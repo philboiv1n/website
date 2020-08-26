@@ -32,7 +32,9 @@ Hello i'm
 
   <style>
 
-    @import url('https://fonts.googleapis.com/css2?family=Sriracha&family=Roboto&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Alike&family=Roboto&display=swap');
+
+  /*   @import url('https://fonts.googleapis.com/css2?family=Sriracha&family=Roboto&display=swap'); */
 
     :root {
     --color-body-bg: #fff;
@@ -40,14 +42,21 @@ Hello i'm
     --color-body-a: #3366cc;
     --color-highlight-bg: #ffffcc;
     --color-highlight-txt: #000;
-    --color-menu-bg: #f5f5f5;
+    
+    --color-logo-dark: #000;
+    --color-logo-light: #fff;
+
+    --color-menu-bg: #000;
     --color-menu-a: #000;
-    --color-footer-bg: #eee;
-    --color-footer-txt: #555;
-    --color-footer-a: #555;
-    --color-footer-a-hover: #111;
-    --color-social-icons : #555;
-    --color-social-icons-hover : #111;
+    --color-menu-inv: #fff;
+    --color-menu-line: #eee;
+    
+    --color-footer-bg: #000;
+    --color-footer-txt: #fff;
+    --color-footer-a: #fff;
+    --color-footer-a-hover: #eee;
+    --color-social-icons : #fff;
+    --color-social-icons-hover : #ccc;
     --menu-height: 52px;
     --content-width : 70%;
     --content-width-mobile : 90%;
@@ -76,9 +85,9 @@ Hello i'm
       width: var(--content-width); 
       align-self: center; text-align: left; 
       position: -webkit-sticky; position: sticky; 
-      top: 8px;
-      margin: 0 auto; padding: 0;
-      border-bottom: 2px solid var(--color-menu-bg);
+      top: 10px;
+      margin: 0 auto; padding: 0 0 10px 0;
+      border-bottom: 2px solid var(--color-menu-line);
       display: grid;
       grid-template-columns: 220px auto;
       grid-template-areas:
@@ -86,7 +95,9 @@ Hello i'm
       z-index: 200;
     }
 
-    #logo {grid-area: logo; font-family: 'Sriracha'; font-size: 2.0em; text-align: left; margin-top: -3px;}
+    #logo {grid-area: logo; font-family: 'Alike', sans-serif; font-size: 2.0em; text-align: left; letter-spacing: 1px;}
+    .logo-dark {color: var(--color-logo-dark)}
+    .logo-light {color: var(--color-logo-light);}
 
     .logo-wave {
       background: linear-gradient(to right, #000 20%, #999 40%, #999 60%, #000 80%);
@@ -109,36 +120,59 @@ Hello i'm
     nav a:hover {text-decoration: underline;}
     nav ul {padding: 10px; font-size: 1.3em;}
     nav li {display: inline; padding: 0 10px;}
+    .nav-light a {color: var(--color-menu-inv);}
 
-    .noLine {border-bottom: 0px;}
+
+    /*****************************************/
+    /* Sticky Menu CSS trigger by Javascript */
+    /*****************************************/
+    .sticky {border-bottom: 0px;}
+    .sticky a {color: #fff;}
 
     .bgColor-in {
       animation-name: menu-in;
       animation-duration: 0.2s;
       animation-timing-function: linear;
-      background: #F5F5F5;
+      background: var(--color-menu-bg);
     }
      @keyframes menu-in {
+      0%    {background: rgba(0,0,0,0);}
+      25%   {background: rgba(0,0,0,0.25);}
+      50%   {background: rgba(0,0,0,0.5);}
+      75%   {background: rgba(0,0,0,0.75);}
+      100%   {background: rgba(0,0,0,1);}
+    } 
+/*
+  @keyframes menu-in {
       0%    {background: rgba(245,245,245,0);}
       25%   {background: rgba(245,245,245,0.25);}
       50%   {background: rgba(245,245,245,0.5);}
       75%   {background: rgba(245,245,245,0.75);}
       100%   {background: rgba(245,245,245,1);}
     } 
-
+*/
 
     .bgColor-out {
       animation-name: menu-out;
       animation-duration: 0.4s;
       animation-timing-function: ease-out;
-      background: #FFFFFF;
+      background: var(--color-menu-inv);
     }
-     @keyframes menu-out {
+
+  /*   @keyframes menu-out {
       0%    {background: rgba(245,245,245,1);}
       25%   {background: rgba(245,245,245,0.75);}
       50%   {background: rgba(245,245,245,0.5);}
       75%   {background: rgba(245,245,245,0.25);}
       100%   {background: rgba(245,245,245,0);}
+    } */
+
+      @keyframes menu-out {
+      0%    {background: rgba(0,0,0,1);}
+      25%   {background: rgba(0,0,0,0.75);}
+      50%   {background: rgba(0,0,0,0.5);}
+      75%   {background: rgba(0,0,0,0.25);}
+      100%   {background: rgba(0,0,0,0);}
     } 
 
 
@@ -159,7 +193,7 @@ Hello i'm
     main p {line-height: 1.6; margin: 15px 0;}
 
 
-    footer {grid-area: footer; font-size: 1.1em; color: var(--color-footer-txt); background-color: var(--color-footer-bg); margin-top:20px; padding:40px 0; line-height: 1.4;}
+    footer {grid-area: footer; font-size: 1.1em; color: var(--color-footer-txt); background-color: var(--color-footer-bg); margin-top:40px; padding:40px 0; line-height: 1.4;}
     footer a {color: var(--color-footer-a);}
     footer a:hover {color: var(--color-footer-a-hover);}
     .social-icons svg {fill: var(--color-social-icons); opacity: 1.0; padding: 5px; width: 22px; height: 22px;}
@@ -212,7 +246,7 @@ Hello i'm
       }
 
     
-      #logo, nav {margin: 0 auto; width: var(--content-width-mobile); padding: 0 0 0 5px;}
+      #logo, nav {margin: 0 auto; width: var(--content-width-mobile); padding: 0 0 0 5px; color: var(--color-logo-inv);}
       nav ul {padding: 0;}
       nav li {padding: 0 10px 0 0;}
 
@@ -264,38 +298,27 @@ Hello i'm
 
   <header>
         <div id="logo" class="logo-wave">Phil Boivin</div>
-      <!--
+    
         <nav>
           <ul>
             <li><a href="#">À propos</a></li>
             <li><a href="#">Photographie</a></li>
           </ul>
         </nav>
-    -->
+  
   </header>
 
 
   <main>
-
-
-  <!--   <section id="intro">
-        <div class="logo">Phil Boivin</div>
-        <nav>
-
-        </nav>
-    </section> -->
-
     
 
     <section id="content">
 
      
       <h1>Hello World!</h1>
-      <p>Lorem Ipsum
-      </p>
+      <p>Lorem Ipsum</p>
 
      
-
 
     </section>
 
@@ -315,13 +338,7 @@ Hello i'm
 
                         /* Temp - To Delete ?
                         galleryDisplayMode: 'rows',
-                        
-
                         */
-                        
-                        
-
-
 
 
                         // THUMBNAILS
@@ -334,18 +351,14 @@ Hello i'm
                         thumbnailLabel: { display: false },
 
 
-
                         // LIGHTBOX
                         viewerToolbar: { display: false },
                         viewerTools: {
                           topLeft:   'label',
                           topRight:  'shareButton, zoomButton, fullscreenButton, closeButton'
                         },
-
-
-          
                         
-                        itemsBaseURL:     'https://nanogallery2.nanostudio.org/samples/',
+                        itemsBaseURL: 'https://nanogallery2.nanostudio.org/samples/',
                         
                         // ### gallery content ### 
                         items: [
@@ -410,19 +423,37 @@ Hello i'm
   var alreadyLoaded = false;
   var observer = new IntersectionObserver(function(entries) {
 
-  // no intersection with screen
+  // Scrolling down
   if(entries[0].intersectionRatio === 0) {
-    document.querySelector("header").classList.add("noLine"); 
+    document.querySelector("header").classList.add("sticky"); 
+
+
+
     document.querySelector("#topBar").classList.add("bgColor-in");
     document.querySelector("#topBar").classList.remove("bgColor-out");
+    document.querySelector("#logo").classList.add("logo-light");
+
+    document.querySelector("#logo").classList.remove("logo-wave");
+
+ //   document.querySelector("nav").classList.add("nav-light");
+
+
+
+
     alreadyLoaded = true;
   }
-  // fully intersects with screen
+  // Top of the screen
   else if(entries[0].intersectionRatio === 1 && alreadyLoaded) {
-    document.querySelector("header").classList.remove("noLine");
+    document.querySelector("header").classList.remove("sticky");
+
     document.querySelector("#topBar").classList.remove("bgColor-in");
     document.querySelector("#topBar").classList.add("bgColor-out");
-   
+
+    document.querySelector("#logo").classList.remove("logo-light");
+   // document.querySelector("#logo").classList.add("logo-dark");
+
+//    document.querySelector("nav").classList.remove("nav-light");
+    
   }
 }, { threshold: [0,1] });
 
