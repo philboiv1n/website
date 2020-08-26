@@ -231,7 +231,6 @@ Hello i'm
     -------------------------------------- */
     @media (max-width: 800px) {
 
-
       header {
         display: grid;
         grid-template-columns: var(--content-width-mobile) auto;
@@ -246,7 +245,12 @@ Hello i'm
       }
 
     
-      #logo, nav {margin: 0 auto; width: var(--content-width-mobile); padding: 0 0 0 5px; color: var(--color-logo-inv);}
+       .logo-wave {
+
+      animation: none;
+    }
+  
+      #logo, nav {margin: 0 auto; width: var(--content-width-mobile); padding: 0 0 0 5px; color: var(--color-logo-light);}
       nav ul {padding: 0;}
       nav li {padding: 0 10px 0 0;}
 
@@ -452,7 +456,8 @@ Hello i'm
     document.querySelector("#logo").classList.remove("logo-light");
    // document.querySelector("#logo").classList.add("logo-dark");
 
-//    document.querySelector("nav").classList.remove("nav-light");
+    document.querySelector("nav").classList.remove("nav-light");
+
     
   }
 }, { threshold: [0,1] });
