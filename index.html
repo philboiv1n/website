@@ -234,6 +234,7 @@ Hello i'm
       header {
         display: grid;
         grid-template-columns: var(--content-width-mobile) auto;
+        grid-template-rows: 40px 30px;
         grid-template-areas:
           "logo"
           "nav";
@@ -241,14 +242,11 @@ Hello i'm
         position: relative;
         background-color: var(--color-menu-bg);
         top: 0;
-        padding: 10px 0;
+        padding: 20px 0;
       }
 
     
-       .logo-wave {
-
-      animation: none;
-    }
+       .logo-wave {animation: none;}
   
       #logo, nav {margin: 0 auto; width: var(--content-width-mobile); padding: 0 0 0 5px; color: var(--color-logo-light);}
       nav ul {padding: 0;}
