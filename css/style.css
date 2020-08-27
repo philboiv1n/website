@@ -1,0 +1,218 @@
+ @import url('https://fonts.googleapis.com/css2?family=Alike&family=Roboto&display=swap');
+ 
+   :root {
+
+    --logo-font : 'Alike';
+    --body-font : 'Roboto';
+    --body-font-size : 12px;
+
+    --menu-height: 52px;
+    --content-width : 75%;
+    --content-width-mobile : 90%;
+
+    --color-body-bg: #fff;
+    --color-body-txt: #333;
+    --color-body-a: #3366cc;
+    --color-highlight-bg: #ffffcc;
+    --color-highlight-txt: #000;
+    
+    --color-logo-dark: #000;
+    --color-logo-light: #fff;
+
+    --color-menu-bg: #000;
+    --color-menu-a: #000;
+    --color-menu-inv: #fff;
+    --color-menu-line: #eee;
+    
+    --color-footer-bg: #000;
+    --color-footer-txt: #fff;
+    --color-footer-a: #fff;
+    --color-footer-a-hover: #eee;
+    --color-social-icons : #fff;
+    --color-social-icons-hover : #ccc;
+    
+    }
+
+    * {margin:0; padding:0;}
+    body {font-family: var(--body-font); font-size: var(--body-font-size); background-color: var(--color-body-bg); color: var(--color-body-txt); text-align: center;}
+    
+    .container {
+    margin: 0 auto; padding-top: var(--menu-height); display: grid;  
+    grid-template-columns: 100%;
+    grid-template-rows: 10px 10vh auto auto;
+    align-items: center;
+    grid-template-areas:
+      "topBar"
+      "header"
+      "main"
+      "footer";
+    }
+
+    #topBar {z-index:100; grid-area: topBar; position: fixed; top: 0; left: 0; width: 100%; height: var(--menu-height);}
+
+
+    header {
+      grid-area: header; 
+      width: var(--content-width); 
+      align-self: center; text-align: left; 
+      position: -webkit-sticky; position: sticky; 
+      top: 10px;
+      margin: 0 auto; padding: 0 0 10px 0;
+      border-bottom: 2px solid var(--color-menu-line);
+      display: grid;
+      grid-template-columns: 220px auto;
+      grid-template-areas:
+      "logo nav";
+      z-index: 200;
+    }
+
+    #logo {grid-area: logo; font-family: var(--logo-font);, sans-serif; font-size: 2.0em; text-align: left; letter-spacing: 1px;}
+    .logo-dark {color: var(--color-logo-dark)}
+    .logo-light {color: var(--color-logo-light);}
+
+    .logo-wave {
+      background: linear-gradient(to right, #000 20%, #999 40%, #999 60%, #000 80%);
+      background-size: 290% auto;
+      color: #000;
+      background-clip: text;
+      text-fill-color: transparent;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: wave 1s linear 1;
+    }
+    @keyframes wave {
+      to {
+        background-position: 140% center;
+      }
+    }
+    
+    nav {grid-area: nav;}
+    nav a {color: var(--color-menu-a); text-decoration: none;}
+    nav a:hover {text-decoration: underline;}
+    nav ul {padding: 10px; font-size: 1.3em;}
+    nav li {display: inline; padding: 0 10px;}
+    .nav-light a {color: var(--color-menu-inv);}
+
+
+    /*****************************************/
+    /* Sticky Menu CSS trigger by Javascript */
+    /*****************************************/
+    .sticky {border-bottom: 0px;}
+    .sticky a {color: #fff;}
+
+    .bgColor-in {
+      animation-name: menu-in;
+      animation-duration: 0.2s;
+      animation-timing-function: linear;
+      background: var(--color-menu-bg);
+    }
+     @keyframes menu-in {
+      0%    {background: rgba(0,0,0,0);}
+      25%   {background: rgba(0,0,0,0.25);}
+      50%   {background: rgba(0,0,0,0.5);}
+      75%   {background: rgba(0,0,0,0.75);}
+      100%   {background: rgba(0,0,0,1);}
+    } 
+
+    .bgColor-out {
+      animation-name: menu-out;
+      animation-duration: 0.4s;
+      animation-timing-function: ease-out;
+      background: var(--color-menu-inv);
+    }
+
+      @keyframes menu-out {
+      0%    {background: rgba(0,0,0,1);}
+      25%   {background: rgba(0,0,0,0.75);}
+      50%   {background: rgba(0,0,0,0.5);}
+      75%   {background: rgba(0,0,0,0.25);}
+      100%   {background: rgba(0,0,0,0);}
+    } 
+
+
+    main {
+      grid-area: main; 
+      font-size: 1.2em; 
+      width: var(--content-width); 
+      min-height: calc(100vh - 280px);
+      margin: auto; 
+      display: grid;  
+      grid-template-columns: auto;
+      grid-template-rows: auto auto;
+      grid-template-areas:
+        "content"
+        "projects";
+    }
+
+    main p {line-height: 1.6; margin: 15px 0;}
+
+    footer {grid-area: footer; font-size: 1.1em; color: var(--color-footer-txt); background-color: var(--color-footer-bg); margin-top:40px; padding:40px 0; line-height: 1.4;}
+    footer a {color: var(--color-footer-a);}
+    footer a:hover {color: var(--color-footer-a-hover);}
+    .social-icons svg {fill: var(--color-social-icons); opacity: 1.0; padding: 5px; width: 22px; height: 22px;}
+    .social-icons svg:hover {fill: var(--color-social-icons-hover);}
+
+
+    h1 {font-size: 1.8em; margin: 25px 0;}
+    h2 {font-size: 1.5em; margin: 25px 0;}
+    a {color: var(--color-body-a);}
+    section p {font-size: 1.2em;}
+
+    #content {grid-area: content; text-align: left; }
+    #projects {grid-area: projects; text-align: left; }
+
+    .highlight {background-color: var(--color-highlight-bg); color: var(--color-highlight-txt); padding: 0.12rem 0.4rem; }
+    .highlight:hover {animation-name: glitch; animation-duration: 0.5s; animation-timing-function: ease-in-out;}
+
+     @keyframes glitch {
+      0%    {padding: 0.12rem 0.4rem; }
+      50%   {padding: 0.22rem 0.4rem; }
+      100%   {padding: 0.12rem 0.4rem; }
+    } 
+
+ 
+
+    /* --------------------------------------
+    Mobile CSS
+    -------------------------------------- */
+    @media (max-width: 800px) {
+
+      header {
+        display: grid;
+        grid-template-columns: var(--content-width-mobile) auto;
+        grid-template-rows: 40px 30px;
+        grid-template-areas:
+          "logo"
+          "nav";
+        width: 100%;
+        position: relative;
+        background-color: var(--color-menu-bg);
+        top: 0;
+        padding: 30px 0 20px 0;
+      }
+
+    
+      .logo-wave {animation: none;}
+  
+      #logo, nav {margin: 0 auto; width: var(--content-width-mobile); padding: 0 0 0 5px; color: var(--color-logo-light);}
+      nav ul {padding: 0;}
+      nav li {padding: 0 10px 0 0;}
+
+      #topBar {display: none;}
+      #topRef {height: 0px;}
+
+    
+      .container {
+        margin: 0 auto; padding-top: 0; display: grid;  
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto;
+        align-items: center;
+        grid-template-areas:
+          "header"
+          "main"
+          "footer";
+      }
+   
+      main {width: var(--content-width-mobile);}
+
+    }
