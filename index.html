@@ -11,11 +11,11 @@ Hello i'm Phil Boivin!
   <link rel="icon" type="image/png" href="img/icon.png">
 
   <!-- jQuery -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
           
   <!-- nanogallery2 : https://nanogallery2.nanostudio.org/ -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/nanogallery2/3.0.2/css/nanogallery2.min.css" rel="stylesheet" type="text/css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/nanogallery2/3.0.2/jquery.nanogallery2.min.js" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/nanogallery2/3.0.2/jquery.nanogallery2.min.js"></script>
   
   <!-- custom stylesheet-->
   <link href="css/style.css" rel="stylesheet" type="text/css">
@@ -42,12 +42,9 @@ Hello i'm Phil Boivin!
     <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut leo vel ex accumsan rhoncus. Proin euismod viverra eros a posuere. Nam non purus tellus. Integer ac erat condimentum, pulvinar quam sit amet, scelerisque tellus. Nulla nec est diam. Cras vitae est semper justo iaculis molestie. Proin et lacus sit amet neque posuere scelerisque. Nullam commodo urna ut orci volutpat tincidunt. Mauris eget libero ut risus scelerisque volutpat. Aliquam in rutrum lacus.</p>
     <h2>This is h2</h2>
      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut leo vel ex accumsan rhoncus. Proin euismod viverra eros a posuere. Nam non purus tellus. Integer ac erat condimentum, pulvinar quam sit amet, scelerisque tellus. Nulla nec est diam. Cras vitae est semper justo iaculis molestie. Proin et lacus sit amet neque posuere scelerisque. Nullam commodo urna ut orci volutpat tincidunt. Mauris eget libero ut risus scelerisque volutpat. Aliquam in rutrum lacus.</p>
-    </section>
+   
 
-    
-    <section id="projects">
-
-    <div id="gallery01">Photo Gallery</div>
+    <div id="gallery01" class="gallery">Photo Gallery</div>
   
     <script>
        jQuery(document).ready(function () {
@@ -62,7 +59,8 @@ Hello i'm Phil Boivin!
 
               // THUMBNAILS
               thumbnailWidth:   "auto",
-              thumbnailAlignment: 'scaled',
+          //    thumbnailAlignment: 'justified',
+               thumbnailHeight: 300,
               thumbnailGutterWidth: 10, 
               thumbnailGutterHeight: 10,
               thumbnailBorderHorizontal: 0, 
@@ -89,7 +87,6 @@ Hello i'm Phil Boivin!
                   { src: 'berlin3.jpg', srct: 'berlin3_t.jpg', title: 'Berlin 3' },
                   { src: 'berlin1.jpg', srct: 'berlin1_t.jpg', title: 'Berlin 1' },
                   { src: 'berlin2.jpg', srct: 'berlin2_t.jpg', title: 'Berlin 2' },
-                  { src: 'berlin3.jpg', srct: 'berlin3_t.jpg', title: 'Berlin 3' },
                   { src: 'berlin1.jpg', srct: 'berlin1_t.jpg', title: 'Berlin 1' },
                   { src: 'berlin2.jpg', srct: 'berlin2_t.jpg', title: 'Berlin 2' },
                   { src: 'berlin3.jpg', srct: 'berlin3_t.jpg', title: 'Berlin 3' }
@@ -97,7 +94,10 @@ Hello i'm Phil Boivin!
             });
         });
     </script>
-  </section>
+
+   </section>
+
+    
   
   </main>
   
@@ -114,7 +114,7 @@ Hello i'm Phil Boivin!
   </script> 
 
   <!-- header animation script -->
-  <script src="js/header-anim.js" type="text/javascript"></script>
+  <script src="js/header-anim.js"></script>
 
 </body>
 </html>

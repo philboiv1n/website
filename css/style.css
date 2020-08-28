@@ -103,7 +103,7 @@
     .bgColor-in {
       animation-name: menu-in;
       animation-duration: 0.2s;
-      animation-timing-function: linear;
+      animation-timing-function: ease-in;
       background: var(--color-menu-bg);
     }
      @keyframes menu-in {
@@ -116,7 +116,7 @@
 
     .bgColor-out {
       animation-name: menu-out;
-      animation-duration: 0.4s;
+      animation-duration: 0.3s;
       animation-timing-function: ease-out;
       background: var(--color-menu-inv);
     }
@@ -160,6 +160,12 @@
 
     #content {grid-area: content; text-align: left; }
     #projects {grid-area: projects; text-align: left; }
+
+
+    .gallery {padding: 20px 0;}
+
+
+
 
     .highlight {background-color: var(--color-highlight-bg); color: var(--color-highlight-txt); padding: 0.12rem 0.4rem; }
     .highlight:hover {animation-name: glitch; animation-duration: 0.5s; animation-timing-function: ease-in-out;}
