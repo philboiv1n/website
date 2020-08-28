@@ -4,6 +4,7 @@
 
     --logo-font : 'Alike';
     --body-font : 'Roboto';
+    --h-font : 'Alike';
     --body-font-size : 11px;
 
     --menu-height: 52px;
@@ -56,7 +57,7 @@
       width: var(--content-width); 
       align-self: center; text-align: left; 
       position: -webkit-sticky; position: sticky; 
-      top: 10px;
+      top: 11px;
       margin: 0 auto; padding: 0 0 10px 0;
       border-bottom: 2px solid var(--color-menu-line);
       display: grid;
@@ -66,7 +67,7 @@
       z-index: 200;
     }
 
-    #logo {grid-area: logo; font-family: var(--logo-font);, sans-serif; font-size: 2.0em; text-align: left; letter-spacing: 1px;}
+    #logo {grid-area: logo; font-family: var(--logo-font); sans-serif; font-size: 2.2em; text-align: left; letter-spacing: 1px;}
     .logo-dark {color: var(--color-logo-dark)}
     .logo-light {color: var(--color-logo-light);}
 
@@ -146,18 +147,18 @@
 
     main p {line-height: 1.4; margin: 10px 0 15px 0;}
 
-    footer {grid-area: footer; font-size: 1.1em; color: var(--color-footer-txt); background-color: var(--color-footer-bg); margin-top:40px; padding:40px 0; line-height: 1.4;}
+    footer {grid-area: footer; font-size: 1.2em; color: var(--color-footer-txt); background-color: var(--color-footer-bg); margin-top:40px; padding:40px 0; line-height: 1.4;}
     footer a {color: var(--color-footer-a);}
     footer a:hover {color: var(--color-footer-a-hover);}
     .social-icons svg {fill: var(--color-social-icons); opacity: 1.0; padding: 5px; width: 22px; height: 22px;}
     .social-icons svg:hover {fill: var(--color-social-icons-hover);}
 
 
-    h1 {font-size: 1.6em; margin: 25px 0 0 0;}
-    h2 {font-size: 1.4em; margin: 25px 0 0 0;}
+    h1 {font-size: 1.6em; margin: 25px 0 0 0; font-family: var(--h-font); font-weight: normal;}
+    h2 {font-size: 1.4em; margin: 25px 0 0 0; font-family: var(--h-font); font-weight: normal;}
     a {color: var(--color-body-a);}
     section p {font-size: 1.2em;}
-
+    .serif {font-family: var(--logo-font);}
     #content {grid-area: content; text-align: left; }
     #projects {grid-area: projects; text-align: left; }
 
