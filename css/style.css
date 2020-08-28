@@ -144,7 +144,7 @@
         "projects";
     }
 
-    main p {line-height: 1.6; margin: 15px 0;}
+    main p {line-height: 1.4; margin: 10px 0 15px 0;}
 
     footer {grid-area: footer; font-size: 1.1em; color: var(--color-footer-txt); background-color: var(--color-footer-bg); margin-top:40px; padding:40px 0; line-height: 1.4;}
     footer a {color: var(--color-footer-a);}
@@ -153,8 +153,8 @@
     .social-icons svg:hover {fill: var(--color-social-icons-hover);}
 
 
-    h1 {font-size: 1.6em; margin: 25px 0;}
-    h2 {font-size: 1.4em; margin: 25px 0;}
+    h1 {font-size: 1.6em; margin: 25px 0 0 0;}
+    h2 {font-size: 1.4em; margin: 25px 0 0 0;}
     a {color: var(--color-body-a);}
     section p {font-size: 1.2em;}
 
@@ -188,15 +188,16 @@
         position: relative;
         background-color: var(--color-menu-bg);
         top: 0;
-        padding: 30px 0 20px 0;
+        padding: 25px 0 15px 0;
       }
 
-    
-      .logo-wave {animation: none;}
   
-      #logo, nav {margin: 0 auto; width: var(--content-width-mobile); padding: 0 0 0 5px; color: var(--color-logo-light);}
+      #logo {margin: 0 auto; width: var(--content-width-mobile); padding: 0 0 0 5px; color: var(--color-logo-light);}
+      nav {margin: 0 auto; width: var(--content-width-mobile); padding: 0 0 0 5px;}
       nav ul {padding: 0;}
       nav li {padding: 0 10px 0 0;}
+
+      .logo-wave {animation: none; text-fill-color: var(--color-logo-light); -webkit-text-fill-color: var(--color-logo-light);}
 
       #topBar {display: none;}
       #topRef {height: 0px;}
