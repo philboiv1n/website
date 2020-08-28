@@ -4,7 +4,7 @@
 
     --logo-font : 'Alike';
     --body-font : 'Roboto';
-    --body-font-size : 12px;
+    --body-font-size : 11px;
 
     --menu-height: 52px;
     --content-width : 75%;
@@ -153,8 +153,8 @@
     .social-icons svg:hover {fill: var(--color-social-icons-hover);}
 
 
-    h1 {font-size: 1.8em; margin: 25px 0;}
-    h2 {font-size: 1.5em; margin: 25px 0;}
+    h1 {font-size: 1.6em; margin: 25px 0;}
+    h2 {font-size: 1.4em; margin: 25px 0;}
     a {color: var(--color-body-a);}
     section p {font-size: 1.2em;}
 
