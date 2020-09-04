@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!--
+Hello i'm Phil Boivin! 
+-->
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Contact Phil Boivin</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="img/icon.png">
+
+  <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+  <!-- custom stylesheet-->
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+
+
+<body>
+
+<div class="container">
+
+<div id="topBar" class="topBar"></div>  
+<div id="topRef"></div>
+
+<header></header>
+
+<main>
+    
+
+    <section id="content">
+
+    <h1>Contact me</h1>
+
+    <p> 
+      <form id="contact-form" method="post">
+      <h4>Name:</h4>
+      <input type="text" style="height:35px;" id="name-input" placeholder="Enter name here…" class="form-control" style="width:100%;" /><br/>
+      <h4>Phone:</h4>
+      <input type="phone" style="height:35px;" id="phone-input" placeholder="Enter phone number" class="form-control" style="width:100%;"/><br/>
+      <h4>Email:</h4>
+      <input type="email" style="height:35px;" id="email-input" placeholder="Enter email here…" class="form-control" style="width:100%;"/><br/>
+      <h4>How can we help you?</h4>
+      <textarea id="description-input" rows="3" placeholder="Enter your message…" class="form-control" style="width:100%;"></textarea><br/>
+      <div class="g-recaptcha" data-sitekey="6Lc7cVMUAAAAAM1yxf64wrmO8gvi8A1oQ_ead1ys" class="form-control" style="width:100%;"></div>
+      <button type="button" onClick="submitToAPI(event)" class="btn btn-lg" style="margin-top:20px;">Submit</button>
+      </form>
+    </p>
+    
+   
+   </section>
+
+    
+  
+  </main>
+  
+  <footer></footer>
+
+</div>
+ 
+  <!-- load shared content -->
+  <script> 
+    $(function(){
+      $("header").load("header.html"); 
+      $("footer").load("footer.html"); 
+    });
+  </script> 
+
+  <!-- header animation script -->
+  <script src="js/header-anim.js"></script>
+
+</body>
+</html>

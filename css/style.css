@@ -40,7 +40,7 @@
     .container {
     margin: 0 auto; padding-top: var(--menu-height); display: grid;  
     grid-template-columns: 100%;
-    grid-template-rows: 10px 10vh auto auto;
+    grid-template-rows: 10px 15vh auto auto;
     align-items: center;
     grid-template-areas:
       "topBar"
@@ -57,8 +57,10 @@
       width: var(--content-width); 
       align-self: center; text-align: left; 
       position: -webkit-sticky; position: sticky; 
-      top: 11px;
-      margin: 0 auto; padding: 0 0 10px 0;
+      top: 7px;
+      margin: 0 auto; 
+
+      /* padding: 0 0 10px 0; */
       border-bottom: 2px solid var(--color-menu-line);
       display: grid;
       grid-template-columns: 220px auto;
@@ -67,7 +69,14 @@
       z-index: 200;
     }
 
-    #logo {grid-area: logo; font-family: var(--logo-font); sans-serif; font-size: 2.2em; text-align: left; letter-spacing: 1px;}
+    #logo {
+      grid-area: logo; 
+      font-family: var(--logo-font); sans-serif; 
+      font-size: 2.2em; 
+      align-self: center; text-align: left;
+      letter-spacing: 1px;
+    }
+    #logo a, #logo a:visited, #logo a:hover, #logo a:active {text-decoration: none; color: inherit;}
     .logo-dark {color: var(--color-logo-dark)}
     .logo-light {color: var(--color-logo-light);}
 
@@ -90,7 +99,7 @@
     nav {grid-area: nav;}
     nav a {color: var(--color-menu-a); text-decoration: none;}
     nav a:hover {text-decoration: underline;}
-    nav ul {padding: 10px; font-size: 1.3em;}
+    nav ul {padding: 10px; font-size: 1.4em;}
     nav li {display: inline; padding: 0 10px;}
     .nav-light a {color: var(--color-menu-inv);}
 
