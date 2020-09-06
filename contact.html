@@ -35,23 +35,29 @@ Hello i'm Phil Boivin!
     <section id="content">
 
     <h1>Contact me</h1>
+    <p>Feel free to send me a few lines!</p>
 
     <p> 
       <form id="contact-form" method="post">
-      <h4>Name:</h4>
-      <input type="text" style="height:35px;" id="name-input" placeholder="Enter name here…" class="form-control" style="width:100%;" /><br/>
-      <h4>Phone:</h4>
-      <input type="phone" style="height:35px;" id="phone-input" placeholder="Enter phone number" class="form-control" style="width:100%;"/><br/>
-      <h4>Email:</h4>
-      <input type="email" style="height:35px;" id="email-input" placeholder="Enter email here…" class="form-control" style="width:100%;"/><br/>
-      <h4>How can we help you?</h4>
-      <textarea id="description-input" rows="3" placeholder="Enter your message…" class="form-control" style="width:100%;"></textarea><br/>
-      <div class="g-recaptcha" data-sitekey="6Lc7cVMUAAAAAM1yxf64wrmO8gvi8A1oQ_ead1ys" class="form-control" style="width:100%;"></div>
-      <button type="button" onClick="submitToAPI(event)" class="btn btn-lg" style="margin-top:20px;">Submit</button>
+      Name
+      <input type="text" id="name-input" placeholder="Enter your name here" class="form-control"><br>
+     <!--  <h4>Phone:</h4>
+      <input type="phone" style="height:35px;" id="phone-input" placeholder="Enter phone number" class="form-control" style="width:100%;"/><br/> -->
+      Email 
+      <input type="email" id="email-input" placeholder="Enter your email here" class="form-control"><br>
+      
+      Message<br>
+      <textarea id="description-input" rows="3" placeholder="Enter your message, question or comment here!" class="form-control"></textarea><br/>
+
+      <!-- <div class="g-recaptcha" data-sitekey="6Lc7cVMUAAAAAM1yxf64wrmO8gvi8A1oQ_ead1ys" class="form-control" style="width:100%;"></div> -->
+      
+      <button type="button" onClick="submitToAPI(event)" class="btn btn-lg" >Submit</button>
+
       </form>
     </p>
     
-   
+   <div id="messages" class="error"></div>
+
    </section>
 
     
@@ -70,8 +76,80 @@ Hello i'm Phil Boivin!
     });
   </script> 
 
+
   <!-- header animation script -->
   <script src="js/header-anim.js"></script>
+
+
+  <!-- Form validation and post -->
+  <script>
+    function submitToAPI(e) {
+       e.preventDefault();
+     
+     //  var URL = "https://abc1234.execute-api.us-east-1.amazonaws.com/01/contact";
+
+            var nameRegex = /[A-Za-z]{1}[A-Za-z]/;
+
+            if (!nameRegex.test($("#name-input").val())) {
+              $("#messages").html("Name should be at least 2 characters");
+              return;
+            }
+
+            /*
+            var mobilere = /[0-9]{10}/;
+            if (!mobilere.test($("#phone-input").val())) {
+                alert ("Please enter valid mobile number");
+                return;
+            }
+            
+            if ($("#email-input").val()=="") {
+                alert ("Please enter your email");
+                return;
+            }
+            */
+
+            /* var reeamil = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,6})?$/; */
+
+            var emailRegex = /^((([!#$%&'*+\-/=?^_`{|}~\w])|([!#$%&'*+\-/=?^_`{|}~\w][!#$%&'*+\-/=?^_`{|}~\.\w]{0,}[!#$%&'*+\-/=?^_`{|}~\w]))[@]\w+([-.]\w+)*\.\w+([-.]\w+)*)$/;
+
+            if (!emailRegex.test($("#email-input").val())) {
+                $("#messages").html("Please enter valid email address");
+                return;
+            }
+
+       var name = $("#name-input").val();
+       var email = $("#email-input").val();
+       var message = $("#description-input").val();
+       var data = {
+          name : name,
+          email : email,
+          message : message
+        };
+
+       $.ajax({
+         type: "POST",
+         url : "https://039fqid0i9.execute-api.us-east-2.amazonaws.com/Prod",
+         dataType: "json",
+         crossDomain: "true",
+         contentType: "application/json; charset=utf-8",
+         data: JSON.stringify(data),
+
+         
+         success: function () {
+            // clear form and show a success message 
+            $("#messages").attr('class', 'success');
+            $("#messages").html("Message sent! Thank you");
+            document.getElementById("contact-form").reset();
+            location.reload();
+         },
+         error: function () {
+            // show an error message
+            $("#messages").html("Sorry, there is a technical problem and we can't send your message. Please try again later.");
+         }});
+     }
+
+
+  </script>
 
 </body>
 </html>

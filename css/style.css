@@ -59,8 +59,7 @@
       position: -webkit-sticky; position: sticky; 
       top: 7px;
       margin: 0 auto; 
-
-      /* padding: 0 0 10px 0; */
+      padding: 0 0 10px 0; 
       border-bottom: 2px solid var(--color-menu-line);
       display: grid;
       grid-template-columns: 220px auto;
@@ -144,7 +143,8 @@
       grid-area: main; 
       font-size: 1.2em; 
       width: var(--content-width); 
-      min-height: calc(100vh - 280px);
+     /* min-height: calc(100vh - 280px); */
+      min-height: calc(80vh);
       margin: auto; 
       display: grid;  
       grid-template-columns: auto;
@@ -174,9 +174,11 @@
 
     .gallery {padding: 20px 0;}
 
+    .success {color: green}
+    .error {color: red;}
 
 
-
+    /* Lab */
     .highlight {background-color: var(--color-highlight-bg); color: var(--color-highlight-txt); padding: 0.12rem 0.4rem; }
     .highlight:hover {animation-name: glitch; animation-duration: 0.5s; animation-timing-function: ease-in-out;}
 
