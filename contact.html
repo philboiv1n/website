@@ -56,7 +56,7 @@ Hello i'm Phil Boivin!
       </form>
     </p>
     
-   <div id="messages" class="error">v.0.0.3</div>
+   <div id="messages" class="error"></div>
    </section>
 
     
@@ -131,14 +131,13 @@ Hello i'm Phil Boivin!
          contentType: 'application/json',
          data: JSON.stringify(data),
  
-         success: function (data) {
+         success: function () {
             // clear form and show a success message 
-            $("#messages").attr('class', 'success');
-            $("#messages").html("Message sent! Thank you");
+            alert("Message sent! Thank you");
             document.getElementById("contact-form").reset();
             location.reload();
          },
-         error: function (data) {
+         error: function () {
             // show an error message
             $("#messages").html("Sorry, there is a technical problem and we can't send your message. Please try again later.");
          }});
