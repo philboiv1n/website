@@ -47,7 +47,7 @@ Hello i'm Phil Boivin!
       <input type="email" id="email-input" placeholder="Enter your email here" class="form-control"><br>
       
       Message<br>
-      <textarea id="description-input" rows="3" placeholder="Enter your message, question or comment here!" class="form-control"></textarea><br/>
+      <textarea id="message-input" rows="3" placeholder="Enter your message, question or comment here!" class="form-control"></textarea><br/>
 
       <!-- <div class="g-recaptcha" data-sitekey="6Lc7cVMUAAAAAM1yxf64wrmO8gvi8A1oQ_ead1ys" class="form-control" style="width:100%;"></div> -->
       
@@ -119,7 +119,7 @@ Hello i'm Phil Boivin!
 
        var name = $("#name-input").val();
        var email = $("#email-input").val();
-       var message = $("#description-input").val();
+       var message = $("#message-input").val();
        var data = {
           name : name,
           email : email,
@@ -132,9 +132,9 @@ Hello i'm Phil Boivin!
          dataType: "json",
          crossDomain: "true",
          contentType: "application/json; charset=utf-8",
-         data: JSON.stringify(data),
+      //   data: JSON.stringify(data),
+         data: data,
 
-         
          success: function () {
             // clear form and show a success message 
             $("#messages").attr('class', 'success');
