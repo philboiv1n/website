@@ -5,7 +5,11 @@
     --logo-font : 'Alike';
     --body-font : 'Roboto';
     --h-font : 'Alike';
-    --body-font-size : 11px;
+
+    --body-font-size : 12px;
+    --logo-font-size : 2.0em;
+    --form-font-size : 1.1em;
+    --form-border-color: #ddd;
 
     --menu-height: 52px;
     --content-width : 75%;
@@ -34,7 +38,7 @@
     
     }
 
-    * {margin:0; padding:0;}
+    * {margin:0; padding:0; box-sizing: border-box;}
     body {font-family: var(--body-font); font-size: var(--body-font-size); background-color: var(--color-body-bg); color: var(--color-body-txt); text-align: center;}
     
     .container {
@@ -49,8 +53,11 @@
       "footer";
     }
 
-    #topBar {z-index:100; grid-area: topBar; position: fixed; top: 0; left: 0; width: 100%; height: var(--menu-height);}
 
+    /*****************************************/
+    /* Header and logo
+    /*****************************************/
+    #topBar {z-index:100; grid-area: topBar; position: fixed; top: 0; left: 0; width: 100%; height: var(--menu-height);}
 
     header {
       grid-area: header; 
@@ -71,7 +78,7 @@
     #logo {
       grid-area: logo; 
       font-family: var(--logo-font); sans-serif; 
-      font-size: 2.2em; 
+      font-size: var(--logo-font-size); 
       align-self: center; text-align: left;
       letter-spacing: 1px;
     }
@@ -104,7 +111,7 @@
 
 
     /*****************************************/
-    /* Sticky Menu CSS trigger by Javascript */
+    /* Sticky Menu 
     /*****************************************/
     .sticky {border-bottom: 0px;}
     .sticky a {color: #fff;}
@@ -139,6 +146,10 @@
     } 
 
 
+
+    /*****************************************/
+    /* Main content               
+    /*****************************************/
     main {
       grid-area: main; 
       font-size: 1.2em; 
@@ -156,12 +167,6 @@
 
     main p {line-height: 1.4; margin: 10px 0 15px 0;}
 
-    footer {grid-area: footer; font-size: 1.2em; color: var(--color-footer-txt); background-color: var(--color-footer-bg); margin-top:40px; padding:40px 0; line-height: 1.4;}
-    footer a {color: var(--color-footer-a);}
-    footer a:hover {color: var(--color-footer-a-hover);}
-    .social-icons svg {fill: var(--color-social-icons); opacity: 1.0; padding: 5px; width: 22px; height: 22px;}
-    .social-icons svg:hover {fill: var(--color-social-icons-hover);}
-
 
     h1 {font-size: 1.6em; margin: 25px 0 0 0; font-family: var(--h-font); font-weight: normal;}
     h2 {font-size: 1.4em; margin: 25px 0 0 0; font-family: var(--h-font); font-weight: normal;}
@@ -173,9 +178,35 @@
 
 
     .gallery {padding: 20px 0;}
-
+    
     .success {color: green}
     .error {color: red;}
+
+    .form-control {
+      font-family: var(--body-font); 
+      padding: 5px; 
+      font-size: var(--form-font-size);
+      margin:10px 0; 
+      border: 1px solid var(--form-border-color); 
+      width: 95%;
+      max-width: 400px;
+    }
+
+    .form-submit {padding: 10px 15px; font-size: inherit; margin-top: 10px; border-radius: 10px; border: 1px solid #ccc;}
+    .form-submit:hover {background-color: #fff; cursor:pointer;}
+
+    /*****************************************/
+    /* Footer                
+    /*****************************************/
+    footer {grid-area: footer; font-size: 1.2em; color: var(--color-footer-txt); background-color: var(--color-footer-bg); margin-top:40px; padding:40px 0; line-height: 1.4;}
+    footer a {color: var(--color-footer-a);}
+    footer a:hover {color: var(--color-footer-a-hover);}
+    .social-icons svg {fill: var(--color-social-icons); opacity: 1.0; padding: 5px; width: 22px; height: 22px;}
+    .social-icons svg:hover {fill: var(--color-social-icons-hover);}
+
+
+
+
 
 
     /* Lab */
@@ -189,10 +220,22 @@
     } 
 
  
+    .redCircle {
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    padding: 2px;
+    background: red;
+    color: white;
+    text-align: center;
+    font-size:  16px;
+    display: inline-block;
+    }
 
-    /* --------------------------------------
-    Mobile CSS
-    -------------------------------------- */
+
+    /*****************************************/
+    /* Mobile                
+    /*****************************************/
     @media (max-width: 800px) {
 
       header {
