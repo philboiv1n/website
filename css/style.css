@@ -201,9 +201,8 @@
     footer {grid-area: footer; font-size: 1.2em; color: var(--color-footer-txt); background-color: var(--color-footer-bg); margin-top:40px; padding:40px 0; line-height: 1.4;}
     footer a {color: var(--color-footer-a);}
     footer a:hover {color: var(--color-footer-a-hover);}
-    .social-icons svg {fill: var(--color-social-icons); opacity: 1.0; padding: 5px; width: 22px; height: 22px;}
+    .social-icons svg {fill: var(--color-social-icons); opacity: 1.0; padding: 5px; width: 28px; height: 28px;}
     .social-icons svg:hover {fill: var(--color-social-icons-hover);}
-
 
 
 

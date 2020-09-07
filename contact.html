@@ -5,6 +5,7 @@ Hello i'm Phil Boivin!
 <html lang="en">
 
 <head>
+
   <meta charset="utf-8">
   <title>Contact Phil Boivin</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -31,7 +32,6 @@ Hello i'm Phil Boivin!
 
 <main>
     
-
     <section id="content">
 
     <h1>Contact me</h1>
@@ -48,12 +48,12 @@ Hello i'm Phil Boivin!
     </p>
     
    <div id="messages" class="error"></div>
-   </section>
 
+   </section>
   
-  </main>
+</main>
   
-  <footer></footer>
+<footer></footer>
 
 </div>
  
@@ -84,12 +84,11 @@ Hello i'm Phil Boivin!
               return;
             }
 
-
             var emailRegex = /^((([!#$%&'*+\-/=?^_`{|}~\w])|([!#$%&'*+\-/=?^_`{|}~\w][!#$%&'*+\-/=?^_`{|}~\.\w]{0,}[!#$%&'*+\-/=?^_`{|}~\w]))[@]\w+([-.]\w+)*\.\w+([-.]\w+)*)$/;
 
             if (!emailRegex.test($("#email-input").val())) {
-                $("#messages").html(x+"Please enter valid email address");
-                return;
+              $("#messages").html(x+"Please enter valid email address");
+              return;
             }
 
             var msgRegex = /[A-Za-z]{3}[A-Za-z]/;
@@ -115,13 +114,12 @@ Hello i'm Phil Boivin!
          data: JSON.stringify(data),
  
          success: function () {
-            // clear form and show a success message 
             alert("Message sent! Thank you");
             document.getElementById("contact-form").reset();
             location.reload();
          },
+
          error: function () {
-            // show an error messages
             $("#messages").html(x+"Sorry, there is a technical problem and we can't send your message. Please try again later.");
          }});
      }
