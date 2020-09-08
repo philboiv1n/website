@@ -37,15 +37,21 @@ Hello i'm Phil Boivin!
     <h1>Contact me</h1>
     <p>Feel free to send me a few lines!</p>
 
-    <p> 
+    
       <form id="contact-form" method="post">
-      <input type="text" id="name-input" placeholder="Your name" class="form-control" maxlength="64"><br>
-      <input type="email" id="email-input" placeholder="Your email address" class="form-control" maxlength="320"><br>
-      <textarea id="message-input" rows="6" placeholder="Enter your message, question or comment here!" class="form-control" maxlength="1024"></textarea>
+
+      <label for="name-input">Name</label><br>
+      <input type="text" id="name-input" placeholder="Your name" class="form-control" maxlength="64" required><br>
+      
+      <label for="email-input">Email</label><br>
+      <input type="email" id="email-input" placeholder="Your email address" class="form-control" maxlength="320" required><br>
+      
+      <label for="message-input">Message</label><br>
+      <textarea id="message-input" rows="6" placeholder="Enter your message, question or comment here!" class="form-control" maxlength="1024" required></textarea>
       <br>
       <button type="button" onClick="submitToAPI(event)" class="form-submit">Submit</button>
       </form>
-    </p>
+    
     
    <div id="messages" class="error"></div>
 

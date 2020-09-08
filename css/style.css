@@ -182,11 +182,13 @@
     .success {color: green}
     .error {color: red;}
 
+    #contact-form {padding: 20px 0;}
+
     .form-control {
       font-family: var(--body-font); 
       padding: 5px; 
       font-size: var(--form-font-size);
-      margin:10px 0; 
+      margin:0 0 20px 0; 
       border: 1px solid var(--form-border-color); 
       width: 95%;
       max-width: 400px;
