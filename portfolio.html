@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<!--
+Hello i'm Phil Boivin! 
+-->
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <title>Portfolio | Phil Boivin</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="img/icon.png">
+
+  <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+          
+  <!-- nanogallery2 : https://nanogallery2.nanostudio.org/ -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/nanogallery2/3.0.2/css/nanogallery2.min.css" rel="stylesheet" type="text/css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/nanogallery2/3.0.2/jquery.nanogallery2.min.js"></script>
+  
+  <!-- custom stylesheet-->
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+
+
+<body>
+
+<div class="container">
+
+<div id="topBar" class="topBar"></div>  
+<div id="topRef"></div>
+<header></header>
+
+<main>
+    
+
+    <section id="content">
+
+    <h1>Portfolio</h1>
+
+    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut leo vel ex accumsan rhoncus. Proin euismod viverra eros a posuere. Nam non purus tellus. Integer ac erat condimentum, pulvinar quam sit amet, scelerisque tellus. Nulla nec est diam. Cras vitae est semper justo iaculis molestie. Proin et lacus sit amet neque posuere scelerisque. Nullam commodo urna ut orci volutpat tincidunt. Mauris eget libero ut risus scelerisque volutpat. Aliquam in rutrum lacus.</p>
+    
+
+    <div id="gallery01" class="gallery">Photo Gallery</div>
+  
+    <script>
+       jQuery(document).ready(function () {
+
+          jQuery("#gallery01").nanogallery2( {
+              // ### gallery settings ### 
+
+
+              // THUMBNAILS
+              thumbnailWidth:   "auto",
+              thumbnailHeight: 300,
+              thumbnailGutterWidth: 10, 
+              thumbnailGutterHeight: 10,
+              thumbnailBorderHorizontal: 0, 
+              thumbnailBorderVertical: 0,
+              thumbnailLabel: { display: false },
+
+
+              // LIGHTBOX
+              viewerToolbar: { display: false },
+              viewerTools: {
+                topLeft:   'label',
+                topRight:  'shareButton, zoomButton, fullscreenButton, closeButton'
+              },
+              
+              itemsBaseURL: 'https://nanogallery2.nanostudio.org/samples/',
+              
+              // ### gallery content ### 
+              items: [
+                  { src: 'berlin1.jpg', srct: 'berlin1_t.jpg', title: 'Berlin 1' },
+                  { src: 'berlin2.jpg', srct: 'berlin2_t.jpg', title: 'Berlin 2' },
+                  { src: 'berlin3.jpg', srct: 'berlin3_t.jpg', title: 'Berlin 3' },
+                  { src: 'berlin1.jpg', srct: 'berlin1_t.jpg', title: 'Berlin 1' },
+                  { src: 'berlin2.jpg', srct: 'berlin2_t.jpg', title: 'Berlin 2' },
+                  { src: 'berlin3.jpg', srct: 'berlin3_t.jpg', title: 'Berlin 3' },
+                  { src: 'berlin1.jpg', srct: 'berlin1_t.jpg', title: 'Berlin 1' },
+                  { src: 'berlin2.jpg', srct: 'berlin2_t.jpg', title: 'Berlin 2' },
+                  { src: 'berlin1.jpg', srct: 'berlin1_t.jpg', title: 'Berlin 1' },
+                  { src: 'berlin2.jpg', srct: 'berlin2_t.jpg', title: 'Berlin 2' },
+                  { src: 'berlin3.jpg', srct: 'berlin3_t.jpg', title: 'Berlin 3' }
+                ]
+            });
+        });
+    </script>
+
+   </section>
+
+    
+  
+  </main>
+  
+  <footer></footer>
+
+</div>
+ 
+  <!-- load shared content -->
+  <script> 
+    $(function(){
+      $("header").load("header.html"); 
+      $("footer").load("footer.html"); 
+    });
+  </script> 
+
+  <!-- header animation script -->
+  <script src="js/header-anim.js"></script>
+
+</body>
+</html>

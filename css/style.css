@@ -9,10 +9,15 @@ CSS Stylesheet for philboivin.com
     --body-font : 'Roboto';
     --h-font : 'Alike';
 
-    --body-font-size : 12px;
-    --logo-font-size : 2.0em;
-
+    --body-font-size : 14px;
+    --logo-font-size : 1.7em;
     --form-font-size : 1.1em;
+    --menu-font-size : 1.1em;
+    --p-font-size : 1.2em;
+    --h1-font-size : 1.6em;
+    --h2-font-size : 1.4em;
+    --footer-font-size: 1.0em;
+
     --form-border-color: #ddd;
     --form-submit-color-border: #ccc;
     --form-submit-color-hover: #fff;
@@ -109,10 +114,10 @@ CSS Stylesheet for philboivin.com
       }
     }
     
-    nav {grid-area: nav;}
+    nav {grid-area: nav; font-size: var(--menu-font-size);}
     nav a {color: var(--color-menu-a); text-decoration: none;}
     nav a:hover {text-decoration: underline;}
-    nav ul {padding: 10px; font-size: 1.4em;}
+    nav ul {padding: 10px;}
     nav li {display: inline; padding: 0 10px;}
     .nav-light a {color: var(--color-menu-a);}
 
@@ -129,12 +134,13 @@ CSS Stylesheet for philboivin.com
       animation-timing-function: ease-in;
       background: var(--color-menu-sticky-bg);
     }
-     @keyframes menu-in {
+
+    @keyframes menu-in {
       0%    {background: rgba(0,0,0,0);}
       25%   {background: rgba(0,0,0,0.25);}
       50%   {background: rgba(0,0,0,0.5);}
       75%   {background: rgba(0,0,0,0.75);}
-      100%   {background: rgba(0,0,0,1);}
+      100%  {background: rgba(0,0,0,1);}
     } 
 
     .bgColor-out {
@@ -149,7 +155,7 @@ CSS Stylesheet for philboivin.com
       25%   {background: rgba(0,0,0,0.75);}
       50%   {background: rgba(0,0,0,0.5);}
       75%   {background: rgba(0,0,0,0.25);}
-      100%   {background: rgba(0,0,0,0);}
+      100%  {background: rgba(0,0,0,0);}
     } 
 
 
@@ -159,9 +165,7 @@ CSS Stylesheet for philboivin.com
     /*****************************************/
     main {
       grid-area: main; 
-      font-size: 1.2em; 
       width: var(--content-width); 
-     /* min-height: calc(100vh - 280px); */
       min-height: calc(80vh);
       margin: auto; 
       display: grid;  
@@ -174,21 +178,22 @@ CSS Stylesheet for philboivin.com
 
     main p {line-height: 1.4; margin: 10px 0 15px 0;}
 
-
-    h1 {font-size: 1.6em; margin: 25px 0 0 0; font-family: var(--h-font); font-weight: normal;}
-    h2 {font-size: 1.4em; margin: 25px 0 0 0; font-family: var(--h-font); font-weight: normal;}
+    h1 {font-size: var(--h1-font-size); margin: 25px 0 0 0; font-family: var(--h-font); font-weight: normal;}
+    h2 {font-size: var(--h2-font-size); margin: 25px 0 0 0; font-family: var(--h-font); font-weight: normal;}
     a {color: var(--color-body-a);}
-    section p {font-size: 1.2em;}
+    section p {font-size: var(--p-font-size);}
+
     .serif {font-family: var(--logo-font);}
     #content {grid-area: content; text-align: left; }
     #projects {grid-area: projects; text-align: left; }
-
-
-    .gallery {padding: 20px 0;}
-    
+    .gallery {padding: 20px 0;}    
     .success {color: green}
     .error {color: red;}
 
+
+    /*****************************************/
+    /* Contact Form             
+    /*****************************************/
     #contact-form {padding: 20px 0;}
     textarea {resize: none;}
 
@@ -215,10 +220,24 @@ CSS Stylesheet for philboivin.com
     .form-submit {padding: 10px 15px; font-size: inherit; margin-top: 10px; border-radius: 10px; border: 1px solid var(--form-submit-color-border);}
     .form-submit:hover {background-color: var(--form-submit-color-hover); cursor:pointer;}
 
+    .redCircle {
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    padding: 2px;
+    background: red;
+    color: white;
+    text-align: center;
+    font-size:  16px;
+    display: inline-block;
+    }
+
+
+
     /*****************************************/
     /* Footer                
     /*****************************************/
-    footer {grid-area: footer; font-size: 1.2em; color: var(--color-footer-txt); background-color: var(--color-footer-bg); margin-top:40px; padding:40px 0; line-height: 1.4;}
+    footer {grid-area: footer; font-size: var(--footer-font-size); color: var(--color-footer-txt); background-color: var(--color-footer-bg); margin-top:40px; padding:40px 0; line-height: 1.4;}
     footer a {color: var(--color-footer-a);}
     footer a:hover {color: var(--color-footer-a-hover);}
     .social-icons svg {fill: var(--color-social-icons); opacity: 1.0; padding: 5px; width: 28px; height: 28px;}
@@ -239,17 +258,7 @@ CSS Stylesheet for philboivin.com
     } 
 
  
-    .redCircle {
-    border-radius: 50%;
-    width: 24px;
-    height: 24px;
-    padding: 2px;
-    background: red;
-    color: white;
-    text-align: center;
-    font-size:  16px;
-    display: inline-block;
-    }
+   
 
 
     /*****************************************/
