@@ -27,7 +27,6 @@ Hello i'm Phil Boivin!
 
 <div id="topBar" class="topBar"></div>  
 <div id="topRef"></div>
-
 <header></header>
 
 <main>
@@ -35,10 +34,15 @@ Hello i'm Phil Boivin!
     <section id="content">
 
     <h1>Contact me</h1>
-    <p>Ask me anything! I might reply!</p>
+    <p>Questions or comments are always welcome.</p>
 
     
       <form id="contact-form" method="post">
+
+      <label class="form-control-bee" for="name"></label>
+      <input class="form-control-bee" autocomplete="off" type="text" id="name" name="name" placeholder="Your name here">
+      <label class="form-control-bee" for="email"></label>
+      <input class="form-control-bee" autocomplete="off" type="email" id="email" name="email" placeholder="Your e-mail here">
 
       <label for="name-input">Name</label><br>
       <input type="text" id="name-input" placeholder="Your name" class="form-control" maxlength="64" required><br>
@@ -48,16 +52,10 @@ Hello i'm Phil Boivin!
       
       <label for="message-input">Message</label><br>
       <textarea id="message-input" rows="5" placeholder="Enter your message, question or comment here!" class="form-control" maxlength="1024" required></textarea>
-
-      <label class="form-control-bee" for="name"></label>
-      <input class="form-control-bee" autocomplete="off" type="text" id="name" name="name" placeholder="Your name here">
-      <label class="form-control-bee" for="email"></label>
-      <input class="form-control-bee" autocomplete="off" type="email" id="email" name="email" placeholder="Your e-mail here">
-
+     
       <br>
       <button type="button" onClick="submitToAPI(event)" class="form-submit">Submit</button>
       </form>
-    
     
    <div id="messages" class="error"></div>
 

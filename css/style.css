@@ -1,4 +1,7 @@
- @import url('https://fonts.googleapis.com/css2?family=Alike&family=Roboto&display=swap');
+/**********************************
+CSS Stylesheet for philboivin.com
+/**********************************/
+@import url('https://fonts.googleapis.com/css2?family=Alike&family=Roboto&display=swap');
  
    :root {
 
@@ -8,15 +11,18 @@
 
     --body-font-size : 12px;
     --logo-font-size : 2.0em;
+
     --form-font-size : 1.1em;
     --form-border-color: #ddd;
+    --form-submit-color-border: #ccc;
+    --form-submit-color-hover: #fff;
 
     --menu-height: 52px;
     --content-width : 75%;
     --content-width-mobile : 90%;
 
     --color-body-bg: #fff;
-    --color-body-txt: #333;
+    --color-body-txt: #000;
     --color-body-a: #3366cc;
     --color-highlight-bg: #ffffcc;
     --color-highlight-txt: #000;
@@ -24,11 +30,12 @@
     --color-logo-dark: #000;
     --color-logo-light: #fff;
 
-    --color-menu-bg: #000;
+    --color-menu-bg: #fff;
     --color-menu-a: #000;
-    --color-menu-inv: #fff;
     --color-menu-line: #eee;
-    
+    --color-menu-sticky-bg: #000;
+    --color-menu-sticky-a: #fff;
+
     --color-footer-bg: #000;
     --color-footer-txt: #fff;
     --color-footer-a: #fff;
@@ -77,7 +84,7 @@
 
     #logo {
       grid-area: logo; 
-      font-family: var(--logo-font); sans-serif; 
+      font-family: var(--logo-font);
       font-size: var(--logo-font-size); 
       align-self: center; text-align: left;
       letter-spacing: 1px;
@@ -89,7 +96,7 @@
     .logo-wave {
       background: linear-gradient(to right, #000 20%, #999 40%, #999 60%, #000 80%);
       background-size: 290% auto;
-      color: #000;
+      color: var(--color-logo-dark)
       background-clip: text;
       text-fill-color: transparent;
       -webkit-background-clip: text;
@@ -107,20 +114,20 @@
     nav a:hover {text-decoration: underline;}
     nav ul {padding: 10px; font-size: 1.4em;}
     nav li {display: inline; padding: 0 10px;}
-    .nav-light a {color: var(--color-menu-inv);}
+    .nav-light a {color: var(--color-menu-a);}
 
 
     /*****************************************/
     /* Sticky Menu 
     /*****************************************/
     .sticky {border-bottom: 0px;}
-    .sticky a {color: #fff;}
+    .sticky a {color: var(--color-menu-sticky-a);}
 
     .bgColor-in {
       animation-name: menu-in;
       animation-duration: 0.2s;
       animation-timing-function: ease-in;
-      background: var(--color-menu-bg);
+      background: var(--color-menu-sticky-bg);
     }
      @keyframes menu-in {
       0%    {background: rgba(0,0,0,0);}
@@ -134,7 +141,7 @@
       animation-name: menu-out;
       animation-duration: 0.3s;
       animation-timing-function: ease-out;
-      background: var(--color-menu-inv);
+      background: var(--color-menu-bg);
     }
 
       @keyframes menu-out {
@@ -183,6 +190,7 @@
     .error {color: red;}
 
     #contact-form {padding: 20px 0;}
+    textarea {resize: none;}
 
     .form-control {
       font-family: var(--body-font); 
@@ -204,8 +212,8 @@
       z-index: -1;
     }
 
-    .form-submit {padding: 10px 15px; font-size: inherit; margin-top: 10px; border-radius: 10px; border: 1px solid #ccc;}
-    .form-submit:hover {background-color: #fff; cursor:pointer;}
+    .form-submit {padding: 10px 15px; font-size: inherit; margin-top: 10px; border-radius: 10px; border: 1px solid var(--form-submit-color-border);}
+    .form-submit:hover {background-color: var(--form-submit-color-hover); cursor:pointer;}
 
     /*****************************************/
     /* Footer                
