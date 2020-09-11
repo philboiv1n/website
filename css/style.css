@@ -56,7 +56,7 @@ CSS Stylesheet for philboivin.com
     .container {
     margin: 0 auto; padding-top: var(--menu-height); display: grid;  
     grid-template-columns: 100%;
-    grid-template-rows: 10px 15vh auto auto;
+    grid-template-rows: 10px 12vh auto auto;
     align-items: center;
     grid-template-areas:
       "topBar"
@@ -167,7 +167,7 @@ CSS Stylesheet for philboivin.com
       grid-area: main; 
       width: var(--content-width); 
       min-height: calc(80vh);
-      margin: auto; 
+      margin: 20px auto; 
       display: grid;  
       grid-template-columns: auto;
       grid-template-rows: auto auto;
@@ -178,8 +178,8 @@ CSS Stylesheet for philboivin.com
 
     main p {line-height: 1.4; margin: 10px 0 15px 0;}
 
-    h1 {font-size: var(--h1-font-size); margin: 25px 0 0 0; font-family: var(--h-font); font-weight: normal;}
-    h2 {font-size: var(--h2-font-size); margin: 25px 0 0 0; font-family: var(--h-font); font-weight: normal;}
+    h1 {font-size: var(--h1-font-size); margin: 0 0 15px 0; font-family: var(--h-font); font-weight: normal;}
+    h2 {font-size: var(--h2-font-size); margin: 0 0 10px 0; font-family: var(--h-font); font-weight: normal;}
     a {color: var(--color-body-a);}
     section p {font-size: var(--p-font-size);}
 
@@ -279,6 +279,7 @@ CSS Stylesheet for philboivin.com
         background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(17,17,17,1) 35%, rgba(51,51,51,1) 100%);
         top: 0;
         padding: 25px 0 15px 0;
+        margin-bottom: 15px;
       }
 
   
