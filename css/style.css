@@ -56,7 +56,6 @@ CSS Stylesheet for philboivin.com
     .container {
     margin: 0 auto; padding-top: var(--menu-height); display: grid;  
     grid-template-columns: 100%;
-    min-height: 100vh;
     grid-template-rows: 10px 12vh auto 180px;
    /* align-items: center;*/
     grid-template-areas:
@@ -167,7 +166,7 @@ CSS Stylesheet for philboivin.com
     main {
       grid-area: main; 
       width: var(--content-width); 
-    /*  min-height: calc(80vh);*/
+      min-height: 80vh;
       margin: 10px auto; 
       display: grid;  
  /*     grid-template-columns: auto;
