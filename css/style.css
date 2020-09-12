@@ -26,7 +26,7 @@ CSS Stylesheet for philboivin.com
     --content-width : 75%;
     --content-width-mobile : 90%;
 
-    --color-body-bg: #fff;
+    --color-body-bg: #000;
     --color-body-txt: #000;
     --color-body-a: #3366cc;
     --color-highlight-bg: #ffffcc;
@@ -72,6 +72,7 @@ CSS Stylesheet for philboivin.com
     #topBar {z-index:100; grid-area: topBar; position: fixed; top: 0; left: 0; width: 100%; height: var(--menu-height);}
 
     header {
+      background: #fff;
       grid-area: header; 
       width: var(--content-width); 
       align-self: center; text-align: left; 
@@ -164,6 +165,7 @@ CSS Stylesheet for philboivin.com
     /* Main content               
     /*****************************************/
     main {
+      background: #fff;
       grid-area: main; 
       width: var(--content-width); 
       min-height: 80vh;
