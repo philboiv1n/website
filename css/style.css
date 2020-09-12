@@ -9,13 +9,13 @@ CSS Stylesheet for philboivin.com
     --body-font : 'Roboto';
     --h-font : 'Alike';
 
-    --body-font-size : 14px;
-    --logo-font-size : 1.7em;
-    --form-font-size : 1.1em;
-    --menu-font-size : 1.1em;
-    --p-font-size : 1.2em;
-    --h1-font-size : 1.6em;
-    --h2-font-size : 1.4em;
+    --body-font-size : 16px;
+    --logo-font-size : 1.4em;
+    --form-font-size : 1.0em;
+    --menu-font-size : 1.0em;
+    --p-font-size : 1.0em;
+    --h1-font-size : 1.5em;
+    --h2-font-size : 1.3em;
     --footer-font-size: 1.0em;
 
     --form-border-color: #ddd;
@@ -37,9 +37,11 @@ CSS Stylesheet for philboivin.com
 
     --color-menu-bg: #fff;
     --color-menu-a: #000;
+    --color-menu-a-hover: #333;
     --color-menu-line: #eee;
     --color-menu-sticky-bg: #000;
     --color-menu-sticky-a: #fff;
+    --color-menu-sticky-a-hover: #eee;
 
     --color-footer-bg: #000;
     --color-footer-txt: #fff;
@@ -116,7 +118,7 @@ CSS Stylesheet for philboivin.com
     
     nav {grid-area: nav; font-size: var(--menu-font-size);}
     nav a {color: var(--color-menu-a); text-decoration: none;}
-   /* nav a:hover {text-decoration: underline;}*/
+    nav a:hover {color: var(--color-menu-a-hover)}
     nav ul {padding: 10px;}
     nav li {display: inline; padding: 0 10px;}
     .nav-light a {color: var(--color-menu-a);}
@@ -127,6 +129,7 @@ CSS Stylesheet for philboivin.com
     /*****************************************/
     .sticky {border-bottom: 0px;}
     .sticky a {color: var(--color-menu-sticky-a);}
+    .sticky a:hover {color: var(--color-menu-sticky-a-hover);}
 
     .bgColor-in {
       animation-name: menu-in;
