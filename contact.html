@@ -7,7 +7,7 @@ Hello i'm Phil Boivin!
 <head>
 
   <meta charset="utf-8">
-  <title>Contact | Phil Boivin</title>
+  <title>Contactez-moi | Phil Boivin</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/png" href="img/icon.png">
 
@@ -33,8 +33,8 @@ Hello i'm Phil Boivin!
     
     <section id="content">
 
-    <h1>Contact me</h1>
-    <p>Questions or comments are always welcome.</p>
+    <h1>Contactez-moi</h1>
+    <p>Remplissez le formulaire pour me contacter par courriel</p>
 
     
       <form id="contact-form" method="post">
@@ -44,17 +44,17 @@ Hello i'm Phil Boivin!
       <label class="form-control-bee" for="email"></label>
       <input class="form-control-bee" autocomplete="off" type="email" id="email" name="email" placeholder="Your e-mail here">
 
-      <label for="name-input">Name</label><br>
-      <input type="text" id="name-input" placeholder="Your name" class="form-control" maxlength="64" required><br>
+      <label for="name-input">Nom</label><br>
+      <input type="text" id="name-input" placeholder="Votre nom" class="form-control" maxlength="64" required><br>
       
-      <label for="email-input">Email</label><br>
-      <input type="email" id="email-input" placeholder="Your email address" class="form-control" maxlength="320" required><br>
+      <label for="email-input">Courriel</label><br>
+      <input type="email" id="email-input" placeholder="Votre adresse courriel" class="form-control" maxlength="320" required><br>
       
       <label for="message-input">Message</label><br>
-      <textarea id="message-input" rows="5" placeholder="Enter your message, question or comment here!" class="form-control" maxlength="1024" required></textarea>
+      <textarea id="message-input" rows="5" placeholder="Votre message" class="form-control" maxlength="1024" required></textarea>
      
       <br>
-      <button type="button" onClick="submitToAPI(event)" class="form-submit">Submit</button>
+      <button id="submit-button" type="button" onClick="submitToAPI(event)" class="form-submit">Envoyer</button>
       </form>
     
    <div id="messages" class="error"></div>
@@ -86,7 +86,6 @@ Hello i'm Phil Boivin!
        e.preventDefault();
      
             var x = "<span class='redCircle'>x</span>&nbsp;&nbsp;";
-
             var nameRegex = /[A-Za-z]{1}[A-Za-z]/;
 
             if ($("#email").val() || $("#name").val()) {
@@ -94,21 +93,21 @@ Hello i'm Phil Boivin!
             }
 
             if (!nameRegex.test($("#name-input").val())) {
-              $("#messages").html(x+"Name should be at least 2 characters");
+              $("#messages").html(x+"Le nom doit contenir au moins 2 lettres");
               return;
             }
 
             var emailRegex = /^((([!#$%&'*+\-/=?^_`{|}~\w])|([!#$%&'*+\-/=?^_`{|}~\w][!#$%&'*+\-/=?^_`{|}~\.\w]{0,}[!#$%&'*+\-/=?^_`{|}~\w]))[@]\w+([-.]\w+)*\.\w+([-.]\w+)*)$/;
 
             if (!emailRegex.test($("#email-input").val())) {
-              $("#messages").html(x+"Please enter valid email address");
+              $("#messages").html(x+"Veuillez entrer une adresse courriel valide");
               return;
             }
 
             var msgRegex = /[A-Za-z]{3}[A-Za-z]/;
 
             if (!msgRegex.test($("#message-input").val())) {
-              $("#messages").html(x+"Please enter a message");
+              $("#messages").html(x+"Veuillez entrer un message");
               return;
             }
 
@@ -128,13 +127,15 @@ Hello i'm Phil Boivin!
          data: JSON.stringify(data),
  
          success: function () {
-            alert("Message sent! Thank you");
+            alert("Message envoyé.");
             document.getElementById("contact-form").reset();
             location.reload();
          },
 
          error: function () {
-            $("#messages").html(x+"Sorry, there is a technical problem and we can't send your message. Please try again later.");
+            $("#submit-button").attr('disabled', 'disabled');
+            $("#submit-button").addClass('form-submit-disabled');// ADD class form-submit-disabled
+            $("#messages").html(x+"Désolé, nous éprouvons des difficultés techniques, veuillez essayer plus tard.");
          }});
      }
 
