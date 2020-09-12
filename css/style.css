@@ -9,7 +9,8 @@ CSS Stylesheet for philboivin.com
     --body-font : 'Roboto';
     --h-font : 'Alike';
 
-    --body-font-size : 16px;
+    /*--body-font-size : 16px;*/
+
     --logo-font-size : 1.4em;
     --form-font-size : 1.0em;
     --menu-font-size : 1.0em;
@@ -24,7 +25,7 @@ CSS Stylesheet for philboivin.com
 
     --menu-height: 52px;
     --content-width : 75%;
-    --content-width-mobile : 90%;
+    --content-width-mobile : 88%;
 
     --color-body-bg: #fff;
     --color-body-txt: #000;
@@ -53,7 +54,9 @@ CSS Stylesheet for philboivin.com
     }
 
     * {margin:0; padding:0; box-sizing: border-box;}
-    body {font-family: var(--body-font); font-size: var(--body-font-size); background-color: var(--color-body-bg); color: var(--color-body-txt); text-align: center;}
+    body {font-family: var(--body-font); 
+      /*font-size: var(--body-font-size); */
+      background-color: var(--color-body-bg); color: var(--color-body-txt); text-align: center;}
     
     .container {
     margin: 0 auto; padding-top: var(--menu-height); display: grid;  
