@@ -9,12 +9,9 @@ CSS Stylesheet for philboivin.com
     --body-font : 'Roboto';
     --h-font : 'Alike';
 
-    /*--body-font-size : 16px;*/
-
     --logo-font-size : 1.4em;
     --form-font-size : 1.0em;
     --menu-font-size : 1.0em;
-    --p-font-size : 1.0em;
     --h1-font-size : 1.5em;
     --h2-font-size : 1.3em;
     --footer-font-size: 1.0em;
@@ -29,7 +26,8 @@ CSS Stylesheet for philboivin.com
 
     --color-body-bg: #fff;
     --color-body-txt: #000;
-    --color-body-a: #3366cc;
+    --color-body-a: #006699;
+    --color-body-a-hover: #003366;
     --color-highlight-bg: #ffffcc;
     --color-highlight-txt: #000;
     
@@ -54,9 +52,7 @@ CSS Stylesheet for philboivin.com
     }
 
     * {margin:0; padding:0; box-sizing: border-box;}
-    body {font-family: var(--body-font); 
-      /*font-size: var(--body-font-size); */
-      background-color: var(--color-body-bg); color: var(--color-body-txt); text-align: center;}
+    body {font-family: var(--body-font); background-color: var(--color-body-bg); color: var(--color-body-txt); text-align: center;}
     
     .container {
     margin: 0 auto; padding-top: var(--menu-height); display: grid;  
@@ -186,8 +182,11 @@ CSS Stylesheet for philboivin.com
 
     h1 {font-size: var(--h1-font-size); margin: 10px 0; font-family: var(--h-font); font-weight: normal;}
     h2 {font-size: var(--h2-font-size); margin: 10px 0; font-family: var(--h-font); font-weight: normal;}
-    a {color: var(--color-body-a);}
-    section p {font-size: var(--p-font-size);}
+    a {color: var(--color-body-a); text-decoration: none;}
+    a:hover {color: var(--color-body-a-hover);}
+
+
+    .sub-menu li {display: inline; padding-right: 10px;}
 
     .serif {font-family: var(--logo-font);}
     #content {grid-area: content; text-align: left; }
