@@ -1,4 +1,11 @@
-<div id="logo" class="logo-wave"><a href="index.html">Phil Boivin</a></div>
+<script>
+if (document.location.href.match(/[^\/]+$/)[0] == "index.html") {
+	var element = document.getElementById("logo");
+  element.classList.toggle("logo-wave");
+}
+</script>
+
+<div id="logo" class="logo-dark"><a href="index.html">Philippe Boivin</a></div>
     
 <nav>
   <ul>

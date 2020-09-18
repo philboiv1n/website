@@ -7,13 +7,13 @@ CSS Stylesheet for philboivin.com
 
     --logo-font : 'Alike';
     --body-font : 'Roboto';
-    --h-font : 'Alike';
+    --h-font : 'Roboto';
 
     --logo-font-size : 1.4em;
     --form-font-size : 1.0em;
     --menu-font-size : 1.0em;
-    --h1-font-size : 1.5em;
-    --h2-font-size : 1.3em;
+    --h1-font-size : 1.4em;
+    --h2-font-size : 1.2em;
     --footer-font-size: 1.0em;
 
     --form-border-color: #ddd;
@@ -28,19 +28,19 @@ CSS Stylesheet for philboivin.com
     --color-body-txt: #000;
     --color-body-a: #006699;
     --color-body-a-hover: #003366;
-    --color-highlight-bg: #ffffcc;
-    --color-highlight-txt: #000;
     
-    --color-logo-dark: #000;
-    --color-logo-light: #fff;
+    --color-logo-dark: #888;
+    --color-logo-light: #ccc;
 
     --color-menu-bg: #fff;
-    --color-menu-a: #000;
+    --color-menu-a: #888;
     --color-menu-a-hover: #333;
     --color-menu-line: #eee;
     --color-menu-sticky-bg: #000;
-    --color-menu-sticky-a: #fff;
+    --color-menu-sticky-a: #ccc;
     --color-menu-sticky-a-hover: #eee;
+
+    --color-sub-menu-li: #006699;
 
     --color-footer-bg: #000;
     --color-footer-txt: #fff;
@@ -48,6 +48,10 @@ CSS Stylesheet for philboivin.com
     --color-footer-a-hover: #eee;
     --color-social-icons : #fff;
     --color-social-icons-hover : #ccc;
+
+
+    --color-highlight-bg: #ffffcc;
+    --color-highlight-txt: #000;
     
     }
 
@@ -186,7 +190,8 @@ CSS Stylesheet for philboivin.com
     a:hover {color: var(--color-body-a-hover);}
 
 
-    .sub-menu li {display: inline; padding-right: 10px;}
+    .sub-menu {margin-left: 15px;}
+    .sub-menu li {padding: 0 0 5px 0; color: var(--color-sub-menu-li);}
 
     .serif {font-family: var(--logo-font);}
     #content {grid-area: content; text-align: left; }
