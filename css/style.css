@@ -29,18 +29,20 @@ CSS Stylesheet for philboivin.com
     --color-body-a: #006699;
     --color-body-a-hover: #003366;
     
-    --color-logo-dark: #888;
-    --color-logo-light: #ccc;
-
+    --color-logo-dark: #777;
+    --color-logo-dark-hover: #000;
+    --color-menu-a: #777;
+    --color-menu-a-hover: #000;
     --color-menu-bg: #fff;
-    --color-menu-a: #888;
-    --color-menu-a-hover: #333;
-    --color-menu-line: #eee;
-    --color-menu-sticky-bg: #000;
-    --color-menu-sticky-a: #ccc;
-    --color-menu-sticky-a-hover: #eee;
 
-    --color-sub-menu-li: #006699;
+    --color-logo-light: #fff;
+    --color-logo-light-hover: #ccc;
+    --color-menu-sticky-a: #fff;
+    --color-menu-sticky-a-hover: #ccc;
+    --color-menu-sticky-bg: #000;
+   
+    --color-menu-line: #eee;
+    --color-sub-menu-li: #000;
 
     --color-footer-bg: #000;
     --color-footer-txt: #fff;
@@ -49,9 +51,6 @@ CSS Stylesheet for philboivin.com
     --color-social-icons : #fff;
     --color-social-icons-hover : #ccc;
 
-
-    --color-highlight-bg: #ffffcc;
-    --color-highlight-txt: #000;
     
     }
 
@@ -62,7 +61,6 @@ CSS Stylesheet for philboivin.com
     margin: 0 auto; padding-top: var(--menu-height); display: grid;  
     grid-template-columns: 100%;
     grid-template-rows: 10px 12vh auto 180px;
-   /* align-items: center;*/
     grid-template-areas:
       "topBar"
       "header"
@@ -81,7 +79,7 @@ CSS Stylesheet for philboivin.com
       width: var(--content-width); 
       align-self: center; text-align: left; 
       position: -webkit-sticky; position: sticky; 
-      top: 7px;
+      top: 6px;
       margin: 0 auto; 
       padding: 0 0 10px 0; 
       border-bottom: 2px solid var(--color-menu-line);
@@ -99,9 +97,19 @@ CSS Stylesheet for philboivin.com
       align-self: center; text-align: left;
       letter-spacing: 1px;
     }
-    #logo a, #logo a:visited, #logo a:hover, #logo a:active {text-decoration: none; color: inherit;}
-    .logo-dark {color: var(--color-logo-dark)}
-    .logo-light {color: var(--color-logo-light);}
+
+   /* #logo a, #logo a:visited, #logo a:active {text-decoration: none; color: var(--color-logo-dark);}
+*/
+/*    #logo a:hover {color: var(--color-logo-dark-hover)}*/
+   
+
+
+    .logo-dark, .logo-dark a {color: var(--color-logo-dark)}
+    .logo-dark a:hover {color: var(--color-logo-dark-hover);}
+
+    .logo-light, .logo-light a {color: var(--color-logo-light);}
+    .logo-light a:hover {color: var(--color-logo-light-hover);}
+
 
     .logo-wave {
       background: linear-gradient(to right, #000 20%, #999 40%, #999 60%, #000 80%);
@@ -184,8 +192,8 @@ CSS Stylesheet for philboivin.com
 
     main p {line-height: 1.4; margin: 10px 0 15px 0;}
 
-    h1 {font-size: var(--h1-font-size); margin: 10px 0; font-family: var(--h-font); font-weight: normal;}
-    h2 {font-size: var(--h2-font-size); margin: 10px 0; font-family: var(--h-font); font-weight: normal;}
+    h1 {font-size: var(--h1-font-size); margin: 12px 0; font-family: var(--h-font); font-weight: normal;}
+    h2 {font-size: var(--h2-font-size); margin: 12px 0; font-family: var(--h-font); font-weight: normal;}
     a {color: var(--color-body-a); text-decoration: none;}
     a:hover {color: var(--color-body-a-hover);}
 
@@ -198,8 +206,10 @@ CSS Stylesheet for philboivin.com
     #projects {grid-area: projects; text-align: left; } 
     .success {color: green}
     .error {color: red;}
-    .content-block {margin-bottom: 40px;}
     .top-spacer {margin-top: 30px;}
+
+    .row {display: flex;}
+    .col {flex: 50%;}
 
 
     /*****************************************/
@@ -255,23 +265,7 @@ CSS Stylesheet for philboivin.com
     .social-icons svg {fill: var(--color-social-icons); opacity: 1.0; padding: 5px; width: 28px; height: 28px;}
     .social-icons svg:hover {fill: var(--color-social-icons-hover);}
 
-
-
-
-
-    /* Lab */
-    .highlight {background-color: var(--color-highlight-bg); color: var(--color-highlight-txt); padding: 0.12rem 0.4rem; }
-    .highlight:hover {animation-name: glitch; animation-duration: 0.5s; animation-timing-function: ease-in-out;}
-
-     @keyframes glitch {
-      0%    {padding: 0.12rem 0.4rem; }
-      50%   {padding: 0.22rem 0.4rem; }
-      100%   {padding: 0.12rem 0.4rem; }
-    } 
-
- 
    
-
 
     /*****************************************/
     /* Mobile                
@@ -305,7 +299,6 @@ CSS Stylesheet for philboivin.com
       #topBar {display: none;}
       #topRef {height: 0px;}
 
-    
       .container {
         margin: 0 auto; padding-top: 0; display: grid;  
         grid-template-columns: 100%;
