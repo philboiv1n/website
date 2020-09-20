@@ -30,23 +30,32 @@ Hello i'm Phil Boivin!
   <main>
     <section id="content">
 
-       <div id="gallery01"></div>
+      <div id="gallery01"></div>
 
 
        <div class="row">
         <div class="col">
+
           <h1>Portfolio</h1>
-          <p>Voici quelques-unes de mes photos préférées accompagnées de quelques projets personnels et professionnels.</p>
+          <p>Quelques-unes de mes photos préférées.</p>
      
- 
-      <ul class="sub-menu">
-        <li><a href="editorial.html">Editorial</a></li>
-        <li><a href="corpo.html">Corporatif</a> + Laurier</li>
-        <li><a href="voyage.html">Voyage</a></li>
-        <li><a href="taxi.html">Taxi</a></li>
-        <li><a href="cirque-du-soleil.html">Cirque du Soleil</a>  - Spotlight etc.</li>
-        <li><a href="covid19.html">Covid-19</a></li>
-      </ul>
+        </div>
+      </div>
+
+      
+       <div class="row">
+        <div class="col">
+
+          <h2>Autres photos et projets</h2>
+          <ul class="sub-menu">
+            <li><a href="editorial.html">Editorial</a></li>
+            <li><a href="corpo.html">Corporatif</a> + Laurier</li>
+            <li><a href="voyage.html">Voyage</a></li>
+            <li><a href="taxi.html">Taxi</a></li>
+            <li><a href="cirque-du-soleil.html">Cirque du Soleil</a>  - Spotlight etc.</li>
+            <li><a href="covid19.html">Covid-19</a></li>
+            <li><a href="mobile.html">Mobile</a></li>
+          </ul>
     
       </div>
     </div>
@@ -56,21 +65,9 @@ Hello i'm Phil Boivin!
       <div class="col">
 
 
-      <h2 class="top-spacer">Quelques réalisations</h2>
-        <p>
-        <ul class="sub-menu">
-          <li><a href="https://boutique.cirquedusoleil.com/">Photos pour la boutique du Cirque du Soleil</a></li>
-          <li><a href="http://plus.lapresse.ca/screens/1775d447-c4d6-49e9-a5ec-2f1bb86fa24b__7C___0.html" target="_blank">La Presse - Photos sur la collection du Cirque du Soleil</a></li>
-          <li><a href="http://ayemag.com/flash-back-by-philippe-boivin/" target="_blank">AYE MAG - Série Flash-Back</a></li>
-          <li><a href="http://www.ballecourbe.ca/bouffe-de-stade-ca-goute-le-baseball" target="_blank">Balle Courbe - Bouffe de stade</a></li>
-          <li><a href="http://www.ballecourbe.ca/combat-kovalev-pascal-ce-que-vous-avez-manque" target="_blank">Balle Courbe - Combat Kovalev-Pascal</a></li>
-          <li><a href="http://www.misspixels.com/les-matins-infideles/" target="_blank">MissPixels - Les matins infidèles</a></li>
-          <li><a href="https://www.quebec-amerique.com/livres/litterature/litterature-amerique/linconnue-1286?search_query=inconnue&amp;results=1" target="_blank">L'inconnue - Québec Amérique - Couverture du livre</a></li>
-          <li><a href="http://thenextweb.com/lifehacks/2011/07/31/how-to-take-incredible-photos-with-your-phone/" target="_blank">TNW : "How to take incredible photos with your phone"</a></li>
-          <li><a href="https://mashable.com/2011/06/15/iphone-photos-birds/#164136-Sunlight-by-Philippe-Boivin" target="_blank">Mashable : "10 Stunning iPhone Bird Photos"</a></li>
-          <li><a href="http://www.blurb.com/books/2010832" target="_blank">Livre "The i.phoneography Book"</a></li>
-        </ul>
-        </p>
+      <h2>Quelques publications</h2>
+      
+          <div id="gallery-publications"></div>
 
       </div>
     </div>
@@ -85,7 +82,7 @@ Hello i'm Phil Boivin!
 
 
               // THUMBNAILS
-              thumbnailWidth:   "auto",
+              thumbnailWidth: "auto",
               thumbnailHeight: 300,
               thumbnailGutterWidth: 10, 
               thumbnailGutterHeight: 10,
@@ -113,6 +110,49 @@ Hello i'm Phil Boivin!
                   { src: 'id/60/1200/800', srct: 'id/60/300/200', title: 'Temporary picture 6' },
                   { src: 'id/70/1200/800', srct: 'id/70/300/200', title: 'Temporary picture 7' },
                   { src: 'id/80/800/1200', srct: 'id/80/200/300', title: 'Temporary picture 8' },
+                ]
+            });
+
+          jQuery("#gallery-publications").nanogallery2( {
+              // ### gallery settings ### 
+
+
+              // THUMBNAILS
+              thumbnailWidth: "auto",
+              thumbnailHeight: 180,
+              thumbnailGutterWidth: 10, 
+              thumbnailGutterHeight: 10,
+              thumbnailBorderHorizontal: 0, 
+              thumbnailBorderVertical: 0,
+              thumbnailLabel: { display: false },
+
+
+              // LIGHTBOX
+              viewerToolbar: { display: false },
+              viewerTools: {
+                topLeft:   'label',
+                topRight:  'shareButton, zoomButton, fullscreenButton, closeButton'
+              },
+              
+              itemsBaseURL: 'img/publications/',
+              
+              // ### gallery content ### 
+              items: [
+              { src: 'publi-philippeboivin-cirque-du-soleil.jpg', srct: 'publi-philippeboivin-cirque-du-soleil.jpg', title: '' },
+              { src: 'publi-philippeboivin-presse01.jpg', srct: 'publi-philippeboivin-presse01.jpg', title: '' },
+                  { src: 'publi-philippeboivin-aye.jpg', srct: 'publi-philippeboivin-aye.jpg', title: 'Série Flash-back sur AYE MAG' },
+                  { src: 'publi-philippeboivin-ballecourbe.jpg', srct: 'publi-philippeboivin-ballecourbe.jpg', title: 'Balle Courbe - Bouffe de stade'},
+                 
+                  { src: 'publi-philippeboivin-mashable.jpg', srct: 'publi-philippeboivin-mashable.jpg', title: '' },
+                 
+                  { src: 'publi-philippeboivin-quebecamerique.jpg', srct: 'publi-philippeboivin-quebecamerique.jpg', title: '' },
+                  { src: 'publi-philippeboivin-rds.jpg', srct: 'publi-philippeboivin-rds.jpg', title: '' },
+                  { src: 'publi-philippeboivin-iphonebook.jpg', srct: 'publi-philippeboivin-iphonebook.jpg', title: '' },
+                  { src: 'publi-philippeboivin-matins-infideles.jpg', srct: 'publi-philippeboivin-matins-infideles.jpg', title: '' },
+                  { src: 'publi-philippeboivin-tnw.jpg', srct: 'publi-philippeboivin-tnw.jpg', title: '' },
+
+
+
                 ]
             });
         });

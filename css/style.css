@@ -25,7 +25,6 @@ CSS Stylesheet for philboivin.com
 
 --color-body-bg: #fff;
 --color-body-txt: #000;
-
 --color-body-a: #006699;
 --color-body-a-hover: #003366;
 
@@ -66,9 +65,6 @@ a:hover {color: var(--color-body-a-hover);}
 
 
 
-/*****************************************/
-/* Main content               
-/*****************************************/
 main {
   grid-area: main; 
   min-height: 85vh;
@@ -87,20 +83,16 @@ main {
 
 main p {line-height: 1.4; margin: 10px 0 15px 0;}
 
-
 .sub-menu {margin-left: 15px;}
 .sub-menu li {padding: 0 0 5px 0; color: var(--color-sub-menu-li);}
 
-
-#projects {grid-area: projects; text-align: left; } 
 .success {color: green}
 .error {color: red;}
 .top-spacer {margin-top: 30px;}
-
 .row {display: flex; padding: 20px 0;}
 .col {flex: 50%;}
 
-
+#gallery-publications {filter: grayscale(100%);}
 
 
 /*****************************************/
