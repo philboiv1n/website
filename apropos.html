@@ -19,19 +19,10 @@ Hello i'm Phil Boivin!
 
 </head>
 
-
-
 <body>
 
-<div class="container">
-
-<div id="topBar" class="topBar"></div>  
-<div id="topRef"></div>
-<header></header>
-
-<main>
-    
-  <section id="content">
+  <main>
+    <section id="content">
 
     <div class="row">
       <div class="col">
@@ -50,25 +41,16 @@ Hello i'm Phil Boivin!
     </div>
 
 
-</section>
-  
+  </section> 
 </main>
   
 <footer></footer>
 
-</div>
- 
-  <!-- load shared content -->
-  <script> 
-    $(function(){
-      $("header").load("header.html"); 
-      $("footer").load("footer.html"); 
-    });
-  </script> 
-
-
-  <!-- header animation script -->
-  <script src="js/header-anim.js"></script>
+<script> 
+  $(function(){
+    $("footer").load("footer.html"); 
+  });
+</script> 
 
 </body>
 </html>
