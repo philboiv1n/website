@@ -58,6 +58,7 @@ body {
     "footer";
 }
 
+
 h1 {font-size: var(--h1-font-size); margin: 12px 0; font-family: var(--h-font); font-weight: normal;}
 h2 {font-size: var(--h2-font-size); margin: 12px 0; font-family: var(--h-font); font-weight: normal;}
 a {color: var(--color-body-a); text-decoration: none;}
@@ -80,7 +81,7 @@ main {
   grid-area: content; 
   text-align: left; 
   width: var(--content-width); 
-  margin: 50px auto; 
+  margin: 40px auto; 
 }
 
 
@@ -90,16 +91,13 @@ main p {line-height: 1.4; margin: 10px 0 15px 0;}
 .sub-menu {margin-left: 15px;}
 .sub-menu li {padding: 0 0 5px 0; color: var(--color-sub-menu-li);}
 
-.serif {font-family: var(--logo-font);}
-
-
 
 #projects {grid-area: projects; text-align: left; } 
 .success {color: green}
 .error {color: red;}
 .top-spacer {margin-top: 30px;}
 
-.row {display: flex; padding: 20px;}
+.row {display: flex; padding: 20px 0;}
 .col {flex: 50%;}
 
 
