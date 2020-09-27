@@ -28,6 +28,9 @@ CSS Stylesheet for philboivin.com
 --color-body-a: #006699;
 --color-body-a-hover: #003366;
 
+--color-menu-a: #000;
+--color-menu-a-hover: #666;
+
 --color-logo: #fff;
 --color-logo-hover: #ccc;
 --color-footer-bg: #000;
@@ -77,7 +80,7 @@ main {
   grid-area: content; 
   text-align: left; 
   width: var(--content-width); 
-  margin: 40px auto; 
+  margin: 30px auto; 
 }
 
 
@@ -177,9 +180,9 @@ footer a {color: var(--color-footer-a);}
 footer a:hover {color: var(--color-footer-a-hover);}
 
 
-/*nav {font-size: var(--menu-font-size); padding: 20px 0;}
-nav li {display: inline; padding: 0 20px 0 0;}
-*/
+#footer-menu {font-size: var(--menu-font-size); padding: 20px 0;}
+#footer-menu li {display: inline; padding: 0 20px 0 0;}
+
 .social-icons {padding: 20px 0;}
 .social-icons li {display: inline; padding: 0 12px 0 0;}
 .social-icons svg {fill: var(--color-social-icons); opacity: 1.0; width: 24px;}
@@ -234,23 +237,13 @@ nav li {display: inline; padding: 0 20px 0 0;}
   /*top: 50px;
   left: 50px;
   */
-  z-index: 1;
-  
+  z-index: 100;
   -webkit-user-select: none;
   user-select: none;
 }
 
-#menuToggle a
-{
-  text-decoration: none;
-  color: #232323;
-  
-  transition: color 0.3s ease;
-}
-
-#menuToggle a:hover
-{
-  color: tomato;
+#menuToggle a { text-decoration: none; color: var(--color-menu-a); transition: color 0.3s ease;}
+#menuToggle a:hover { color: var(--color-menu-a-hover);
 }
 
 
@@ -262,9 +255,7 @@ nav li {display: inline; padding: 0 20px 0 0;}
   position: absolute;
   top: -7px;
   left: -5px;
-  
   cursor: pointer;
-  
   opacity: 0; /* hide this */
   z-index: 2; /* and place it over the hamburger */
   
@@ -274,6 +265,7 @@ nav li {display: inline; padding: 0 20px 0 0;}
 /*
  * Just a quick hamburger
  */
+
 #menuToggle span
 {
   display: block;
@@ -294,35 +286,19 @@ nav li {display: inline; padding: 0 20px 0 0;}
               opacity 0.55s ease;
 }
 
-#menuToggle span:first-child
-{
-  transform-origin: 0% 0%;
-}
-
-#menuToggle span:nth-last-child(2)
-{
-  transform-origin: 0% 100%;
-}
+#menuToggle span:first-child {transform-origin: 0% 0%;}
+#menuToggle span:nth-last-child(2) {transform-origin: 0% 100%;}
 
 /* 
  * Transform all the slices of hamburger
  * into a crossmark.
  */
-#menuToggle input:checked ~ span
-{
-  opacity: 1;
-  transform: rotate(45deg) translate(-2px, -1px);
-  background: #232323;
-}
+#menuToggle input:checked ~ span { opacity: 1; transform: rotate(45deg) translate(-2px, -1px); background: #232323;}
 
 /*
  * But let's hide the middle one.
  */
-#menuToggle input:checked ~ span:nth-last-child(3)
-{
-  opacity: 0;
-  transform: rotate(0deg) scale(0.2, 0.2);
-}
+#menuToggle input:checked ~ span:nth-last-child(3) { opacity: 0; transform: rotate(0deg) scale(0.2, 0.2);}
 
 /*
  * Ohyeah and the last one should go the other direction
@@ -336,26 +312,24 @@ nav li {display: inline; padding: 0 20px 0 0;}
  * Make this absolute positioned
  * at the top left of the screen
  */
-#menu2
+#menu-items
 {
   position: absolute;
   width: 300px;
   margin: -100px 0 0 -50px;
   padding: 50px;
   padding-top: 125px;
-  
   background: #ededed;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   /* to stop flickering of text in safari */
-  
+
   transform-origin: 0% 0%;
-  transform: translate(-190%, 0);
-  
+  transform: translate(-190%, 0);  
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
-#menu2 li
+#menu-items li
 {
   padding: 10px 0;
   font-size: 22px;
@@ -370,3 +344,13 @@ nav li {display: inline; padding: 0 20px 0 0;}
 }
 
 
+#logo2 {
+font-family: var(--logo-font);
+letter-spacing: 1px;
+color: #ccc;
+font-size: 1.2em;
+position: relative;
+top: -28px;
+left: 46px;
+z-index: 500;
+}

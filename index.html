@@ -18,40 +18,16 @@ Hello i'm Phil Boivin!
   <main>
     <section id="content">
 
-
-      <nav role="navigation">
-  <div id="menuToggle">
-    <!--
-    A fake / hidden checkbox is used as click reciever,
-    so you can use the :checked selector on it.
-    -->
-    <input type="checkbox" />
-    
-    <!--
-    Some spans to act as a hamburger.
-    -->
-    <span></span>
-    <span></span>
-    <span></span>
-    
-    <!--
-    Too bad the menu has to be inside of the button
-    but hey, it's pure CSS magic.
-    -->
-    <ul id="menu2">
-      <a href="#"><li>Home</li></a>
-      <a href="#"><li>About</li></a>
-      <a href="#"><li>Info</li></a>
-      <a href="#"><li>Contact</li></a>
-    </ul>
-    
-  </div>
-</nav>
-
-
-
-
-
+    <nav id="main-menu" role="navigation">
+      <div id="menuToggle">
+        <input type="checkbox" />
+        <span></span>
+        <span></span>
+        <span></span> 
+        <ul id="menu-items"></ul>
+      </div>
+      <div id="logo2">Philippe Boivin</div>
+    </nav>
 
     <div class="row">
       <div class="col">
@@ -73,7 +49,8 @@ Hello i'm Phil Boivin!
 
 <script> 
   $(function(){
-    $("footer").load("footer.html"); 
+    $("#menu-items").load("menu.html"); 
+    $("footer").load("footer.html");
   });
 </script> 
 
