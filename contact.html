@@ -20,6 +20,17 @@ Hello i'm Phil Boivin!
   <main>
     <section id="content">
 
+      <nav id="main-menu" role="navigation">
+        <div id="menuToggle">
+          <input type="checkbox" />
+          <span></span>
+          <span></span>
+          <span></span>
+          <ul id="menu-items"></ul>
+        </div>
+        <div class="logo"><a href="index.html">Philippe Boivin</a></div>
+      </nav>
+
       <div class="row">
         <div class="col">
 
@@ -61,7 +72,8 @@ Hello i'm Phil Boivin!
  
 <script> 
   $(function(){
-    $("footer").load("footer.html"); 
+    $("#menu-items").load("menu.html"); 
+    $("footer").load("footer.html");
   });
 </script> 
 
