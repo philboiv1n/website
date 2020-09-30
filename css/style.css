@@ -113,6 +113,7 @@ main p {line-height: 1.4; margin: 10px 0 15px 0;}
 .top-spacer {margin-top: 30px;}
 .row {display: flex; padding: 10px 0;}
 .col {flex: 50%;}
+.portrait {width: 180px;}
 
 #gallery-publications {filter: grayscale(100%);}
 
@@ -296,5 +297,5 @@ footer nav li {display: inline; padding: 0 20px 0 0;}
 
  #content {width: var(--content-width-mobile);}
  #menu {width: var(--content-width-mobile);}
-
+ .row {flex-direction: column;}
 }
