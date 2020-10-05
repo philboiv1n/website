@@ -26,8 +26,8 @@ CSS Stylesheet for philboivin.com
 
 --color-body-bg: #fff;
 --color-body-txt: #000;
---color-body-a: #006699;
---color-body-a-hover: #003366;
+--color-body-a: #000;
+--color-body-a-hover: #000;
 
 --color-menu-a: #000;
 --color-menu-a-hover: #666;
@@ -70,8 +70,8 @@ body {
 
 h1 {font-size: var(--h1-font-size); margin: 12px 0; font-family: var(--h-font); font-weight: normal;}
 h2 {font-size: var(--h2-font-size); margin: 12px 0; font-family: var(--h-font); font-weight: normal;}
-a {color: var(--color-body-a); text-decoration: none;}
-a:hover {color: var(--color-body-a-hover);}
+a {color: var(--color-body-a);}
+a:hover {color: var(--color-body-a-hover); text-decoration: none;}
 
 
 .logo a {
@@ -113,7 +113,7 @@ main p {line-height: 1.4; margin: 10px 0 15px 0;}
 .top-spacer {margin-top: 30px;}
 .row {display: flex; padding: 10px 0;}
 .col {flex: 50%;}
-.portrait {width: 180px;}
+.portrait {width: 160px;}
 
 #gallery-publications {filter: grayscale(100%);}
 
@@ -266,18 +266,11 @@ footer {
   color: var(--color-footer-txt); 
 }
 
-/*footer .logo {
-  top:0; left:0; 
-  align-self: center; text-align: left;
-  color: var(--color-logo);
-}*/
+footer a {color: var(--color-footer-a); text-decoration: none;}
+footer a:hover {color: var(--color-footer-a-hover);}
 
 footer .logo a {top:0; left:0; color: var(--color-logo-footer);}
 footer .logo a:hover {color: var(--color-logo-footer-hover);}
-
-footer a {color: var(--color-footer-a);}
-footer a:hover {color: var(--color-footer-a-hover);}
-
 
 footer nav {font-size: var(--menu-footer-font-size); padding: 20px 0;}
 footer nav li {display: inline; padding: 0 20px 0 0;}
@@ -298,4 +291,5 @@ footer nav li {display: inline; padding: 0 20px 0 0;}
  #content {width: var(--content-width-mobile);}
  #menu {width: var(--content-width-mobile);}
  .row {flex-direction: column;}
+
 }
