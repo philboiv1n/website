@@ -84,7 +84,6 @@ color: var(--color-logo);
 position: relative;
 top: -30px;
 left: 55px;
-z-index: 500;
 }
 
 .logo a:hover {color: var(--color-logo-hover);}
