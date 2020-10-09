@@ -16,7 +16,6 @@ Hello i'm Phil Boivin!
 </head>
 
 
-
 <body>
 
   <main>
@@ -36,7 +35,7 @@ Hello i'm Phil Boivin!
         <div class="col">
 
           <h1>Mobile</h1>
-          <p>Mes photos iPhone préférées.</p>
+          <p>Quelques photos capturées sur mobile.</p>
      
         </div>
       </div>
@@ -44,52 +43,79 @@ Hello i'm Phil Boivin!
       <div id="gallery01"></div>
 
   
-    <script>
-       jQuery(document).ready(function () {
+      <script>
+         jQuery(document).ready(function () {
 
-          jQuery("#gallery01").nanogallery2( {
-              // ### gallery settings ### 
-
-
-              // THUMBNAILS
-              thumbnailWidth: "auto",
-              thumbnailHeight: 300,
-              thumbnailGutterWidth: 10, 
-              thumbnailGutterHeight: 10,
-              thumbnailBorderHorizontal: 0, 
-              thumbnailBorderVertical: 0,
-              thumbnailLabel: { display: false },
+            jQuery("#gallery01").nanogallery2( {
+                // ### gallery settings ### 
 
 
-              // LIGHTBOX
-              viewerToolbar: { display: false },
-              viewerTools: {
-                topLeft:   'label',
-                topRight:  'shareButton, zoomButton, fullscreenButton, closeButton'
-              },
-              
-              itemsBaseURL: 'img/photos/mobile/',
-              
-              // ### gallery content ### 
-              items: [
-                  { src: '800px/20120913-mobile-philboivin-001.jpg', srct: '400px/20120913-mobile-philboivin-001.jpg', title: 'YUL' },
-                  { src: '800px/20100704-mobile-philboivin-006.jpg', srct: '400px/20100704-mobile-philboivin-006.jpg', title: 'BMX - Quebec' },
-                  { src: '800px/20100626-mobile-philboivin-003.jpg', srct: '400px/20100626-mobile-philboivin-003.jpg', title: 'Place des Arts - Montreal' },
-                  { src: '800px/20140130-mobile-philboivin-004.jpg', srct: '400px/20140130-mobile-philboivin-004.jpg', title: 'Biker - Inde' },
-                  { src: '800px/20100718-mobile-philboivin-002.jpg', srct: '400px/20100718-mobile-philboivin-002.jpg', title: 'Sam Underwater' },
-                  { src: '800px/20100724-mobile-philboivin-005.jpg', srct: '400px/20100724-mobile-philboivin-005.jpg', title: 'Spectacles à venir' },
-                  { src: '800px/20100811-mobile-philboivin-009.jpg', srct: '400px/20100811-mobile-philboivin-009.jpg', title: 'New York City' },
-                  { src: '800px/20100901-mobile-philboivin-011.jpg', srct: '400px/20100901-mobile-philboivin-011.jpg', title: 'Slow - Toronto' },
-                  { src: '800px/20100706-mobile-philboivin-012.jpg', srct: '400px/20100706-mobile-philboivin-012.jpg', title: 'Selphie' },
-                  { src: '800px/20120220-mobile-philboivin-007.jpg', srct: '400px/20120220-mobile-philboivin-007.jpg', title: 'I\'m watcing you'},
-                  { src: '800px/20120220-mobile-philboivin-008.jpg', srct: '400px/20120220-mobile-philboivin-008.jpg', title: 'He\'s on fire!' },
-                  { src: '800px/20140919-mobile-philboivin-010.jpg', srct: '400px/20140919-mobile-philboivin-010.jpg', title: 'Peaking' },
-                  { src: '800px/20100808-mobile-philboivin-013.jpg', srct: '400px/20100808-mobile-philboivin-013.jpg', title: 'Bird - Montreal' },
-                  { src: '800px/20181115-mobile-philboivin-014.jpg', srct: '400px/20181115-mobile-philboivin-014.jpg', title: 'Selphie' }
-                ]
-            });
-        });
-    </script>
+                // THUMBNAILS
+                thumbnailWidth: "auto",
+                thumbnailHeight: 300,
+                thumbnailGutterWidth: 10, 
+                thumbnailGutterHeight: 10,
+                thumbnailBorderHorizontal: 0, 
+                thumbnailBorderVertical: 0,
+                thumbnailLabel: { display: false },
+
+
+                // LIGHTBOX
+                viewerToolbar: { display: false },
+                viewerTools: {
+                  topLeft:   'label',
+                  topRight:  'shareButton, zoomButton, fullscreenButton, closeButton'
+                },
+                
+                itemsBaseURL: 'img/photos/mobile/',
+                
+                // ### gallery content ### 
+                items: [
+                { src: '800px/20120913-mobile-philboivin-001.jpg', srct: '400px/20120913-mobile-philboivin-001.jpg', 
+                  title: 'YUL' },
+
+                { src: '800px/20100704-mobile-philboivin-006.jpg', srct: '400px/20100704-mobile-philboivin-006.jpg', 
+                  title: 'BMX - Quebec' },
+
+                { src: '800px/20100626-mobile-philboivin-003.jpg', srct: '400px/20100626-mobile-philboivin-003.jpg', 
+                  title: 'Place des Arts - Montreal' },
+
+                { src: '800px/20140130-mobile-philboivin-004.jpg', srct: '400px/20140130-mobile-philboivin-004.jpg', 
+                  title: 'Biker - Inde' },
+
+                { src: '800px/20100718-mobile-philboivin-002.jpg', srct: '400px/20100718-mobile-philboivin-002.jpg', 
+                  title: 'Sam Underwater' },
+
+                { src: '800px/20100724-mobile-philboivin-005.jpg', srct: '400px/20100724-mobile-philboivin-005.jpg', 
+                  title: 'Spectacles à venir' },
+
+                { src: '800px/20100811-mobile-philboivin-009.jpg', srct: '400px/20100811-mobile-philboivin-009.jpg', 
+                  title: 'New York City' },
+
+                { src: '800px/20100901-mobile-philboivin-011.jpg', srct: '400px/20100901-mobile-philboivin-011.jpg', 
+                  title: 'Slow - Toronto' },
+
+                { src: '800px/20100706-mobile-philboivin-012.jpg', srct: '400px/20100706-mobile-philboivin-012.jpg', 
+                  title: 'Selphie' },
+
+                { src: '800px/20120220-mobile-philboivin-007.jpg', srct: '400px/20120220-mobile-philboivin-007.jpg', 
+                  title: 'I\'m watcing you'},
+
+                { src: '800px/20120220-mobile-philboivin-008.jpg', srct: '400px/20120220-mobile-philboivin-008.jpg', 
+                  title: 'He\'s on fire!' },
+
+                { src: '800px/20140919-mobile-philboivin-010.jpg', srct: '400px/20140919-mobile-philboivin-010.jpg', 
+                  title: 'Peaking' },
+
+                { src: '800px/20100808-mobile-philboivin-013.jpg', srct: '400px/20100808-mobile-philboivin-013.jpg', 
+                  title: 'Bird - Montreal' },
+
+                { src: '800px/20181115-mobile-philboivin-014.jpg', srct: '400px/20181115-mobile-philboivin-014.jpg', 
+                  title: 'Selphie' }
+                  ]
+              });
+          });
+      </script>
 
 
    </section>

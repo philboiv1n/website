@@ -49,11 +49,11 @@ Hello i'm Phil Boivin!
 
           <h2>Autres photos et projets</h2>
           <ul class="sub-menu">
-            <li>Editorial</li>
+            <li><a href="editorial.html">Editorial</a></li>
             <li>Corporatif</li>
             <li>Voyage</li>
             <li><a href="taxi.html">Les visages du taxi</a></li>
-            <li><a href="cirque-du-soleil.html">Cirque du Soleil</a></li>
+            <li><a href="cirque-du-soleil.html">Lumière sur... le Cirque du Soleil</a></li>
             <li><a href="mobile.html">Mobile</a></li>
             <li><a href="video.html">Video</a></li>
           </ul>
@@ -99,19 +99,21 @@ Hello i'm Phil Boivin!
                 topRight:  'shareButton, zoomButton, fullscreenButton, closeButton'
               },
               
-              itemsBaseURL: 'https://picsum.photos/',
+              itemsBaseURL: 'img/photos/mobile/',
               
               // ### gallery content ### 
-              items: [
-                  { src: 'id/1/800/533', srct: 'id/1/300/200', title: 'Temporary picture 1' },
-                  { src: 'id/20/800/533', srct: 'id/20/300/200', title: 'Temporary picture 2' },
-                  { src: 'id/30/800/533', srct: 'id/30/300/200', title: 'Temporary picture 3' },
-                  { src: 'id/40/533/800', srct: 'id/40/200/300', title: 'Temporary picture 4' },
-                  { src: 'id/50/800/533', srct: 'id/50/300/200', title: 'Temporary picture 5' },
-                  { src: 'id/60/800/533', srct: 'id/60/300/200', title: 'Temporary picture 6' },
-                  { src: 'id/70/800/533', srct: 'id/70/300/200', title: 'Temporary picture 7' },
-                  { src: 'id/80/533/800', srct: 'id/80/200/300', title: 'Temporary picture 8' },
-                ]
+               items: [
+                { src: '800px/20120913-mobile-philboivin-001.jpg', srct: '400px/20120913-mobile-philboivin-001.jpg', 
+                  title: 'YUL' },
+
+                { src: '800px/20100704-mobile-philboivin-006.jpg', srct: '400px/20100704-mobile-philboivin-006.jpg', 
+                  title: 'BMX - Quebec' },
+
+                { src: '800px/20100626-mobile-philboivin-003.jpg', srct: '400px/20100626-mobile-philboivin-003.jpg', 
+                  title: 'Place des Arts - Montreal' },
+
+               
+                  ]
             });
 
           jQuery("#gallery-publications").nanogallery2( {
