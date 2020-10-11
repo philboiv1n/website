@@ -42,6 +42,11 @@ Hello i'm Phil Boivin!
 
       <div id="gallery01"></div>
 
+      <div class="row top-spacer">
+        <div class="col">
+          <span id="menu-portfolio"></span>
+        </div>
+      </div>
   
       <script>
          jQuery(document).ready(function () {
@@ -132,13 +137,6 @@ Hello i'm Phil Boivin!
                 { src: '900px/20190410-editorial-philboivin-019.jpg', srct: '400px/20190410-editorial-philboivin-019.jpg', 
                   title: 'Rencontre amicale - 2019' }
 
-                
-
-               
-
-               
-
-
                   ]
               });
           });
@@ -153,6 +151,7 @@ Hello i'm Phil Boivin!
 <script> 
   $(function(){
     $("#menu-items").load("inc/menu.html"); 
+    $("#menu-portfolio").load("inc/menu-portfolio.html");
     $("footer").load("inc/footer.html");
   });
 </script> 

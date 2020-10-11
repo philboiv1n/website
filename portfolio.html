@@ -16,7 +16,6 @@ Hello i'm Phil Boivin!
 </head>
 
 
-
 <body>
 
   <main>
@@ -36,7 +35,6 @@ Hello i'm Phil Boivin!
         <div class="col">
 
           <h1>Portfolio</h1>
-         <!--  <p>Quelques-unes de mes photos préférées.</p> -->
      
         </div>
       </div>
@@ -44,31 +42,18 @@ Hello i'm Phil Boivin!
       <div id="gallery01"></div>
 
       
-       <div class="row">
+      <div class="row top-spacer">
         <div class="col">
-
-          <h2>Autres photos et projets</h2>
-          <ul class="sub-menu">
-            <li><a href="editorial.html">Editorial</a></li>
-            <li>Corporatif</li>
-            <li>Voyage</li>
-            <li><a href="taxi.html">Les visages du taxi</a></li>
-            <li><a href="cirque-du-soleil.html">Lumière sur... le Cirque du Soleil</a></li>
-            <li><a href="mobile.html">Mobile</a></li>
-            <li><a href="video.html">Video</a></li>
-          </ul>
-    
+          <span id="menu-portfolio"></span>
+        </div>
       </div>
-    </div>
 
 
-     <div class="row">
+     <div class="row top-spacer">
       <div class="col">
 
-
       <h2>Quelques publications</h2>
-      
-          <div id="gallery-publications"></div>
+      <div id="gallery-publications"></div>
 
       </div>
     </div>
@@ -141,35 +126,25 @@ Hello i'm Phil Boivin!
               
               // ### gallery content ### 
               items: [
-              { src: 'publi-philippeboivin-cirque-du-soleil.jpg', 
-                  srct: 'publi-philippeboivin-cirque-du-soleil.jpg', 
+              { src: 'publi-philippeboivin-cirque-du-soleil.jpg', srct: 'publi-philippeboivin-cirque-du-soleil.jpg', 
                   title: 'Boutique Cirque du Soleil' },
-              { src: 'publi-philippeboivin-presse01.jpg', 
-                  srct: 'publi-philippeboivin-presse01.jpg', 
+              { src: 'publi-philippeboivin-presse01.jpg', srct: 'publi-philippeboivin-presse01.jpg', 
                   title: 'La Presse - Photos sur la collection du Cirque du Soleil' },
-              { src: 'publi-philippeboivin-aye.jpg', 
-                  srct: 'publi-philippeboivin-aye.jpg', 
+              { src: 'publi-philippeboivin-aye.jpg', srct: 'publi-philippeboivin-aye.jpg', 
                   title: 'Série Flash-back sur AYE MAG' },
-              { src: 'publi-philippeboivin-ballecourbe.jpg', 
-                  srct: 'publi-philippeboivin-ballecourbe.jpg', 
+              { src: 'publi-philippeboivin-ballecourbe.jpg', srct: 'publi-philippeboivin-ballecourbe.jpg', 
                   title: 'Balle Courbe - Bouffe de stade'},
-              { src: 'publi-philippeboivin-mashable.jpg', 
-                  srct: 'publi-philippeboivin-mashable.jpg', 
+              { src: 'publi-philippeboivin-mashable.jpg', srct: 'publi-philippeboivin-mashable.jpg', 
                   title: 'Mashable - 10 Stunning iPhone Bird Photos' },   
-              { src: 'publi-philippeboivin-quebecamerique.jpg', 
-                  srct: 'publi-philippeboivin-quebecamerique.jpg', 
+              { src: 'publi-philippeboivin-quebecamerique.jpg', srct: 'publi-philippeboivin-quebecamerique.jpg', 
                   title: 'Québec Amérique - Couverture du livre L\'Inconnue'},
-              { src: 'publi-philippeboivin-rds.jpg', 
-                  srct: 'publi-philippeboivin-rds.jpg',
+              { src: 'publi-philippeboivin-rds.jpg', srct: 'publi-philippeboivin-rds.jpg',
                    title: 'RDS' },
-              { src: 'publi-philippeboivin-iphonebook.jpg', 
-                  srct: 'publi-philippeboivin-iphonebook.jpg', 
+              { src: 'publi-philippeboivin-iphonebook.jpg', srct: 'publi-philippeboivin-iphonebook.jpg', 
                   title: 'Livre The i.phoneography Book' },
-              { src: 'publi-philippeboivin-matins-infideles.jpg', 
-                  srct: 'publi-philippeboivin-matins-infideles.jpg', 
+              { src: 'publi-philippeboivin-matins-infideles.jpg', srct: 'publi-philippeboivin-matins-infideles.jpg', 
                   title: 'Les matins infidèles'},
-              { src: 'publi-philippeboivin-tnw.jpg', 
-                  srct: 'publi-philippeboivin-tnw.jpg', 
+              { src: 'publi-philippeboivin-tnw.jpg', srct: 'publi-philippeboivin-tnw.jpg', 
                   title: 'TNW - How to take incredible photos with your phone' },
                 ]
             });
@@ -184,7 +159,8 @@ Hello i'm Phil Boivin!
 
 <script> 
   $(function(){
-    $("#menu-items").load("inc/menu.html"); 
+    $("#menu-items").load("inc/menu.html");
+    $("#menu-portfolio").load("inc/menu-portfolio.html");
     $("footer").load("inc/footer.html");
   });
 </script> 

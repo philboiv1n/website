@@ -35,6 +35,10 @@ CSS Stylesheet for philboivin.com
 --color-menu-x: #999;
 --color-menu-bg: #eee;
 
+--color-sub-menu-li: #000;
+--color-sub-menu-border: #ccc;
+--color-sub-menu-a-hover: #666;
+
 --color-logo: #ccc;
 --color-logo-hover: #000;
 
@@ -106,8 +110,15 @@ main {
 
 main p {line-height: 1.4; margin: 10px 0 15px 0;}
 
+/* Backup sub-menu
 .sub-menu {margin-left: 15px;}
 .sub-menu li {padding: 0 0 5px 0; color: var(--color-sub-menu-li);}
+*/
+
+.sub-menu {margin-left: 0px;}
+.sub-menu li {display: inline-block; padding: 5px 8px; color: var(--color-sub-menu-li); border: 1px solid var(--color-sub-menu-border); margin: 0 10px 10px 0;}
+.sub-menu a {text-decoration: none;}
+.sub-menu a:hover {color: var(--color-sub-menu-a-hover);}
 
 .success {color: green}
 .error {color: red;}

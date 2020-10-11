@@ -42,7 +42,12 @@ Hello i'm Phil Boivin!
 
       <div id="gallery01"></div>
 
-  
+      <div class="row top-spacer">
+        <div class="col">
+          <span id="menu-portfolio"></span>
+        </div>
+      </div>
+
       <script>
          jQuery(document).ready(function () {
 
@@ -125,7 +130,8 @@ Hello i'm Phil Boivin!
 
 <script> 
   $(function(){
-    $("#menu-items").load("inc/menu.html"); 
+    $("#menu-items").load("inc/menu.html");
+    $("#menu-portfolio").load("inc/menu-portfolio.html");
     $("footer").load("inc/footer.html");
   });
 </script> 
