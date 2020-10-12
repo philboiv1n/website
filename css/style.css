@@ -115,10 +115,10 @@ main p {line-height: 1.4; margin: 10px 0 15px 0;}
 .sub-menu li {padding: 0 0 5px 0; color: var(--color-sub-menu-li);}
 */
 
-.sub-menu {margin-left: 0px;}
-.sub-menu li {display: inline-block; padding: 5px 8px; color: var(--color-sub-menu-li); border: 1px solid var(--color-sub-menu-border); margin: 0 10px 10px 0;}
-.sub-menu a {text-decoration: none;}
-.sub-menu a:hover {color: var(--color-sub-menu-a-hover);}
+.sub-menu {margin: 20px 0 0 0;}
+.sub-menu li {display: inline-block; color: var(--color-sub-menu-li);  margin: 0 10px 25px 0;}
+.sub-menu a {text-decoration: none; border: 1px solid var(--color-sub-menu-border);  padding: 5px 8px;}
+.sub-menu a:hover {border: 1px solid var(--color-sub-menu-a-hover);}
 
 .success {color: green}
 .error {color: red;}
