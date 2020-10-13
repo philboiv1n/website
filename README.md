@@ -1,2 +1,2 @@
 # Phil Boivin Website
-The philboivin.com website repository.
+The philboivin.com website and public photos repository.

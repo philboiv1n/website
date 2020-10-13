@@ -132,7 +132,6 @@ main p {line-height: 1.4; margin: 10px 0 15px 0;}
 
 
 
-
 /******************************************/
 /* Menu (mady by Erik Terwan - MIT License)              
 /******************************************/
@@ -140,7 +139,6 @@ main p {line-height: 1.4; margin: 10px 0 15px 0;}
 #menuToggle {display: block; position: relative; z-index: 100; -webkit-user-select: none; user-select: none;}
 #menuToggle a { text-decoration: none; color: var(--color-menu-a); transition: color 0.3s ease;}
 #menuToggle a:hover { color: var(--color-menu-a-hover);}
-
 
 #menuToggle input
 {
@@ -254,8 +252,6 @@ text-align: center;
 font-size:  16px;
 display: inline-block;
 }
-
-
 
 
 
