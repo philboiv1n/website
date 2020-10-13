@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<!--
+Hello i'm Phil Boivin! 
+-->
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Reportages | Philippe Boivin</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="img/icon.png">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/nanogallery2/3.0.2/css/nanogallery2.min.css" rel="stylesheet" type="text/css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/nanogallery2/3.0.2/jquery.nanogallery2.min.js"></script>
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+
+<body>
+
+  <main>
+    <section id="content">
+
+      <nav id="main-menu" role="navigation">
+        <div id="menuToggle">
+          <input type="checkbox" />
+          <span></span>
+          <span></span>
+          <span></span>
+          <ul id="menu-items"></ul>
+        </div>
+      </nav>
+
+      <div class="row">
+        <div class="col">
+
+          <h1>Reportages</h1>
+     
+        </div>
+      </div>
+
+      <div id="gallery01"></div>
+
+      <div class="row top-spacer">
+        <div class="col">
+          <span id="menu-portfolio"></span>
+        </div>
+      </div>
+
+      <script>
+         jQuery(document).ready(function () {
+
+            jQuery("#gallery01").nanogallery2( {
+                // ### gallery settings ### 
+
+
+                // THUMBNAILS
+                thumbnailWidth: "auto",
+                thumbnailHeight: 300,
+                thumbnailGutterWidth: 10, 
+                thumbnailGutterHeight: 10,
+                thumbnailBorderHorizontal: 0, 
+                thumbnailBorderVertical: 0,
+                thumbnailLabel: { display: false },
+
+
+                // LIGHTBOX
+                viewerToolbar: { display: false },
+                viewerTools: {
+                  topLeft:   'label',
+                  topRight:  'shareButton, zoomButton, fullscreenButton, closeButton'
+                },
+                
+                itemsBaseURL: 'img/photos/travel/',
+                
+                // ### gallery content ### 
+                items: [
+                { src: '900px/20150211-travel-philboivin-001.jpg', srct: '400px/20150211-travel-philboivin-001.jpg', 
+                  title: 'The business man and the sea - Floride - 2015' },
+
+                { src: '900px/20150607-travel-philboivin-002.jpg', srct: '400px/20150607-travel-philboivin-002.jpg', 
+                  title: 'Big Island Hawaii - 2015' },
+
+                { src: '900px/20150616-travel-philboivin-003.jpg', srct: '400px/20150616-travel-philboivin-003.jpg', 
+                  title: 'Tokyo - 2015' },
+
+                { src: '900px/20150616-travel-philboivin-004.jpg', srct: '400px/20150616-travel-philboivin-004.jpg', 
+                  title: 'Tokyo - 2015' },
+
+                { src: '900px/20150616-travel-philboivin-005.jpg', srct: '400px/20150616-travel-philboivin-005.jpg', 
+                  title: 'Tokyo - 2015' },
+
+                { src: '900px/20150617-travel-philboivin-006.jpg', srct: '400px/20150617-travel-philboivin-006.jpg', 
+                  title: 'Tokyo - 2015' },
+
+                { src: '900px/20150617-travel-philboivin-007.jpg', srct: '400px/20150617-travel-philboivin-007.jpg', 
+                  title: 'Tokyo Fish Market - 2015' },
+
+                { src: '900px/20150624-travel-philboivin-008.jpg', srct: '400px/20150624-travel-philboivin-008.jpg', 
+                  title: 'Kyoto - 2015' },
+
+                { src: '900px/20150625-travel-philboivin-009.jpg', srct: '400px/20150625-travel-philboivin-009.jpg', 
+                  title: 'Kyoto - 2015' },
+
+                { src: '900px/20150630-travel-philboivin-010.jpg', srct: '400px/20150630-travel-philboivin-010.jpg', 
+                  title: 'Kyoto - 2015' },
+
+                { src: '900px/20150701-travel-philboivin-011.jpg', srct: '400px/20150701-travel-philboivin-011.jpg', 
+                  title: 'Kyoto - 2015' },
+
+                { src: '900px/20150705-travel-philboivin-012.jpg', srct: '400px/20150705-travel-philboivin-012.jpg', 
+                  title: 'Nara - 2015' },
+
+                { src: '900px/20150708-travel-philboivin-013.jpg', srct: '400px/20150708-travel-philboivin-013.jpg', 
+                  title: 'Osaka - 2015' },
+
+                { src: '900px/20150710-travel-philboivin-014.jpg', srct: '400px/20150710-travel-philboivin-014.jpg', 
+                  title: 'Osaka - 2015' },
+
+                { src: '900px/20150715-travel-philboivin-015.jpg', srct: '400px/20150715-travel-philboivin-015.jpg', 
+                  title: 'Paris - 2015' },
+
+                { src: '900px/20150716-travel-philboivin-016.jpg', srct: '400px/20150716-travel-philboivin-016.jpg', 
+                  title: 'Paris - 2015' },
+
+                { src: '900px/20150717-travel-philboivin-017.jpg', srct: '400px/20150717-travel-philboivin-017.jpg', 
+                  title: 'Paris - 2015' },
+
+                { src: '900px/20150718-travel-philboivin-018.jpg', srct: '400px/20150718-travel-philboivin-018.jpg', 
+                  title: 'Paris - 2015' },
+
+                { src: '900px/20150721-travel-philboivin-019.jpg', srct: '400px/20150721-travel-philboivin-019.jpg', 
+                  title: 'Bordeaux - 2015' },
+
+                { src: '900px/20150723-travel-philboivin-020.jpg', srct: '400px/20150723-travel-philboivin-020.jpg', 
+                  title: 'Bordeaux - 2015' },
+
+                { src: '900px/20150727-travel-philboivin-021.jpg', srct: '400px/20150727-travel-philboivin-021.jpg', 
+                  title: 'Bordeaux - 2015' },
+
+                { src: '900px/20150803-travel-philboivin-022.jpg', srct: '400px/20150803-travel-philboivin-022.jpg', 
+                  title: 'Berlin - 2015' },
+
+                { src: '900px/20150805-travel-philboivin-023.jpg', srct: '400px/20150805-travel-philboivin-023.jpg', 
+                  title: 'Berlin - 2015' },
+
+                { src: '900px/20150806-travel-philboivin-024.jpg', srct: '400px/20150806-travel-philboivin-024.jpg', 
+                  title: 'Berlin - 2015' },
+
+                { src: '900px/20150806-travel-philboivin-025.jpg', srct: '400px/20150806-travel-philboivin-025.jpg', 
+                  title: 'Berlin - 2015' },
+
+                { src: '900px/20150808-travel-philboivin-026.jpg', srct: '400px/20150808-travel-philboivin-026.jpg', 
+                  title: 'Berlin - 2015' },
+
+                { src: '900px/20150821-travel-philboivin-027.jpg', srct: '400px/20150821-travel-philboivin-027.jpg', 
+                  title: 'Copenhagen - 2015' },
+
+                { src: '900px/20150826-travel-philboivin-028.jpg', srct: '400px/20150826-travel-philboivin-028.jpg', 
+                  title: 'Madrid - 2015' },
+
+                { src: '900px/20150826-travel-philboivin-029.jpg', srct: '400px/20150826-travel-philboivin-029.jpg', 
+                  title: 'Madrid - 2015' },
+
+                { src: '900px/20180831-travel-philboivin-030.jpg', srct: '400px/20180831-travel-philboivin-030.jpg', 
+                  title: 'Stockholm - 2015 ' },
+
+                  ]
+              });
+          });
+      </script>
+
+   </section>
+ </main>
+
+<footer></footer>
+
+<script> 
+  $(function(){
+    $("#menu-items").load("inc/menu.html");
+    $("#menu-portfolio").load("inc/menu-portfolio.html");
+    $("footer").load("inc/footer.html");
+  });
+</script> 
+
+</body>
+</html>

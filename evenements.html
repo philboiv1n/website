@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<!--
+Hello i'm Phil Boivin! 
+-->
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Événements | Philippe Boivin</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="img/icon.png">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/nanogallery2/3.0.2/css/nanogallery2.min.css" rel="stylesheet" type="text/css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/nanogallery2/3.0.2/jquery.nanogallery2.min.js"></script>
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+
+<body>
+
+  <main>
+    <section id="content">
+
+      <nav id="main-menu" role="navigation">
+        <div id="menuToggle">
+          <input type="checkbox" />
+          <span></span>
+          <span></span>
+          <span></span>
+          <ul id="menu-items"></ul>
+        </div>
+      </nav>
+
+      <div class="row">
+        <div class="col">
+
+          <h1>Événements</h1>
+          <p>Quelques photos événementielles lors de rassemblement corporatif ou mariages.</p>
+     
+        </div>
+      </div>
+
+      <div id="gallery01"></div>
+
+      <div class="row top-spacer">
+        <div class="col">
+          <span id="menu-portfolio"></span>
+        </div>
+      </div>
+
+  
+      <script>
+         jQuery(document).ready(function () {
+
+            jQuery("#gallery01").nanogallery2( {
+                // ### gallery settings ### 
+
+
+                // THUMBNAILS
+                thumbnailWidth: "auto",
+                thumbnailHeight: 300,
+                thumbnailGutterWidth: 10, 
+                thumbnailGutterHeight: 10,
+                thumbnailBorderHorizontal: 0, 
+                thumbnailBorderVertical: 0,
+                thumbnailLabel: { display: false },
+
+
+                // LIGHTBOX
+                viewerToolbar: { display: false },
+                viewerTools: {
+                  topLeft:   'label',
+                  topRight:  'shareButton, zoomButton, fullscreenButton, closeButton'
+                },
+                
+                itemsBaseURL: 'img/photos/events/',
+                
+                // ### gallery content ### 
+                items: [
+
+                { src: '900px/20140809-events-philboivin-001.jpg', srct: '400px/20140809-events-philboivin-001.jpg', 
+                  title: 'Vanna et Stéphane' },
+
+                { src: '900px/20140809-events-philboivin-002.jpg', srct: '400px/20140809-events-philboivin-002.jpg', 
+                  title: 'Vanna et Stéphane' },
+
+                { src: '900px/20150321-events-philboivin-003.jpg', srct: '400px/20150321-events-philboivin-003.jpg', 
+                  title: 'Bianca et Jérôme' },
+
+                { src: '900px/20181201-events-philboivin-004.jpg', srct: '400px/20181201-events-philboivin-004.jpg', 
+                  title: 'Demoiselle d\'honneur'},
+
+                { src: '900px/20181201-events-philboivin-005.jpg', srct: '400px/20181201-events-philboivin-005.jpg', 
+                  title: 'Jessica et David' },
+
+                { src: '900px/20181201-events-philboivin-006.jpg', srct: '400px/20181201-events-philboivin-006.jpg', 
+                  title: 'Célébration' },
+
+                { src: '900px/20190204-events-philboivin-007.jpg', srct: '400px/20190204-events-philboivin-007.jpg', 
+                  title: '5 à 7' },
+
+                { src: '900px/20190518-events-philboivin-008.jpg', srct: '400px/20190518-events-philboivin-008.jpg', 
+                  title: 'Hélène et Stéphane' },
+
+                { src: '900px/20190518-events-philboivin-009.jpg', srct: '400px/20190518-events-philboivin-009.jpg', 
+                  title: 'Hélène et Stéphane' },
+
+                { src: '900px/20190619-events-philboivin-010.jpg', srct: '400px/20190619-events-philboivin-010.jpg', 
+                  title: 'Dr. Roberta Bondar' },
+
+                { src: '900px/20190620-events-philboivin-011.jpg', srct: '400px/20190620-events-philboivin-011.jpg', 
+                  title: 'Événement corporatif' },
+
+                { src: '900px/20190621-events-philboivin-012.jpg', srct: '400px/20190621-events-philboivin-012.jpg', 
+                  title: 'Avant bal' },
+
+                { src: '900px/20190628-events-philboivin-013.jpg', srct: '400px/20190628-events-philboivin-013.jpg', 
+                  title: 'Party' },
+
+                { src: '900px/20190713-events-philboivin-014.jpg', srct: '400px/20190713-events-philboivin-014.jpg', 
+                  title: 'Mariage' },
+
+                { src: '900px/20190713-events-philboivin-015.jpg', srct: '400px/20190713-events-philboivin-015.jpg', 
+                  title: 'Les trois amigos' },
+
+                { src: '900px/20190921-events-philboivin-016.jpg', srct: '400px/20190921-events-philboivin-016.jpg', 
+                  title: 'Activité corporative' },
+
+                { src: '900px/20190921-events-philboivin-017.jpg', srct: '400px/20190921-events-philboivin-017.jpg', 
+                  title: 'Photo booth FGP' },
+
+                { src: '900px/20191030-events-philboivin-018.jpg', srct: '400px/20191030-events-philboivin-018.jpg', 
+                  title: 'Champagne' },
+
+                { src: '900px/20191107-events-philboivin-019.jpg', srct: '400px/20191107-events-philboivin-019.jpg', 
+                  title: 'Honneur' },
+                
+                  ]
+              });
+          });
+      </script>
+
+   </section>
+ </main>
+
+<footer></footer>
+
+<script> 
+  $(function(){
+    $("#menu-items").load("inc/menu.html"); 
+    $("#menu-portfolio").load("inc/menu-portfolio.html");
+    $("footer").load("inc/footer.html");
+  });
+</script> 
+
+</body>
+</html>

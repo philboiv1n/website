@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<!--
+Hello i'm Phil Boivin! 
+-->
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Editorial | Philippe Boivin</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="img/icon.png">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/nanogallery2/3.0.2/css/nanogallery2.min.css" rel="stylesheet" type="text/css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/nanogallery2/3.0.2/jquery.nanogallery2.min.js"></script>
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+
+<body>
+
+  <main>
+    <section id="content">
+
+      <nav id="main-menu" role="navigation">
+        <div id="menuToggle">
+          <input type="checkbox" />
+          <span></span>
+          <span></span>
+          <span></span>
+          <ul id="menu-items"></ul>
+        </div>
+      </nav>
+
+      <div class="row">
+        <div class="col">
+
+        <h1>Editorial</h1>
+        <p>Quelques photos éditoriales et de presse concernant l’actualité.</p>
+     
+        </div>
+      </div>
+
+      <div id="gallery01"></div>
+
+      <div class="row top-spacer">
+        <div class="col">
+          <span id="menu-portfolio"></span>
+        </div>
+      </div>
+  
+      <script>
+         jQuery(document).ready(function () {
+
+            jQuery("#gallery01").nanogallery2( {
+                // ### gallery settings ### 
+
+
+                // THUMBNAILS
+                thumbnailWidth: "auto",
+                thumbnailHeight: 300,
+                thumbnailGutterWidth: 10, 
+                thumbnailGutterHeight: 10,
+                thumbnailBorderHorizontal: 0, 
+                thumbnailBorderVertical: 0,
+                thumbnailLabel: { display: false },
+
+
+                // LIGHTBOX
+                viewerToolbar: { display: false },
+                viewerTools: {
+                  topLeft:   'label',
+                  topRight:  'shareButton, zoomButton, fullscreenButton, closeButton'
+                },
+                
+                itemsBaseURL: 'img/photos/editorial/',
+                
+                // ### gallery content ### 
+                items: [
+
+                { src: '900px/20190405-editorial-philboivin-017.jpg', srct: '400px/20190405-editorial-philboivin-017.jpg', 
+                  title: 'Je suis taxi - 2019' },
+
+                { src: '900px/20200319-editorial-philboivin-021.jpg', srct: '400px/20200319-editorial-philboivin-021.jpg', 
+                  title: 'Couple dans le Vieux-Montréal durant la Covid-19 - 2020' },
+
+                { src: '900px/20200829-editorial-philboivin-022.jpg', srct: '400px/20200829-editorial-philboivin-022.jpg', 
+                  title: 'L\'église au temps de la Covid - 2020' },
+
+                { src: '900px/20141129-editorial-philboivin-004.jpg', srct: '400px/20141129-editorial-philboivin-004.jpg', 
+                  title: 'Police au Super S. - 2014' },
+
+                { src: '900px/20200215-editorial-philboivin-020.jpg', srct: '400px/20200215-editorial-philboivin-020.jpg', 
+                  title: 'Deux soeurs au HideSeek de Montréal - 2019' },
+
+                { src: '900px/20150123-editorial-philboivin-005.jpg', srct: '400px/20150123-editorial-philboivin-005.jpg', 
+                  title: 'Patrice Bernier - 2015' },
+
+                { src: '900px/20150204-editorial-philboivin-006.jpg', srct: '400px/20150204-editorial-philboivin-006.jpg', 
+                  title: 'Bain de soleil - Florida - 2015' },
+
+                { src: '900px/20150404-editorial-philboivin-007.jpg', srct: '400px/20150404-editorial-philboivin-007.jpg', 
+                  title: 'Thriller - 2015' },
+
+                { src: '900px/20150404-editorial-philboivin-008.jpg', srct: '400px/20150404-editorial-philboivin-008.jpg', 
+                  title: 'Hot-Dog - 2015' },
+
+                { src: '900px/20150415-editorial-philboivin-009.jpg', srct: '400px/20150415-editorial-philboivin-009.jpg', 
+                  title: 'Deux partisanes du CH - 2015' },
+
+                { src: '900px/20170618-editorial-philboivin-010.jpg', srct: '400px/20170618-editorial-philboivin-010.jpg', 
+                  title: 'Zoey - 2017'},
+
+                { src: '900px/20171216-editorial-philboivin-011.jpg', srct: '400px/20171216-editorial-philboivin-011.jpg', 
+                  title: 'Biz - 2017' },
+
+                { src: '900px/20171216-editorial-philboivin-012.jpg', srct: '400px/20171216-editorial-philboivin-012.jpg', 
+                  title: 'Florence K - 2017' },
+
+                { src: '900px/20180927-editorial-philboivin-013.jpg', srct: '400px/20180927-editorial-philboivin-013.jpg', 
+                  title: 'Golf in Las Vegas - 2018' },
+
+                { src: '900px/20181110-editorial-philboivin-014.jpg', srct: '400px/20181110-editorial-philboivin-014.jpg', 
+                  title: 'Gabriel Nadeau-Dubois - 2018' },
+
+                { src: '900px/20190208-editorial-philboivin-015.jpg', srct: '400px/20190208-editorial-philboivin-015.jpg', 
+                  title: 'Glace à la Place des Arts - 2019' },
+
+                { src: '900px/20190213-editorial-philboivin-016.jpg', srct: '400px/20190213-editorial-philboivin-016.jpg', 
+                  title: 'Hiver - 2019' },
+
+                { src: '900px/20131023-editorial-philboivin-002.jpg', srct: '400px/20131023-editorial-philboivin-002.jpg', 
+                  title: 'Boston - 2013' },
+
+                { src: '900px/20190410-editorial-philboivin-018.jpg', srct: '400px/20190410-editorial-philboivin-018.jpg', 
+                  title: 'Non à la loi 17 - 2019' },
+
+                { src: '900px/20190410-editorial-philboivin-019.jpg', srct: '400px/20190410-editorial-philboivin-019.jpg', 
+                  title: 'Rencontre amicale - 2019' }
+
+                  ]
+              });
+          });
+      </script>
+
+
+   </section>
+ </main>
+
+<footer></footer>
+
+<script> 
+  $(function(){
+    $("#menu-items").load("inc/menu.html"); 
+    $("#menu-portfolio").load("inc/menu-portfolio.html");
+    $("footer").load("inc/footer.html");
+  });
+</script> 
+
+</body>
+</html>

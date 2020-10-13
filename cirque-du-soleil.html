@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<!--
+Hello i'm Phil Boivin! 
+-->
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Cirque du Soleil | Philippe Boivin</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="img/icon.png">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+  <main>
+    <section id="content">
+
+      <nav id="main-menu" role="navigation">
+        <div id="menuToggle">
+          <input type="checkbox" />
+          <span></span>
+          <span></span>
+          <span></span>
+          <ul id="menu-items"></ul>
+        </div>
+      </nav>
+
+      <div class="row">
+        <div class="col">
+
+          <h1>Lumière sur... le Cirque du Soleil</h1>
+          <p>Les employés du Cirque du Soleil sont particuliers, spécialisés, révolutionnaires, artistiques, brillants, uniques, audacieux, talentueux, surprenants, innovateurs, humains, sensibles, accessibles et bien davantage. Bref, les employés du Cirque sont inspirants, excellent dans leur profession et font rayonner le Cirque et c'est-ce que cette série de rencontres mettra en lumière.
+          En collaboration avec Élyse Gamache-Bélisle.
+          </p> 
+        </div>
+      </div>
+
+    <div class="row">
+      <div class="col">
+        <img src="img/photos/lumiere-cirque-du-soleil/20181218-Lumiere-Cirque-du-Soleil-002.jpg" alt="Jean-Francois">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <img src="img/photos/lumiere-cirque-du-soleil/20181218-Lumiere-Cirque-du-Soleil-003.jpg" alt="Alexandra">
+      </div>
+    </div>
+
+     <div class="row">
+      <div class="col">
+        <img src="img/photos/lumiere-cirque-du-soleil/20181218-Lumiere-Cirque-du-Soleil-004.jpg" alt="Mitch">
+      </div>
+    </div>
+
+     <div class="row">
+      <div class="col">
+        <img src="img/photos/lumiere-cirque-du-soleil/20181218-Lumiere-Cirque-du-Soleil-005.jpg" alt="Sandy">
+      </div>
+    </div>
+
+     <div class="row">
+      <div class="col">
+        <img src="img/photos/lumiere-cirque-du-soleil/20181218-Lumiere-Cirque-du-Soleil-006.jpg" alt="Adam">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <img src="img/photos/lumiere-cirque-du-soleil/20181218-Lumiere-Cirque-du-Soleil-001.jpg" alt="Sylvia">
+      </div>
+    </div>
+
+     <div class="row">
+      <div class="col">
+        <img src="img/photos/lumiere-cirque-du-soleil/20181218-Lumiere-Cirque-du-Soleil-007.jpg" alt="Pierre-Luc">
+      </div>
+    </div>
+
+     <div class="row">
+      <div class="col">
+        <img src="img/photos/lumiere-cirque-du-soleil/20181218-Lumiere-Cirque-du-Soleil-008.jpg" alt="Daniel">
+      </div>
+    </div>
+
+
+    <div class="row top-spacer">
+      <div class="col">
+        <span id="menu-portfolio"></span>
+      </div>
+    </div>
+
+   </section>
+ </main>
+
+<footer></footer>
+
+<script> 
+  $(function(){
+    $("#menu-items").load("inc/menu.html");
+    $("#menu-portfolio").load("inc/menu-portfolio.html");
+    $("footer").load("inc/footer.html");
+  });
+</script> 
+
+</body>
+</html>

@@ -1,2 +1,2 @@
-# Website
-philboivin.com website repo
+# Phil Boivin Website
+The philboivin.com website and public photos repository

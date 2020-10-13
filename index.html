@@ -1,11 +1,6 @@
 <!DOCTYPE html>
 <!--
-Hello i'm                           
-    ____  __    _ __   ____        _       _     
-   / __ \/ /_  (_) /  / __ )____  (_)   __(_)___ 
-  / /_/ / __ \/ / /  / __  / __ \/ / | / / / __ \
- / ____/ / / / / /  / /_/ / /_/ / /| |/ / / / / /
-/_/   /_/ /_/_/_/  /_____/\____/_/ |___/_/_/ /_/ 
+Hello i'm Phil Boivin! 
 -->
 <html lang="en">
 
@@ -13,26 +8,50 @@ Hello i'm
   <meta charset="utf-8">
   <title>Philippe Boivin</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-
-  <style>
-    body {font-size: 1.0em; font-family: sans-serif;}
-    .mainDiv {width: 100%; height: auto; bottom: 0px; top: 0px; left: 0;position: absolute;}
-    .center {border-radius: 1em; padding: 1em; position: absolute; top: 50%; left: 50%; margin-right: -50%; transform: translate(-50%, -50%) }
-  </style>
-
+  <link rel="icon" type="image/png" href="img/icon.png">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
-
 
 <body>
 
-<div class="mainDiv">
-    <div class="center">
-      <h1>Philippe Boivin</h1>
-      <p>Full website is coming soon! <br>Meanwhile you can reach me on <a href="https://twitter.com/philboiv1n/">Twitter</a> or <a href="https://www.instagram.com/philboiv1n/">Instagram</a>.</p>
-  </div>
-</div>
+  <main>
+    <section id="content">
 
+    <nav id="main-menu" role="navigation">
+      <div id="menuToggle">
+        <input type="checkbox" />
+        <span></span>
+        <span></span>
+        <span></span> 
+        <ul id="menu-items"></ul>
+      </div>
+    </nav>
+
+    <div class="row">
+      <div class="col">
+
+        <h1>Bienvenue</h1>
+        
+        <p>
+        Je suis Philippe, un photographe montréalais au service des humains et de certains robots.<br>
+        Je vous invite à visiter mon <a href="portfolio.html">portfolio</a> ou ma page <a href="apropos.html">à propos</a>. Vous pouvez même me <a href="contact.html">contacter</a>.
+        </p>
+
+      </div>
+    </div>
+
+    </section>
+  </main>
+  
+<footer></footer>
+
+<script> 
+  $(function(){
+    $("#menu-items").load("inc/menu.html"); 
+    $("footer").load("inc/footer.html");
+  });
+</script> 
 
 </body>
 </html>
