@@ -12,7 +12,7 @@ Hello i'm Phil Boivin!
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/nanogallery2/3.0.2/css/nanogallery2.min.css" rel="stylesheet" type="text/css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/nanogallery2/3.0.2/jquery.nanogallery2.min.js"></script>
-  <link href="css/style.css" rel="stylesheet" type="text/css">
+  <link href="/css/style.css" rel="stylesheet" type="text/css">
 </head>
 
 
@@ -71,7 +71,7 @@ Hello i'm Phil Boivin!
                   topRight:  'shareButton, zoomButton, fullscreenButton, closeButton'
                 },
                 
-                itemsBaseURL: 'img/photos/portraits/',
+                itemsBaseURL: '/img/photos/portraits/',
                 
                 // ### gallery content ### 
                 items: [
@@ -146,9 +146,9 @@ Hello i'm Phil Boivin!
 
 <script> 
   $(function(){
-    $("#menu-items").load("inc/menu.html");
-    $("#menu-portfolio").load("inc/menu-portfolio.html");
-    $("footer").load("inc/footer.html");
+    $("#menu-items").load("/inc/menu.html");
+    $("#menu-portfolio").load("/inc/menu-portfolio.html");
+    $("footer").load("/inc/footer.html");
   });
 </script> 
 
