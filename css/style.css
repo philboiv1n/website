@@ -130,6 +130,7 @@ main p {line-height: 1.4; margin: 10px 0 15px 0;}
 .col {flex: 50%;}
 .padding-left {padding-left: 20px;}
 .portrait {width: 160px;}
+.intro p {font-size: 1.2em;}
 
 #gallery-publications {filter: grayscale(100%);}
 
