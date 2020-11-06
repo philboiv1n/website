@@ -25,9 +25,9 @@ CSS Stylesheet for philboivin.com
 --content-width-mobile : 88%;
 
 --color-body-bg: #fff;
---color-body-txt: #000;
---color-body-a: #002b80;
---color-body-a-hover: #002b80;
+--color-body-txt: #333;
+--color-body-a: #000;
+--color-body-a-hover: #333;
 
 --color-menu-a: #000;
 --color-menu-a-hover: #666;
@@ -35,9 +35,9 @@ CSS Stylesheet for philboivin.com
 --color-menu-x: #999;
 --color-menu-bg: #eee;
 
---color-sub-menu-li: #000;
+--color-sub-menu-li: #333;
 --color-sub-menu-border: #ccc;
---color-sub-menu-a-hover: #002b80;
+--color-sub-menu-a-hover: #aaa;
 
 --color-logo: #ccc;
 --color-logo-hover: #000;
@@ -45,13 +45,13 @@ CSS Stylesheet for philboivin.com
 --color-logo-footer: #fff;
 --color-logo-footer-hover: #ccc;
 
---color-footer-bg: #000;
+--color-footer-bg: #333;
 --color-footer-txt: #fff;
 --color-footer-a: #fff;
 --color-footer-a-hover: #ccc;
 --color-social-icons : #fff;
 --color-social-icons-hover : #ccc;
---color-copy : #666;
+--color-copy : #999;
 --color-hr : #ccc;
 
 }
@@ -130,10 +130,6 @@ main p {line-height: 1.4; margin: 10px 0 15px 0; font-size: 1.1em;}
 .col {flex: 50%;}
 .padding-left {padding-left: 20px;}
 .portrait {width: 160px;}
-
-/*
-.intro p {font-size: 1.1em;}
-*/
 
 #gallery-publications {filter: grayscale(100%);}
 
