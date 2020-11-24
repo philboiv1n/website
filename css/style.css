@@ -45,7 +45,7 @@ CSS Stylesheet for philboivin.com
 --color-logo-footer: #fff;
 --color-logo-footer-hover: #ccc;
 
---color-footer-bg: #333;
+--color-footer-bg: #000;
 --color-footer-txt: #fff;
 --color-footer-a: #fff;
 --color-footer-a-hover: #ccc;
@@ -96,6 +96,7 @@ left: 55px;
 .logo a:hover {color: var(--color-logo-hover);}
 
 main {
+  z-index: 10;
   grid-area: main; 
   min-height: 85vh;
   display: grid;
@@ -130,10 +131,19 @@ main p {line-height: 1.4; margin: 10px 0 15px 0; font-size: 1.1em;}
 .col {flex: 50%;}
 .padding-left {padding-left: 20px;}
 .portrait {width: 160px;}
+.float {z-index: 10;}
 
 #gallery-publications {filter: grayscale(100%);}
 
-
+#indexVideo {
+  object-fit: cover;
+  width: 100vw;
+  height: 85vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
 
 /******************************************/
 /* Menu (mady by Erik Terwan - MIT License)              
@@ -153,7 +163,7 @@ main p {line-height: 1.4; margin: 10px 0 15px 0; font-size: 1.1em;}
   left: -5px;
   cursor: pointer;
   opacity: 0; /* hide this */
-  z-index: 2; /* and place it over the hamburger */
+  z-index: 200; /* and place it over the hamburger */
   -webkit-touch-callout: none;
 }
 
@@ -167,7 +177,7 @@ main p {line-height: 1.4; margin: 10px 0 15px 0; font-size: 1.1em;}
   position: relative;
   background: var(--color-menu-hamburger);
   border-radius: 3px;
-  z-index: 1;
+  z-index: 100;
   transform-origin: 4px 0px;
   
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
@@ -262,6 +272,7 @@ display: inline-block;
 /* Footer and main menu             
 /*****************************************/
 footer {
+  z-index: 10;
   grid-area: footer; 
   display: grid;
   background-color: var(--color-footer-bg); 
