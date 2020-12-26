@@ -57,7 +57,6 @@ Hello i'm Phil Boivin!
           <button id="submit-button" type="button" onClick="submitToAPI(event)" class="form-submit">Envoyer</button>
           </form>
     
-          <div id="ip" class="info"></div>
           <div id="messages" class="error"></div>
 
        </div>
@@ -78,12 +77,12 @@ Hello i'm Phil Boivin!
 </script> 
 
 
+<!-- Get IP address (for security measure only) -->
 <script type="application/javascript">
 var ip;
   $(function() {
     $.getJSON("https://api.ipify.org?format=jsonp&callback=?",
       function(json) {
-        $("#ip").html("Votre adresse IP est "+ json.ip)
         ip = json.ip;
       }
     );
