@@ -84,6 +84,7 @@ Hello i'm Phil Boivin!
      
         var x = "<span class='redCircle'>x</span>&nbsp;&nbsp;";
         var nameRegex = /[A-Za-z]{1}[A-Za-z]/;
+        var clientIP;
         
             if ($("#email").val() || $("#name").val()) {
               return;
@@ -109,11 +110,11 @@ Hello i'm Phil Boivin!
             }
 
             $.get('https://api.ipify.org', function(data) {
-              ip = data;
-              console.log(ip);
+              clientIP = data;
+              console.log(clientIP);
             })
 
-            var finalMsg = $("#message-input").val() + ' ' + ip;
+            var finalMsg = $("#message-input").val() + ' ' + clientIP;
 
  
        var data = {
