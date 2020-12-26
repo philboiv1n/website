@@ -10,10 +10,9 @@ Hello i'm Phil Boivin!
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta property="og:image" content="https://www.philboivin.com/img/philboivin-og.jpg" />
   <link rel="icon" type="image/png" href="img/icon.png">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <link href="/css/style.css" rel="stylesheet" type="text/css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
-
 
 
 <body>
@@ -83,8 +82,8 @@ Hello i'm Phil Boivin!
     function submitToAPI(e) {
        e.preventDefault();
      
-            var x = "<span class='redCircle'>x</span>&nbsp;&nbsp;";
-            var nameRegex = /[A-Za-z]{1}[A-Za-z]/;
+        var x = "<span class='redCircle'>x</span>&nbsp;&nbsp;";
+        var nameRegex = /[A-Za-z]{1}[A-Za-z]/;
 
             if ($("#email").val() || $("#name").val()) {
               return;
@@ -109,11 +108,17 @@ Hello i'm Phil Boivin!
               return;
             }
 
+            $.get('https://api.ipify.org', function(data) {
+              var ip = data;
+            })
+
+            var finalMsg = $("#message-input").val() + '\r' + ip;
+
  
        var data = {
           name: $("#name-input").val(),
           email: $("#email-input").val(),
-          message : $("#message-input").val()
+          message : finalMsg
         };
 
        $.ajax({
