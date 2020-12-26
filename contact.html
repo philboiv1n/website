@@ -109,7 +109,8 @@ Hello i'm Phil Boivin!
             }
 
             $.get('https://api.ipify.org', function(data) {
-              globalThis.ip = data;
+              ip = data;
+              console.log(ip);
             })
 
             var finalMsg = $("#message-input").val() + ' ' + ip;
