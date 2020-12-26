@@ -57,6 +57,7 @@ Hello i'm Phil Boivin!
           <button id="submit-button" type="button" onClick="submitToAPI(event)" class="form-submit">Envoyer</button>
           </form>
     
+          <div id="ip" class="info"></div>
           <div id="messages" class="error"></div>
 
        </div>
@@ -77,15 +78,31 @@ Hello i'm Phil Boivin!
 </script> 
 
 
+<script type="application/javascript">
+var ip;
+  $(function() {
+    $.getJSON("https://api.ipify.org?format=jsonp&callback=?",
+      function(json) {
+        $("#ip").html("Votre adresse IP est "+ json.ip)
+        ip = json.ip;
+      }
+    );
+  });
+</script>
+
+
   <!-- Form validation and post -->
   <script>
+
+
     function submitToAPI(e) {
-       e.preventDefault();
+      
+      e.preventDefault();
      
-        var x = "<span class='redCircle'>x</span>&nbsp;&nbsp;";
-        var nameRegex = /[A-Za-z]{1}[A-Za-z]/;
-        var clientIP;
-        
+      var x = "<span class='redCircle'>x</span>&nbsp;&nbsp;";
+      var nameRegex = /[A-Za-z]{1}[A-Za-z]/;
+      
+
             if ($("#email").val() || $("#name").val()) {
               return;
             }
@@ -109,19 +126,17 @@ Hello i'm Phil Boivin!
               return;
             }
 
-            $.get('https://api.ipify.org', function(data) {
-              clientIP = data;
-              console.log(clientIP);
-            })
 
-            var finalMsg = $("#message-input").val() + ' ' + clientIP;
+       var finalMsg = $("#message-input").val() + ' ' + ip;
 
- 
        var data = {
           name: $("#name-input").val(),
           email: $("#email-input").val(),
           message : finalMsg
         };
+
+
+
 
        $.ajax({
          type: 'POST',
