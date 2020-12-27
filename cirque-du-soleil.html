@@ -10,8 +10,8 @@ Hello i'm Phil Boivin!
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta property="og:image" content="https://www.philboivin.com/img/philboivin-og.jpg" />
   <link rel="icon" type="image/png" href="img/icon.png">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <link href="/css/style.css" rel="stylesheet" type="text/css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -87,10 +87,15 @@ Hello i'm Phil Boivin!
       </div>
     </div>
 
-
     <div class="row top-spacer">
       <div class="col">
-        <span id="menu-portfolio"></span>
+        <span id="menu-editorial"></span>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <span id="menu-galeries"></span>
       </div>
     </div>
 
@@ -99,10 +104,12 @@ Hello i'm Phil Boivin!
 
 <footer></footer>
 
+<!-- Load shared HTML content -->
 <script> 
   $(function(){
-    $("#menu-items").load("/inc/menu.html");
-    $("#menu-portfolio").load("/inc/menu-portfolio.html");
+    $("#menu-items").load("/inc/menu.html"); 
+    $("#menu-editorial").load("/inc/menu-editorial.html");
+    $("#menu-galeries").load("/inc/menu-galeries.html");
     $("footer").load("/inc/footer.html");
   });
 </script> 

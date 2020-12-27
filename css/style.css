@@ -15,6 +15,7 @@ CSS Stylesheet for philboivin.com
 --menu-footer-font-size : 1.0em;
 --h1-font-size : 1.4em;
 --h2-font-size : 1.2em;
+--photo-caption-font-size : 1.0em;
 --footer-font-size: 1.0em;
 
 --form-border-color: #ddd;
@@ -52,6 +53,7 @@ CSS Stylesheet for philboivin.com
 --color-social-icons : #fff;
 --color-social-icons-hover : #ccc;
 --color-copy : #999;
+--color-info : #999;
 --color-hr : #ccc;
 
 }
@@ -119,13 +121,14 @@ main p {line-height: 1.4; margin: 10px 0 15px 0; font-size: 1.1em;}
 .sub-menu li {padding: 0 0 5px 0; color: var(--color-sub-menu-li);}
 */
 
-.sub-menu {margin: 20px 0 0 0;}
-.sub-menu li {display: inline-block; color: var(--color-sub-menu-li);  margin: 0 10px 25px 0;}
-.sub-menu a {text-decoration: none; border: 1px solid var(--color-sub-menu-border);  padding: 5px 8px;}
+.sub-menu {margin: 20px 0 0 0; }
+.sub-menu li {display: inline-block; color: var(--color-sub-menu-li); margin: 0 10px 25px 0; }
+.sub-menu a {text-decoration: none; border: 1px solid var(--color-sub-menu-border);  padding: 5px 8px; background-color: #fff;}
 .sub-menu a:hover {border: 1px solid var(--color-sub-menu-a-hover);}
 
 .success {color: green}
 .error {color: red;}
+.info {color : var(--color-info); font-size: 0.9em; padding-bottom: 10px;}
 .top-spacer {margin-top: 30px;}
 .row {display: flex; padding: 15px 0;}
 .col {flex: 50%;}
@@ -144,6 +147,103 @@ main p {line-height: 1.4; margin: 10px 0 15px 0; font-size: 1.1em;}
   left: 0;
   z-index: 0;
 }
+
+
+
+
+
+
+/*****************************************/
+/* Contact Form             
+/*****************************************/
+#contact-form {padding: 20px 0;}
+textarea {resize: none;}
+
+.form-control {
+  font-family: var(--body-font); 
+  padding: 5px; 
+  font-size: var(--form-font-size);
+  margin:0 0 20px 0; 
+  border: 1px solid var(--form-border-color); 
+  width: 95%;
+  max-width: 400px;
+}
+
+.form-control-bee {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0;
+  width: 0;
+  z-index: -1;
+}
+
+.form-submit {padding: 10px 15px; font-size: inherit; margin-top: 10px; border-radius: 10px; border: 1px solid var(--form-submit-color-border);}
+.form-submit:hover {cursor:pointer;}
+.form-submit-disabled:hover {cursor: default;}
+
+.redCircle {
+border-radius: 50%;
+width: 24px;
+height: 24px;
+padding: 2px;
+background: red;
+color: white;
+text-align: center;
+font-size:  16px;
+display: inline-block;
+}
+
+/*****************************************/
+/* Blog        
+/*****************************************/
+.blog li {margin: 0 0 5px 15px}
+.date-blog {color: #666; margin: 20px 0;}
+.photos {margin-top: 40px;}
+.photos img {display: block;}
+.photos p {margin: 0 0 40px 0; font-size: var(--photo-caption-font-size);}
+
+
+/*****************************************/
+/* Footer and main menu             
+/*****************************************/
+footer {
+  z-index: 10;
+  grid-area: footer; 
+  display: grid;
+  background-color: var(--color-footer-bg); 
+  grid-template-areas:
+    "menu";
+}
+
+#menu {
+  grid-area: menu; 
+  text-align: left; 
+  margin: 60px auto; 
+  width: var(--content-width); 
+  font-size: var(--footer-font-size); 
+  color: var(--color-footer-txt); 
+}
+
+footer a {color: var(--color-footer-a); text-decoration: none;}
+footer a:hover {color: var(--color-footer-a-hover);}
+
+footer .logo a {top:0; left:0; color: var(--color-logo-footer);}
+footer .logo a:hover {color: var(--color-logo-footer-hover);}
+
+footer nav {font-size: var(--menu-footer-font-size); padding: 20px 0;}
+footer nav li {display: inline; padding: 0 20px 0 0;}
+
+.social-icons {padding: 20px 0;}
+.social-icons li {display: inline; padding: 0 12px 0 0;}
+.social-icons svg {fill: var(--color-social-icons); opacity: 1.0; width: 24px;}
+.social-icons svg:hover {fill: var(--color-social-icons-hover);}
+.copy {color: var(--color-copy);}
+
+
+
+
 
 /******************************************/
 /* Menu (mady by Erik Terwan - MIT License)              
@@ -220,91 +320,6 @@ main p {line-height: 1.4; margin: 10px 0 15px 0; font-size: 1.1em;}
 
 /* And let's slide it in from the left */
 #menuToggle input:checked ~ ul {transform: none;}
-
-
-
-
-/*****************************************/
-/* Contact Form             
-/*****************************************/
-#contact-form {padding: 20px 0;}
-textarea {resize: none;}
-
-.form-control {
-  font-family: var(--body-font); 
-  padding: 5px; 
-  font-size: var(--form-font-size);
-  margin:0 0 20px 0; 
-  border: 1px solid var(--form-border-color); 
-  width: 95%;
-  max-width: 400px;
-}
-
-.form-control-bee {
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 0;
-  width: 0;
-  z-index: -1;
-}
-
-.form-submit {padding: 10px 15px; font-size: inherit; margin-top: 10px; border-radius: 10px; border: 1px solid var(--form-submit-color-border);}
-.form-submit:hover {cursor:pointer;}
-.form-submit-disabled:hover {cursor: default;}
-
-.redCircle {
-border-radius: 50%;
-width: 24px;
-height: 24px;
-padding: 2px;
-background: red;
-color: white;
-text-align: center;
-font-size:  16px;
-display: inline-block;
-}
-
-
-
-/*****************************************/
-/* Footer and main menu             
-/*****************************************/
-footer {
-  z-index: 10;
-  grid-area: footer; 
-  display: grid;
-  background-color: var(--color-footer-bg); 
-  grid-template-areas:
-    "menu";
-}
-
-#menu {
-  grid-area: menu; 
-  text-align: left; 
-  margin: 60px auto; 
-  width: var(--content-width); 
-  font-size: var(--footer-font-size); 
-  color: var(--color-footer-txt); 
-}
-
-footer a {color: var(--color-footer-a); text-decoration: none;}
-footer a:hover {color: var(--color-footer-a-hover);}
-
-footer .logo a {top:0; left:0; color: var(--color-logo-footer);}
-footer .logo a:hover {color: var(--color-logo-footer-hover);}
-
-footer nav {font-size: var(--menu-footer-font-size); padding: 20px 0;}
-footer nav li {display: inline; padding: 0 20px 0 0;}
-
-.social-icons {padding: 20px 0;}
-.social-icons li {display: inline; padding: 0 12px 0 0;}
-.social-icons svg {fill: var(--color-social-icons); opacity: 1.0; width: 24px;}
-.social-icons svg:hover {fill: var(--color-social-icons-hover);}
-.copy {color: var(--color-copy);}
-
-
 
 /*****************************************/
 /* Mobile                

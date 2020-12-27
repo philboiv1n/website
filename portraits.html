@@ -10,10 +10,10 @@ Hello i'm Phil Boivin!
   <meta name="viewport" content="width=device-width, initial-scale=1">
  <meta property="og:image" content="https://www.philboivin.com/img/philboivin-og.jpg" />
   <link rel="icon" type="image/png" href="img/icon.png">
+  <link href="/css/style.css" rel="stylesheet" type="text/css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/nanogallery2/3.0.2/css/nanogallery2.min.css" rel="stylesheet" type="text/css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/nanogallery2/3.0.2/jquery.nanogallery2.min.js"></script>
-  <link href="/css/style.css" rel="stylesheet" type="text/css">
 </head>
 
 
@@ -44,7 +44,7 @@ Hello i'm Phil Boivin!
 
       <div class="row top-spacer">
         <div class="col">
-          <span id="menu-portfolio"></span>
+          <span id="menu-galeries"></span>
         </div>
       </div>
 
@@ -130,9 +130,8 @@ Hello i'm Phil Boivin!
                   title: 'Théâtre de la Fournaise' },
 
                 { src: '900px/20151115-portraits-philboivin-005.jpg', srct: '400px/20151115-portraits-philboivin-005.jpg', 
-                  title: 'Carina' },
+                  title: 'Carina' }
 
-            
 
                   ]
               });
@@ -145,10 +144,11 @@ Hello i'm Phil Boivin!
 
 <footer></footer>
 
+<!-- Load shared HTML content -->
 <script> 
   $(function(){
-    $("#menu-items").load("/inc/menu.html");
-    $("#menu-portfolio").load("/inc/menu-portfolio.html");
+    $("#menu-items").load("/inc/menu.html"); 
+    $("#menu-galeries").load("/inc/menu-galeries.html");
     $("footer").load("/inc/footer.html");
   });
 </script> 

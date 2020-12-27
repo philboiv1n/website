@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!--
+Hello i'm Phil Boivin! 
+-->
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Surfer en hiver à Montréakl | Philippe Boivin</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:image" content="https://www.philboivin.com/img/philboivin-og.jpg" />
+  <link rel="icon" type="image/png" href="img/icon.png">
+  <link href="/css/style.css" rel="stylesheet" type="text/css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+  <main>
+    <div id="content">
+
+      <nav id="main-menu">
+        <div id="menuToggle">
+          <input type="checkbox" />
+          <span></span>
+          <span></span>
+          <span></span> 
+          <ul id="menu-items"></ul>
+        </div>
+      </nav>
+
+      <div class="row">
+        <div class="col">
+
+          <h1>Surfer en hiver à Montréal</h1>
+          
+          <p>
+           <div class="date-blog">5 décembre 2020</div>
+
+           Quelques photos capturées sur le fleuve Saint-Laurent près d’Habitat à Montréal. Malgré la température près du point de congélation, j'ai rencontré quelques surfeuses et surfeurs passionnés par les vagues.
+          </p>
+
+          <div class="photos">
+            <p>
+              <img src="/img/photos/blog/900px/20201205-surf-montreal-phil-boivin-001.jpg">
+              Un surfeur se dirige vers le fleuve. Photo Philippe Boivin.
+            </p>
+
+            <p>
+              <img src="/img/photos/blog/900px/20201205-surf-montreal-phil-boivin-002.jpg">
+              Un surfeur pratique sur le fleuve St-Laurent. Photo Philippe Boivin.
+            </p>
+
+            <p>
+              <img src="/img/photos/blog/900px/20201205-surf-montreal-phil-boivin-003.jpg">
+             Photo Philippe Boivin.
+            </p>
+
+            <p>
+              <img src="/img/photos/blog/900px/20201205-surf-montreal-phil-boivin-004.jpg">
+              Photo Philippe Boivin.
+            </p>
+
+            <p>
+              <img src="/img/photos/blog/900px/20201205-surf-montreal-phil-boivin-005.jpg">
+              Un panneau "personalisé" sur le chemin vers la rivière. Photo Philippe Boivin.
+            </p>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </main>
+  
+<footer></footer>
+
+<script> 
+  $(function(){
+    $("#menu-items").load("/inc/menu.html");
+    $("footer").load("/inc/footer.html");
+  });
+</script> 
+
+</body>
+</html>
