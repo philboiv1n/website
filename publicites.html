@@ -40,18 +40,12 @@ Hello i'm Phil Boivin!
         </div>
       </div>
 
-      <div id="gallery01"></div>
-
-      <div class="row top-spacer">
-        <div class="col">
-          <span id="menu-galeries"></span>
-        </div>
-      </div>
+      <div id="gallery"></div>
   
       <script>
          jQuery(document).ready(function () {
 
-            jQuery("#gallery01").nanogallery2( {
+            jQuery("#gallery").nanogallery2( {
                 // ### gallery settings ### 
 
 
@@ -128,7 +122,6 @@ Hello i'm Phil Boivin!
 <script> 
   $(function(){
     $("#menu-items").load("/inc/menu.html"); 
-    $("#menu-galeries").load("/inc/menu-galeries.html");
     $("footer").load("/inc/footer.html");
   });
 </script> 

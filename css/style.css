@@ -11,7 +11,7 @@ CSS Stylesheet for philboivin.com
 
 --logo-font-size : 1.4em;
 --form-font-size : 1.0em;
---menu-font-size : 1.2em;
+--menu-font-size : 1.1em;
 --menu-footer-font-size : 1.0em;
 --h1-font-size : 1.4em;
 --h2-font-size : 1.2em;
@@ -35,6 +35,7 @@ CSS Stylesheet for philboivin.com
 --color-menu-hamburger: #ccc;
 --color-menu-x: #999;
 --color-menu-bg: #eee;
+--color-menu-line: #999;
 
 --color-sub-menu-li: #333;
 --color-sub-menu-border: #ccc;
@@ -42,6 +43,7 @@ CSS Stylesheet for philboivin.com
 
 --color-logo: #ccc;
 --color-logo-hover: #000;
+--color-logo-top: #ccc;
 
 --color-logo-footer: #fff;
 --color-logo-footer-hover: #ccc;
@@ -59,67 +61,18 @@ CSS Stylesheet for philboivin.com
 }
 
 * {margin:0; padding:0; box-sizing: border-box;}
-
-body {
-  background-color: var(--color-body-bg); 
-  font-family: var(--body-font), sans-serif;
-  color: var(--color-body-txt);
-  text-align: center;
-  margin: 0 auto; 
-  display: grid;  
-  grid-template-columns: 100%;
-  grid-template-rows: auto 400px;
-  grid-template-areas:
-    "main"
-    "footer";
-}
-
-
+body {background-color: var(--color-body-bg); font-family: var(--body-font), sans-serif; color: var(--color-body-txt); text-align: center; margin: 0 auto; display: grid; grid-template-columns: 100%; grid-template-rows: auto 400px; grid-template-areas: "main" "footer";}
 h1 {font-size: var(--h1-font-size); margin: 12px 0; font-family: var(--h-font); font-weight: normal;}
 h2 {font-size: var(--h2-font-size); margin: 12px 0; font-family: var(--h-font); font-weight: normal;}
-
 a {color: var(--color-body-a);}
 a:hover {color: var(--color-body-a-hover); text-decoration: none;}
-
-
 img {max-width: 100%; height: auto;}
 hr {margin: 30px 0; border: 1px solid var(--color-hr);}
-
-.logo a {
-font-family: var(--logo-font);
-font-size: var(--logo-font-size);
-letter-spacing: 1px;
-color: var(--color-logo);
-position: relative;
-top: -30px;
-left: 55px;
-}
-
-.logo a:hover {color: var(--color-logo-hover);}
-
-main {
-  z-index: 10;
-  grid-area: main; 
-  min-height: 85vh;
-  display: grid;
-  grid-template-areas:
-    "content";
-}
-
-#content {
-  grid-area: content; 
-  text-align: left; 
-  width: var(--content-width); 
-  margin: 30px auto; 
-}
-
-
+main {z-index: 1; grid-area: main; min-height: 85vh; display: grid; grid-template-areas: "content";}
 main p {line-height: 1.4; margin: 10px 0 15px 0; font-size: 1.1em;}
+#content {grid-area: content; text-align: left; width: var(--content-width); margin: 30px auto;}
 
-/* Backup sub-menu
-.sub-menu {margin-left: 15px;}
-.sub-menu li {padding: 0 0 5px 0; color: var(--color-sub-menu-li);}
-*/
+.logo {font-family: var(--logo-font); font-size: var(--logo-font-size); letter-spacing: 1px;}
 
 .sub-menu {margin: 20px 0 0 0; }
 .sub-menu li {display: inline-block; color: var(--color-sub-menu-li); margin: 0 10px 25px 0; }
@@ -147,8 +100,6 @@ main p {line-height: 1.4; margin: 10px 0 15px 0; font-size: 1.1em;}
   left: 0;
   z-index: 0;
 }
-
-
 
 
 
@@ -209,7 +160,7 @@ display: inline-block;
 /* Footer and main menu             
 /*****************************************/
 footer {
-  z-index: 10;
+  z-index: 0;
   grid-area: footer; 
   display: grid;
   background-color: var(--color-footer-bg); 
@@ -233,10 +184,10 @@ footer .logo a {top:0; left:0; color: var(--color-logo-footer);}
 footer .logo a:hover {color: var(--color-logo-footer-hover);}
 
 footer nav {font-size: var(--menu-footer-font-size); padding: 20px 0;}
-footer nav li {display: inline; padding: 0 20px 0 0;}
+footer nav li {display: inline-block; margin: 0 20px 10px 0;}
 
 .social-icons {padding: 20px 0;}
-.social-icons li {display: inline; padding: 0 12px 0 0;}
+.social-icons li {display: inline; padding-right: 15px;}
 .social-icons svg {fill: var(--color-social-icons); opacity: 1.0; width: 24px;}
 .social-icons svg:hover {fill: var(--color-social-icons-hover);}
 .copy {color: var(--color-copy);}
@@ -248,7 +199,6 @@ footer nav li {display: inline; padding: 0 20px 0 0;}
 /******************************************/
 /* Menu (mady by Erik Terwan - MIT License)              
 /******************************************/
-
 #menuToggle {display: block; position: relative; z-index: 100; -webkit-user-select: none; user-select: none;}
 #menuToggle a { text-decoration: none; color: var(--color-menu-a); transition: color 0.3s ease;}
 #menuToggle a:hover { color: var(--color-menu-a-hover);}
@@ -263,7 +213,7 @@ footer nav li {display: inline; padding: 0 20px 0 0;}
   left: -5px;
   cursor: pointer;
   opacity: 0; /* hide this */
-  z-index: 200; /* and place it over the hamburger */
+  z-index: 20; /* and place it over the hamburger */
   -webkit-touch-callout: none;
 }
 
@@ -277,9 +227,8 @@ footer nav li {display: inline; padding: 0 20px 0 0;}
   position: relative;
   background: var(--color-menu-hamburger);
   border-radius: 3px;
-  z-index: 100;
+  z-index: 10;
   transform-origin: 4px 0px;
-  
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
               background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
               opacity 0.55s ease;
@@ -287,7 +236,6 @@ footer nav li {display: inline; padding: 0 20px 0 0;}
 
 #menuToggle span:first-child {transform-origin: 0% 0%;}
 #menuToggle span:nth-last-child(2) {transform-origin: 0% 100%;}
-
 
 /* Transform all the slices of hamburger into a crossmark. */
 #menuToggle input:checked ~ span { opacity: 1; transform: rotate(45deg) translate(-2px, -1px); background: var(--color-menu-x);}
@@ -297,7 +245,6 @@ footer nav li {display: inline; padding: 0 20px 0 0;}
 
 /* and the last one should go the other direction */
 #menuToggle input:checked ~ span:nth-last-child(2) { transform: rotate(-45deg) translate(0, -1px);}
-
 
 /* Make this absolute positioned at the top left of the screen */
 #menu-items
@@ -315,11 +262,13 @@ footer nav li {display: inline; padding: 0 20px 0 0;}
   transform: translate(-190%, 0);  
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 }
+#menu-items ul {list-style-type: none; font-size: var(--menu-font-size);}
+#menu-items li {padding: 8px 0;}
 
-#menu-items li {padding: 10px 0; font-size: var(--menu-font-size); }
 
 /* And let's slide it in from the left */
 #menuToggle input:checked ~ ul {transform: none;}
+
 
 /*****************************************/
 /* Mobile                
