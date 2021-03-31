@@ -34,15 +34,14 @@ Hello i'm Phil Boivin!
 
       <div class="row">
         <div class="col">
-
+          <div id="menu-l2" class="sub-menu"></div>
           <h1>Flashback</h1>
-         
         </div>
       </div>
 
       <div id="gallery"></div>
 
-      <div class="row top-spacer">
+      <div class="row">
         <div class="col">
           <span id="menu-editorial"></span>
         </div>
@@ -118,7 +117,8 @@ Hello i'm Phil Boivin!
 <!-- Load shared HTML content -->
 <script> 
   $(function(){
-    $("#menu-items").load("/inc/menu.html"); 
+    $("#menu-items").load("/inc/menu.html");
+    $("#menu-l2").load("/inc/menu-l2.html");
     $("#menu-editorial").load("/inc/menu-editorial.html");
     $("footer").load("/inc/footer.html");
   });

@@ -32,8 +32,9 @@ Hello i'm Phil Boivin!
     <div class="row">
       <div class="col">
 
+        <div id="menu-l2" class="sub-menu"></div>
         <h1>Vidéos</h1>
-
+        
         <p>
          <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/389216283" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
         </p>
@@ -50,7 +51,8 @@ Hello i'm Phil Boivin!
 <!-- Load shared HTML content -->
 <script> 
   $(function(){
-    $("#menu-items").load("/inc/menu.html"); 
+    $("#menu-items").load("/inc/menu.html");
+    $("#menu-l2").load("/inc/menu-l2.html");
     $("footer").load("/inc/footer.html");
   });
 </script> 

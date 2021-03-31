@@ -41,6 +41,8 @@ CSS Stylesheet for philboivin.com
 --color-sub-menu-border: #ccc;
 --color-sub-menu-a-hover: #aaa;
 
+--color-sub-sub-menu: #ccc;
+
 --color-logo: #ccc;
 --color-logo-hover: #000;
 --color-logo-top: #ccc;
@@ -56,7 +58,7 @@ CSS Stylesheet for philboivin.com
 --color-social-icons-hover : #ccc;
 --color-copy : #999;
 --color-info : #999;
---color-hr : #ccc;
+--color-hr : #eee;
 
 }
 
@@ -78,6 +80,8 @@ main p {line-height: 1.4; margin: 10px 0 15px 0; font-size: 1.1em;}
 .sub-menu li {display: inline-block; color: var(--color-sub-menu-li); margin: 0 10px 25px 0; }
 .sub-menu a {text-decoration: none; border: 1px solid var(--color-sub-menu-border);  padding: 5px 8px; background-color: #fff;}
 .sub-menu a:hover {border: 1px solid var(--color-sub-menu-a-hover);}
+
+.sub-sub-menu {color : var(--color-sub-sub-menu);}
 
 .success {color: green}
 .error {color: red;}

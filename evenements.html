@@ -34,6 +34,7 @@ Hello i'm Phil Boivin!
 
       <div class="row">
         <div class="col">
+          <div id="menu-l2" class="sub-menu"></div>
           <h1>Événements</h1>
           <p>Quelques photos événementielles lors de rassemblement corporatif ou mariages.</p>
         </div>
@@ -49,7 +50,8 @@ Hello i'm Phil Boivin!
 <!-- Load shared HTML content -->
 <script> 
   $(function(){
-    $("#menu-items").load("/inc/menu.html"); 
+    $("#menu-items").load("/inc/menu.html");
+    $("#menu-l2").load("/inc/menu-l2.html");
     $("footer").load("/inc/footer.html");
   });
 </script> 
