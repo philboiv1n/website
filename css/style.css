@@ -92,6 +92,7 @@ main p {line-height: 1.4; margin: 10px 0 15px 0; font-size: 1.1em;}
 .padding-left {padding-left: 20px;}
 .portrait {width: 160px;}
 .float {z-index: 10;}
+.list li {margin: 0 0 5px 15px}
 
 #gallery-publications {filter: grayscale(100%);}
 
@@ -153,10 +154,11 @@ display: inline-block;
 /*****************************************/
 /* Blog        
 /*****************************************/
-.blog li {margin: 0 0 5px 15px}
+.blog {text-align: center;}
 .date-blog {color: #666; margin: 20px 0;}
 .photos {margin-top: 40px;}
-.photos img {display: block;}
+.photos img {display: block; margin-left: auto;
+  margin-right: auto;}
 .photos p {margin: 0 0 40px 0; font-size: var(--photo-caption-font-size);}
 
 
