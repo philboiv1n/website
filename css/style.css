@@ -59,6 +59,7 @@ CSS Stylesheet for philboivin.com
 --color-copy : #999;
 --color-info : #999;
 --color-hr : #eee;
+--color-photoby : #999;
 
 }
 
@@ -66,7 +67,7 @@ CSS Stylesheet for philboivin.com
 body {background-color: var(--color-body-bg); font-family: var(--body-font), sans-serif; color: var(--color-body-txt); text-align: center; margin: 0 auto; display: grid; grid-template-columns: 100%; grid-template-rows: auto 400px; grid-template-areas: "main" "footer";}
 h1 {font-size: var(--h1-font-size); margin: 12px 0; font-family: var(--h-font); font-weight: normal;}
 h2 {font-size: var(--h2-font-size); margin: 12px 0; font-family: var(--h-font); font-weight: normal;}
-a {color: var(--color-body-a);}
+a {color: var(--color-body-a); }
 a:hover {color: var(--color-body-a-hover); text-decoration: none;}
 img {max-width: 100%; height: auto;}
 hr {margin: 30px 0; border: 1px solid var(--color-hr);}
@@ -78,7 +79,7 @@ main p {line-height: 1.4; margin: 10px 0 15px 0; font-size: 1.1em;}
 
 .sub-menu {margin: 20px 0 0 0; }
 .sub-menu li {display: inline-block; color: var(--color-sub-menu-li); margin: 0 10px 25px 0; }
-.sub-menu a {text-decoration: none; border: 1px solid var(--color-sub-menu-border);  padding: 5px 8px; background-color: #fff;}
+.sub-menu a {text-decoration: none; border: 1px solid var(--color-sub-menu-border);  padding: 5px 8px; }
 .sub-menu a:hover {border: 1px solid var(--color-sub-menu-a-hover);}
 
 .sub-sub-menu {color : var(--color-sub-sub-menu);}
@@ -93,6 +94,7 @@ main p {line-height: 1.4; margin: 10px 0 15px 0; font-size: 1.1em;}
 .portrait {width: 160px;}
 .float {z-index: 10;}
 .list li {margin: 0 0 5px 15px}
+.photo-by {color: var(--color-photoby);}
 
 #gallery-publications {filter: grayscale(100%);}
 
