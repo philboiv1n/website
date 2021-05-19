@@ -72,7 +72,7 @@ a:hover {color: var(--color-body-a-hover); text-decoration: none;}
 img {max-width: 100%; height: auto;}
 hr {margin: 30px 0; border: 1px solid var(--color-hr);}
 main {z-index: 1; grid-area: main; min-height: 85vh; display: grid; grid-template-areas: "content";}
-main p {line-height: 1.4; margin: 10px 0 15px 0; font-size: 1.1em;}
+main p {line-height: 1.4; margin: 10px 0 15px 0; font-size: 1.0em;}
 #content {grid-area: content; text-align: left; width: var(--content-width); margin: 30px auto;}
 
 .logo {font-family: var(--logo-font); font-size: var(--logo-font-size); letter-spacing: 1px;}
