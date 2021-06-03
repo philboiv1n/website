@@ -93,7 +93,7 @@ main p {line-height: 1.4; margin: 10px 0 15px 0; font-size: 1.0em;}
 .padding-left {padding-left: 20px;}
 .portrait {width: 160px;}
 .float {z-index: 10;}
-.list li {margin: 0 0 5px 15px}
+.list li {margin: 0 0 5px 20px}
 .photo-by {color: var(--color-photoby);}
 
 #gallery-publications {filter: grayscale(100%);}
