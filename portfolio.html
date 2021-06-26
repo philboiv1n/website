@@ -41,7 +41,7 @@ Hello i'm Phil Boivin!
       <div id="gallery">Chargement...</div>
 
 
-     <div class="row">
+     <div class="row top-spacer">
       <div class="col">
 
         <h2>Quelques publications</h2>
@@ -57,11 +57,14 @@ Hello i'm Phil Boivin!
 
           jQuery("#gallery-publications").nanogallery2( {
               // ### gallery settings ### 
-
+               galleryMaxRows: 1,
+               galleryDisplayMode: 'rows',
+               gallerySorting: 'random',
+               thumbnailDisplayOrder: 'random',
 
               // THUMBNAILS
               thumbnailWidth: "auto",
-              thumbnailHeight: 180,
+              thumbnailHeight: 140,
               thumbnailGutterWidth: 10, 
               thumbnailGutterHeight: 10,
               thumbnailBorderHorizontal: 0, 
