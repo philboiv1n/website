@@ -8,12 +8,11 @@ Hello i'm Phil Boivin!
   <meta charset="utf-8">
   <title>Portraits | Philippe Boivin</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
- <meta property="og:image" content="https://www.philboivin.com/img/philboivin-og.jpg" />
+  <meta property="og:image" content="https://www.philboivin.com/img/philboivin-og.jpg" />
   <link rel="icon" type="image/png" href="img/icon.png">
   <link href="/css/style.css" rel="stylesheet" type="text/css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/nanogallery2/3.0.5/css/nanogallery2.min.css" rel="stylesheet" type="text/css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/nanogallery2/3.0.5/jquery.nanogallery2.min.js"></script>
 </head>
 
 
@@ -34,106 +33,13 @@ Hello i'm Phil Boivin!
 
       <div class="row">
         <div class="col">
-
           <div id="menu-l2" class="sub-menu"></div>
           <h1>Portraits</h1>
-
         </div>
       </div>
 
-      <div id="gallery"></div>
-
-      <script>
-         jQuery(document).ready(function () {
-
-            jQuery("#gallery").nanogallery2( {
-                // ### gallery settings ### 
-
-
-                // THUMBNAILS
-                thumbnailWidth: "auto",
-                thumbnailHeight: 300,
-                thumbnailGutterWidth: 10, 
-                thumbnailGutterHeight: 10,
-                thumbnailBorderHorizontal: 0, 
-                thumbnailBorderVertical: 0,
-                thumbnailLabel: { display: false },
-
-
-                // LIGHTBOX
-                viewerToolbar: { display: false },
-                viewerTools: {
-                  topLeft:   'label',
-                  topRight:  'shareButton, zoomButton, fullscreenButton, closeButton'
-                },
-                
-                itemsBaseURL: '/img/photos/portraits/',
-                
-                // ### gallery content ### 
-                items: [
-               
-
-                { src: '900px/20130505-portraits-philboivin-001.jpg', srct: '400px/20130505-portraits-philboivin-001.jpg', 
-                  title: 'Carina' },
-
-                { src: '900px/20151011-portraits-philboivin-004.jpg', srct: '400px/20151011-portraits-philboivin-004.jpg', 
-                  title: 'Francine' },
-
-                { src: '900px/20151129-portraits-philboivin-007.jpg', srct: '400px/20151129-portraits-philboivin-007.jpg', 
-                  title: 'Romain et Stéphane' },
-
-                 { src: '900px/20150208-portraits-philboivin-003.jpg', srct: '400px/20150208-portraits-philboivin-003.jpg', 
-                  title: 'Carina' },
-
-                { src: '900px/20151217-portraits-philboivin-008.jpg', srct: '400px/20151217-portraits-philboivin-008.jpg', 
-                  title: 'Silvio' },
-
-                 { src: '900px/20150206-portraits-philboivin-002.jpg', srct: '400px/20150206-portraits-philboivin-002.jpg', 
-                  title: 'Carina' },
-
-                { src: '900px/20161112-portraits-philboivin-009.jpg', srct: '400px/20161112-portraits-philboivin-009.jpg', 
-                  title: 'Zoey' },
-
-                { src: '900px/20151129-portraits-philboivin-006.jpg', srct: '400px/20151129-portraits-philboivin-006.jpg', 
-                  title: 'Romain' },
-
-                { src: '900px/20170318-portraits-philboivin-010.jpg', srct: '400px/20170318-portraits-philboivin-010.jpg', 
-                  title: 'Len' },
-
-                { src: '900px/20170507-portraits-philboivin-011.jpg', srct: '400px/20170507-portraits-philboivin-011.jpg', 
-                  title: 'Vincent' },
-
-                { src: '900px/20191112-portraits-philboivin-018.jpg', srct: '400px/20191112-portraits-philboivin-018.jpg', 
-                  title: 'Véronique' },
-
-                { src: '900px/20170514-portraits-philboivin-012.jpg', srct: '400px/20170514-portraits-philboivin-012.jpg', 
-                  title: 'Marie-Maude' },
-
-                { src: '900px/20171001-portraits-philboivin-013.jpg', srct: '400px/20171001-portraits-philboivin-013.jpg', 
-                  title: 'Sam et Carina' },
-
-                { src: '900px/20171028-portraits-philboivin-014.jpg', srct: '400px/20171028-portraits-philboivin-014.jpg', 
-                  title: 'Zoey' },
-
-                { src: '900px/20190120-portraits-philboivin-015.jpg', srct: '400px/20190120-portraits-philboivin-015.jpg', 
-                  title: 'Zoey' },
-
-                { src: '900px/20190126-portraits-philboivin-016.jpg', srct: '400px/20190126-portraits-philboivin-016.jpg', 
-                  title: 'Jocelyn' },
-
-                { src: '900px/20190126-portraits-philboivin-017.jpg', srct: '400px/20190126-portraits-philboivin-017.jpg', 
-                  title: 'Théâtre de la Fournaise' },
-
-                { src: '900px/20151115-portraits-philboivin-005.jpg', srct: '400px/20151115-portraits-philboivin-005.jpg', 
-                  title: 'Carina' }
-
-
-                  ]
-              });
-          });
-      </script>
-
-
+      <div id="gallery">Chargement...</div>
+  
    </div>
  </main>
 
@@ -147,6 +53,18 @@ Hello i'm Phil Boivin!
     $("footer").load("/inc/footer.html");
   });
 </script> 
+
+
+<!-- Load the gallery integration -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/nanogallery2/3.0.5/jquery.nanogallery2.min.js"></script>
+<script src="js/pb.lib.js"></script>
+
+<script>
+  var csv = 'csv/Phil-Boivin-Portraits.csv';
+  var gallery = "#gallery";
+  displayGallery(csv, gallery);
+</script>
+
 
 </body>
 </html>
