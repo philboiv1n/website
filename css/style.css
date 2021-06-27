@@ -28,7 +28,7 @@ CSS Stylesheet for philboivin.com
 --color-body-bg: #fff;
 --color-body-txt: #333;
 --color-body-a: #3366cc;
---color-body-a-hover: #3366cc;
+--color-body-a-hover: #6699ff;
 
 --color-menu-a: #000;
 --color-menu-a-hover: #666;
@@ -38,8 +38,8 @@ CSS Stylesheet for philboivin.com
 --color-menu-line: #999;
 
 --color-sub-menu-li: #333;
---color-sub-menu-border: #ccc;
---color-sub-menu-a-hover: #aaa;
+--color-sub-menu-border: #3366cc;
+--color-sub-menu-a-hover: #6699ff;
 
 --color-sub-sub-menu: #ccc;
 
