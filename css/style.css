@@ -27,8 +27,8 @@ CSS Stylesheet for philboivin.com
 
 --color-body-bg: #fff;
 --color-body-txt: #333;
---color-body-a: #003399;
---color-body-a-hover: #0033CC;
+--color-body-a: #3366cc;
+--color-body-a-hover: #3366cc;
 
 --color-menu-a: #000;
 --color-menu-a-hover: #666;
@@ -79,7 +79,7 @@ main p {line-height: 1.4; margin: 10px 0 15px 0; font-size: 1.0em;}
 
 .sub-menu {margin: 20px 0 0 0; }
 .sub-menu li {display: inline-block; color: var(--color-sub-menu-li); margin: 0 10px 25px 0; }
-.sub-menu a {text-decoration: none; border: 1px solid var(--color-sub-menu-border);  padding: 5px 8px; }
+.sub-menu a {text-decoration: none; border: 1px solid var(--color-sub-menu-border);  padding: 5px 8px;}
 .sub-menu a:hover {border: 1px solid var(--color-sub-menu-a-hover);}
 
 .sub-sub-menu {color : var(--color-sub-sub-menu);}
