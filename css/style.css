@@ -90,7 +90,7 @@ li {color: var(--color-li)}
 .info {color : var(--color-info); font-size: 0.9em; padding-bottom: 10px;}
 .top-spacer {margin-top: 30px;}
 .row {display: flex; padding: 15px 0;}
-.col {flex: 50%;}
+.col {flex: 50%; padding-right: 40px;}
 .padding-left {padding-left: 20px;}
 .portrait {width: 160px;}
 .float {z-index: 10;}
@@ -290,5 +290,5 @@ footer nav li {display: inline-block; margin: 0 20px 10px 0;}
  #menu {width: var(--content-width-mobile);}
  .row {flex-direction: column;}
  .padding-left {padding-left: 0;}
-
+ .col {flex: 50%; padding-right: 10px;}
 }
