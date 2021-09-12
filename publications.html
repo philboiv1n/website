@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!--
+Hello i'm Phil Boivin! 
+-->
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Publications | Philippe Boivin</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:image" content="https://www.philboivin.com/img/philboivin-og.jpg" />
+  <link rel="icon" type="image/png" href="img/icon.png">
+  <link href="/css/style.css" rel="stylesheet" type="text/css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+  <main>
+    <div id="content">
+
+      <nav id="main-menu">
+        <div id="menuToggle">
+          <input type="checkbox" />
+          <span></span>
+          <span></span>
+          <span></span>
+          <ul id="menu-items"></ul>
+        </div>
+      </nav>
+
+    <div class="row">
+      <div class="col">
+
+        <h1>Publications</h1>
+
+        <p>
+          <ul class="list">
+            <li>La Presse - 9 septembre 2021 : <a href="https://www.lapresse.ca/affaires/2021-09-09/quand-la-philanthropie-danse-avec-la-covid-19.php">Quand la philanthropie danse avec la COVID-19</a>
+            <li>La Presse - 7 septembre 2021 : <a href="https://www.lapresse.ca/arts/musique/2021-09-07/metallica/le-black-album-vu-par.php">Metallica : Le Black Album vu par…</a>
+            <li>La Presse - 3 septembre 2021 : <a href="https://www.lapresse.ca/voyage/quebec-et-canada/2021-09-03/la-lune-s-invite-aux-jardins-de-lumiere.php">La lune s’invite aux Jardins de lumière</a></li>
+            <li>La Presse - 2 septembre 2021 : <a href="https://www.lapresse.ca/affaires/2021-09-02/assurances-collectives/les-assureurs-craignent-l-anxiete-liee-au-retour-au-bureau.php">Les assureurs craignent l’anxiété liée au retour au bureau</a>
+
+              
+          </ul>
+        </p>
+
+      </div>
+
+    </div>
+
+
+  </div> 
+</main>
+  
+<footer></footer>
+
+<script> 
+  $(function(){
+    $("#menu-items").load("/inc/menu.html"); 
+    $("footer").load("/inc/footer.html");
+  });
+</script> 
+
+</body>
+</html>
