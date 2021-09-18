@@ -40,74 +40,11 @@ Hello i'm Phil Boivin!
 
       <div id="gallery">Chargement...</div>
 
-
-     <div class="row">
-      <div class="col">
-
-        <h2>Quelques publications</h2>
-        <div id="gallery-publications"></div>
-
+      <div class="row">
+        <div class="col">
+          Voir mes dernières <a href="publications.html">publications</a>.
+        </div>
       </div>
-    </div>
-
-    
-  
-    <script>
-       jQuery(document).ready(function () {
-
-          jQuery("#gallery-publications").nanogallery2( {
-              // ### gallery settings ### 
-               galleryMaxRows: 1,
-               galleryDisplayMode: 'rows',
-               gallerySorting: 'random',
-               thumbnailDisplayOrder: 'random',
-
-              // THUMBNAILS
-              thumbnailWidth: "auto",
-              thumbnailHeight: 140,
-              thumbnailGutterWidth: 10, 
-              thumbnailGutterHeight: 10,
-              thumbnailBorderHorizontal: 0, 
-              thumbnailBorderVertical: 0,
-              thumbnailLabel: { display: false },
-
-
-              // LIGHTBOX
-              viewerToolbar: { display: false },
-              viewerTools: {
-                topLeft:   'label',
-                topRight:  'shareButton, zoomButton, fullscreenButton, closeButton'
-              },
-              
-              itemsBaseURL: '/img/publications/',
-              
-              // ### gallery content ### 
-              items: [
-              { src: 'publi-philippeboivin-cirque-du-soleil.jpg', srct: 'publi-philippeboivin-cirque-du-soleil.jpg', 
-                  title: 'Boutique Cirque du Soleil' },
-              { src: 'publi-philippeboivin-presse01.jpg', srct: 'publi-philippeboivin-presse01.jpg', 
-                  title: 'La Presse - Photos sur la collection du Cirque du Soleil' },
-              { src: 'publi-philippeboivin-aye.jpg', srct: 'publi-philippeboivin-aye.jpg', 
-                  title: 'Série Flash-back sur AYE MAG' },
-              { src: 'publi-philippeboivin-ballecourbe.jpg', srct: 'publi-philippeboivin-ballecourbe.jpg', 
-                  title: 'Balle Courbe - Bouffe de stade'},
-              { src: 'publi-philippeboivin-mashable.jpg', srct: 'publi-philippeboivin-mashable.jpg', 
-                  title: 'Mashable - 10 Stunning iPhone Bird Photos' },   
-              { src: 'publi-philippeboivin-quebecamerique.jpg', srct: 'publi-philippeboivin-quebecamerique.jpg', 
-                  title: 'Québec Amérique - Couverture du livre L\'Inconnue'},
-              { src: 'publi-philippeboivin-rds.jpg', srct: 'publi-philippeboivin-rds.jpg',
-                   title: 'RDS' },
-              { src: 'publi-philippeboivin-iphonebook.jpg', srct: 'publi-philippeboivin-iphonebook.jpg', 
-                  title: 'Livre The i.phoneography Book' },
-              { src: 'publi-philippeboivin-matins-infideles.jpg', srct: 'publi-philippeboivin-matins-infideles.jpg', 
-                  title: 'Les matins infidèles'},
-              { src: 'publi-philippeboivin-tnw.jpg', srct: 'publi-philippeboivin-tnw.jpg', 
-                  title: 'TNW - How to take incredible photos with your phone' },
-                ]
-            });
-        });
-    </script>
-
 
    </div>
  </main>

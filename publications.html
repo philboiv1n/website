@@ -12,6 +12,7 @@ Hello i'm Phil Boivin!
   <link rel="icon" type="image/png" href="img/icon.png">
   <link href="/css/style.css" rel="stylesheet" type="text/css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/nanogallery2/3.0.5/css/nanogallery2.min.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -32,7 +33,7 @@ Hello i'm Phil Boivin!
     <div class="row">
       <div class="col">
 
-        <h1>Publications</h1>
+        <h1>Dernières publications</h1>
 
         <p>
           <ul class="list">
@@ -49,17 +50,88 @@ Hello i'm Phil Boivin!
     </div>
 
 
+     <div class="row">
+      <div class="col">
+
+        <h2>Autres publications</h2>
+        <div id="gallery-publications"></div>
+
+      </div>
+    </div>
+
+
   </div> 
 </main>
   
 <footer></footer>
+
+ <script>
+       jQuery(document).ready(function () {
+
+          jQuery("#gallery-publications").nanogallery2( {
+              // ### gallery settings ### 
+               galleryMaxRows: 1,
+               galleryDisplayMode: 'rows',
+               gallerySorting: 'random',
+               thumbnailDisplayOrder: 'random',
+
+              // THUMBNAILS
+              thumbnailWidth: "auto",
+              thumbnailHeight: 140,
+              thumbnailGutterWidth: 10, 
+              thumbnailGutterHeight: 10,
+              thumbnailBorderHorizontal: 0, 
+              thumbnailBorderVertical: 0,
+              thumbnailLabel: { display: false },
+
+
+              // LIGHTBOX
+              viewerToolbar: { display: false },
+              viewerTools: {
+                topLeft:   'label',
+                topRight:  'shareButton, zoomButton, fullscreenButton, closeButton'
+              },
+              
+              itemsBaseURL: '/img/publications/',
+              
+              // ### gallery content ### 
+              items: [
+              { src: 'publi-philippeboivin-cirque-du-soleil.jpg', srct: 'publi-philippeboivin-cirque-du-soleil.jpg', 
+                  title: 'Boutique Cirque du Soleil' },
+              { src: 'publi-philippeboivin-presse01.jpg', srct: 'publi-philippeboivin-presse01.jpg', 
+                  title: 'La Presse - Photos sur la collection du Cirque du Soleil' },
+              { src: 'publi-philippeboivin-aye.jpg', srct: 'publi-philippeboivin-aye.jpg', 
+                  title: 'Série Flash-back sur AYE MAG' },
+              { src: 'publi-philippeboivin-ballecourbe.jpg', srct: 'publi-philippeboivin-ballecourbe.jpg', 
+                  title: 'Balle Courbe - Bouffe de stade'},
+              { src: 'publi-philippeboivin-mashable.jpg', srct: 'publi-philippeboivin-mashable.jpg', 
+                  title: 'Mashable - 10 Stunning iPhone Bird Photos' },   
+              { src: 'publi-philippeboivin-quebecamerique.jpg', srct: 'publi-philippeboivin-quebecamerique.jpg', 
+                  title: 'Québec Amérique - Couverture du livre L\'Inconnue'},
+              { src: 'publi-philippeboivin-rds.jpg', srct: 'publi-philippeboivin-rds.jpg',
+                   title: 'RDS' },
+              { src: 'publi-philippeboivin-iphonebook.jpg', srct: 'publi-philippeboivin-iphonebook.jpg', 
+                  title: 'Livre The i.phoneography Book' },
+              { src: 'publi-philippeboivin-matins-infideles.jpg', srct: 'publi-philippeboivin-matins-infideles.jpg', 
+                  title: 'Les matins infidèles'},
+              { src: 'publi-philippeboivin-tnw.jpg', srct: 'publi-philippeboivin-tnw.jpg', 
+                  title: 'TNW - How to take incredible photos with your phone' },
+                ]
+            });
+        });
+    </script>
+
 
 <script> 
   $(function(){
     $("#menu-items").load("/inc/menu.html"); 
     $("footer").load("/inc/footer.html");
   });
-</script> 
+</script>
+
+<!-- Load the gallery integration -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/nanogallery2/3.0.5/jquery.nanogallery2.min.js"></script>
+<script src="js/pb.lib.js"></script>
 
 </body>
 </html>
