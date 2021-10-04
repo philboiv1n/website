@@ -60,7 +60,7 @@ CSS Stylesheet for philboivin.com
 --color-info : #999;
 --color-hr : #eee;
 --color-photoby : #999;
---color-li : #666;
+--color-li : #333;
 }
 
 * {margin:0; padding:0; box-sizing: border-box;}
@@ -85,7 +85,7 @@ li {color: var(--color-li)}
 
 .sub-sub-menu {color : var(--color-sub-sub-menu);}
 
-.success {color: green}
+.success {color: green;}
 .error {color: red;}
 .info {color : var(--color-info); font-size: 0.9em; padding-bottom: 10px;}
 .top-spacer {margin-top: 30px;}
@@ -94,9 +94,11 @@ li {color: var(--color-li)}
 .padding-left {padding-left: 20px;}
 .portrait {width: 160px;}
 .float {z-index: 10;}
-.list li {margin: 0 0 5px 20px}
+.list li {margin: 0 0 5px 20px;}
+.date {color: #999; font-size: 0.9em;}
 .photo-by {color: var(--color-photoby);}
 .center {text-align: center;}
+
 
 #gallery-publications {filter: grayscale(100%);}
 #gallery {padding-bottom: 15px;}
@@ -202,7 +204,6 @@ footer nav li {display: inline-block; margin: 0 20px 10px 0;}
 .social-icons svg {fill: var(--color-social-icons); opacity: 1.0; width: 24px;}
 .social-icons svg:hover {fill: var(--color-social-icons-hover);}
 .copy {color: var(--color-copy);}
-
 
 
 
