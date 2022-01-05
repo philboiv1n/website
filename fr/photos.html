@@ -6,44 +6,39 @@ Hello i'm Phil Boivin!
 
 <head>
   <meta charset="utf-8">
-  <title>404 - Philippe Boivin</title>
+  <title>Photos | Philippe Boivin</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:image" content="https://www.philboivin.com/img/philboivin-og.jpg" />
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link href="/css/style.css" rel="stylesheet" type="text/css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/nanogallery2/3.0.5/css/nanogallery2.min.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
 
-  <header></header>
+<header></header>
 
   <main>
     <div id="content">
 
-    <div class="row">
-      <div class="col">
-
-        <h1>Oups!</h1>
-        
-        <p>
-        404 - Page introuvable.
-        </p>
-        <p>
-        <a href="/index.html">Visiter l'accueil</a>
-        </p>
-
+      <div class="row">
+        <div class="col">
+          <h1>Photos</h1>
+          <div id="menu-l2" class="sub-menu"></div>
+        </div>
       </div>
-    </div>
 
-    </div>
-  </main>
-  
+   </div>
+ </main>
+
 <footer></footer>
 
 <!-- Load shared HTML content -->
 <script> 
   $(function(){
     $("header").load("/fr/inc/header.html");
+    $("#menu-l2").load("/fr/inc/menu-l2.html");  
     $("footer").load("/fr/inc/footer.html");
   });
 </script> 

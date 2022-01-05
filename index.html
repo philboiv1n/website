@@ -9,19 +9,19 @@ Hello i'm Phil Boivin!
   <title>Philippe Boivin</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta property="og:image" content="https://www.philboivin.com/img/philboivin-og.jpg" />
-  <link rel="icon" type="image/png" href="img/icon.png">
-  <link rel="apple-touch-icon" sizes="57x57" href="img/icons/apple-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="img/icons/apple-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="img/icons/apple-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="img/icons/apple-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="img/icons/apple-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="img/icons/apple-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="img/icons/apple-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="img/icons/apple-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="img/icons/apple-icon-180x180.png">
-  <link rel="manifest" href="img/icons/manifest.json">
-  <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="msapplication-TileImage" content="img/icons/ms-icon-144x144.png">
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" sizes="57x57" href="/img/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/img/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/img/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/img/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/img/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/img/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/img/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/icons/apple-icon-180x180.png">
+  <link rel="manifest" href="/img/icons/manifest.json">
+  <meta name="msapplication-TileColor" content="#000000">
+  <meta name="msapplication-TileImage" content="/img/icons/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
   <link href="/css/style.css" rel="stylesheet" type="text/css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -29,22 +29,10 @@ Hello i'm Phil Boivin!
 
 <body>
 
-<video autoplay muted id="indexVideo">
-  <source src="videos/philboivinbirds.webm" type="video/webm">
-</video>
+  <header></header>
 
   <main>
     <div id="content">
-
-      <nav id="main-menu">
-        <div id="menuToggle">
-          <input type="checkbox" />
-          <span></span>
-          <span></span>
-          <span></span>
-          <ul id="menu-items"></ul>
-        </div>
-      </nav>
 
       <div class="row">
         <div class="col">
@@ -53,7 +41,7 @@ Hello i'm Phil Boivin!
           <p>
           Je suis Philippe. Un photographe montréalais au service des humains (et de certains robots).
           <br>
-          Je vous invite à visiter mon <a href="/portfolio.html">portfolio</a> pour en savoir plus. (English version is coming soon!)
+          Je vous invite à visiter mon <a href="/fr/portfolio.html">portfolio</a> pour en savoir plus. (English version is coming soon!)
           </p>
      
         </div>
@@ -65,11 +53,10 @@ Hello i'm Phil Boivin!
           <h2>Quoi de neuf?</h2> 
 
           <ul class="list">
-            <li>Je suis collaborateur à <a href="https://www.lapresse.ca">La Presse</a>, consultez mes dernières <a href="publications.html">publications</a>.</li>
-            <li>Je suis disponible comme photojournaliste, <a href="contact.html">contactez-moi</a>.</li>
+            <li>Je suis collaborateur à <a href="https://www.lapresse.ca">La Presse</a>, consultez mes dernières <a href="/fr/publications.html">publications</a>.</li>
+            <li>Je suis disponible comme photojournaliste, <a href="/fr/contact.html">contactez-moi</a>.</li>
           </ul>
         
-
         </div>
       </div>
 
@@ -78,10 +65,11 @@ Hello i'm Phil Boivin!
   
 <footer></footer>
 
+<!-- Load shared HTML content -->
 <script> 
   $(function(){
-    $("#menu-items").load("/inc/menu.html");
-    $("footer").load("/inc/footer.html");
+    $("header").load("/fr/inc/header.html");
+    $("footer").load("/fr/inc/footer.html");
   });
 </script> 
 

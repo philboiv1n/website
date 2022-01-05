@@ -1,0 +1,31 @@
+<section id="header-content">
+   
+  <div class="logo"><a href="/index.html">Philippe Boivin</a></div>
+
+  <nav id="main-menu">
+
+    <div id="menuToggle">
+      <input type="checkbox" />
+      <span></span>
+      <span></span>
+      <span></span>
+      <ul id="menu-items"></ul>
+    </div>
+
+    <div id="menuToggleDesk">
+      <ul id="menu-items-desk"></ul>
+      <hr>
+    </div>
+
+  </nav>
+
+  <script> 
+    $(function(){
+      $.get("/fr/inc/menu.html", function( menu ) {
+       $("#menu-items").html(menu);
+       $("#menu-items-desk").html(menu);
+      });
+    });
+  </script>
+
+</section>

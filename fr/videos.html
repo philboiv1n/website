@@ -9,31 +9,23 @@ Hello i'm Phil Boivin!
   <title>Vidéos | Philippe Boivin</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta property="og:image" content="https://www.philboivin.com/img/philboivin-og.jpg" />
-  <link rel="icon" type="image/png" href="img/icon.png">
+  <link rel="icon" type="image/png" href="/img/icon.png">
   <link href="/css/style.css" rel="stylesheet" type="text/css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
 
+  <header></header>
+
   <main>
     <div id="content">
-
-      <nav id="main-menu">
-        <div id="menuToggle">
-          <input type="checkbox" />
-          <span></span>
-          <span></span>
-          <span></span>
-          <ul id="menu-items"></ul>
-        </div>
-      </nav>
 
     <div class="row">
       <div class="col">
 
-        <div id="menu-l2" class="sub-menu"></div>
         <h1>Vidéos</h1>
+        <div id="menu-l2" class="sub-menu"></div>
         
         <p>
          <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/389216283" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
@@ -51,9 +43,9 @@ Hello i'm Phil Boivin!
 <!-- Load shared HTML content -->
 <script> 
   $(function(){
-    $("#menu-items").load("/inc/menu.html");
-    $("#menu-l2").load("/inc/menu-l2.html");
-    $("footer").load("/inc/footer.html");
+    $("header").load("/fr/inc/header.html");
+    $("#menu-l2").load("/fr/inc/menu-l2.html");  
+    $("footer").load("/fr/inc/footer.html");
   });
 </script> 
 

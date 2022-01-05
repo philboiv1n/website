@@ -9,25 +9,17 @@ Hello i'm Phil Boivin!
   <title>Cerises du Plateau | Philippe Boivin</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta property="og:image" content="https://www.philboivin.com/img/photos/blog/cerises/20210701-CerisesPlateau-PhilBoivin-001.jpg" />
-  <link rel="icon" type="image/png" href="img/icon.png">
+  <link rel="icon" type="image/png" href="/img/icon.png">
   <link href="/css/style.css" rel="stylesheet" type="text/css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
 
+  <header></header>
+
   <main>
     <div id="content">
-
-      <nav id="main-menu">
-        <div id="menuToggle">
-          <input type="checkbox" />
-          <span></span>
-          <span></span>
-          <span></span> 
-          <ul id="menu-items"></ul>
-        </div>
-      </nav>
 
       <div class="row blog">
         <div class="col">
@@ -75,9 +67,9 @@ Hello i'm Phil Boivin!
 
 <script> 
   $(function(){
-    $("#menu-items").load("/inc/menu.html");
-    $("footer").load("/inc/footer.html");
-    $("#menu-editorial").load("/inc/menu-editorial.html");
+    $("header").load("/fr/inc/header.html");
+    $("footer").load("/fr/inc/footer.html");
+    $("#menu-editorial").load("/fr/inc/menu-editorial.html");
   });
 </script> 
 

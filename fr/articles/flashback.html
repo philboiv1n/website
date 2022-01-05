@@ -8,8 +8,8 @@ Hello i'm Phil Boivin!
   <meta charset="utf-8">
   <title>Flashback | Philippe Boivin</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:image" content="https://www.philboivin.com/img/philboivin-og.jpg" />
-  <link rel="icon" type="image/png" href="img/icon.png">
+  <meta property="og:image" content="https://www.philboivin.com/img/photos/flashback/flashback-old-montreal-vanna-stephane.jpg" />
+  <link rel="icon" type="image/png" href="/img/icon.png">
   <link href="/css/style.css" rel="stylesheet" type="text/css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/nanogallery2/3.0.5/css/nanogallery2.min.css" rel="stylesheet" type="text/css">
@@ -19,18 +19,10 @@ Hello i'm Phil Boivin!
 
 <body>
 
+  <header></header>
+
   <main>
     <div id="content">
-
-      <nav id="main-menu">
-        <div id="menuToggle">
-          <input type="checkbox" />
-          <span></span>
-          <span></span>
-          <span></span>
-          <ul id="menu-items"></ul>
-        </div>
-      </nav>
 
       <div class="row">
         <div class="col">
@@ -114,15 +106,13 @@ Hello i'm Phil Boivin!
 
 <footer></footer>
 
-<!-- Load shared HTML content -->
 <script> 
   $(function(){
-    $("#menu-items").load("/inc/menu.html");
-    $("#menu-l2").load("/inc/menu-l2.html");
-    $("#menu-editorial").load("/inc/menu-editorial.html");
-    $("footer").load("/inc/footer.html");
+    $("header").load("/fr/inc/header.html");
+    $("footer").load("/fr/inc/footer.html");
+    $("#menu-editorial").load("/fr/inc/menu-editorial.html");
   });
-</script> 
+</script>
 
 </body>
 </html>

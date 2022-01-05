@@ -9,35 +9,34 @@ Hello i'm Phil Boivin!
   <title>À propos | Philippe Boivin</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta property="og:image" content="https://www.philboivin.com/img/philboivin-og.jpg" />
-  <link rel="icon" type="image/png" href="img/icon.png">
+  <link rel="icon" type="image/png" href="/img/icon.png">
   <link href="/css/style.css" rel="stylesheet" type="text/css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
 
+  <header></header>
+
   <main>
     <div id="content">
 
-      <nav id="main-menu">
-        <div id="menuToggle">
-          <input type="checkbox" />
-          <span></span>
-          <span></span>
-          <span></span>
-          <ul id="menu-items"></ul>
-        </div>
-      </nav>
-
     <div class="row">
+
+      <div class="col-slim">
+        <img class="portrait" src="/img/PhilippeBoivin.png" alt="Philippe Boivin">
+      </div>
+
       <div class="col">
-        
-        <img class="portrait" src="img/PhilippeBoivin.png" alt="Philippe Boivin">
 
         <h1>À propos</h1>
 
         <p>
-        Philippe Boivin est un photographe et pilote de drone pratiquant à Montréal. Il explore l’imagerie numérique depuis le début des années 2000. À travers ses objectifs, il préconise une approche constructive et créative afin de créer des images éloquentes et authentiques. Rigoureux et très curieux, il est constamment à la recherche de nouveaux projets.
+        Philippe Boivin est un photographe et pilote de drone pratiquant à Montréal. Il explore l’imagerie numérique depuis le début des années 2000. À travers ses objectifs, il préconise une approche constructive et créative afin de créer des images éloquentes et authentiques. 
+        </p>
+        
+        <p>
+        Rigoureux et très curieux, il est constamment à la recherche de nouveaux projets éditoriaux ou reliés à l'actualité.
         </p>
 
         <p>
@@ -54,10 +53,11 @@ Hello i'm Phil Boivin!
   
 <footer></footer>
 
+<!-- Load shared HTML content -->
 <script> 
   $(function(){
-    $("#menu-items").load("/inc/menu.html"); 
-    $("footer").load("/inc/footer.html");
+    $("header").load("/fr/inc/header.html");
+    $("footer").load("/fr/inc/footer.html");
   });
 </script> 
 

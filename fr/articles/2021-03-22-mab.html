@@ -9,7 +9,7 @@ Hello i'm Phil Boivin!
   <title>Mâle Alpha Barbier | Philippe Boivin</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta property="og:image" content="https://www.philboivin.com/img/photos/mab/900px/20210322-mab-philboivin-001.jpg" />
-  <link rel="icon" type="image/png" href="img/icon.png">
+  <link rel="icon" type="image/png" href="/img/icon.png">
   <link href="/css/style.css" rel="stylesheet" type="text/css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/nanogallery2/3.0.5/css/nanogallery2.min.css" rel="stylesheet" type="text/css">
@@ -18,18 +18,10 @@ Hello i'm Phil Boivin!
 
 <body>
 
+  <header></header>
+
   <main>
     <div id="content">
-
-      <nav id="main-menu">
-        <div id="menuToggle">
-          <input type="checkbox" />
-          <span></span>
-          <span></span>
-          <span></span> 
-          <ul id="menu-items"></ul>
-        </div>
-      </nav>
 
       <div class="row blog">
         <div class="col">
@@ -97,8 +89,6 @@ Hello i'm Phil Boivin!
                   title: '' },
                 { src: '900px/20210322-mab-philboivin-005.jpg', srct: '400px/20210322-mab-philboivin-005.jpg', 
                   title: '' },
-                { src: '900px/20210322-mab-philboivin-006.jpg', srct: '400px/20210322-mab-philboivin-006.jpg', 
-                  title: '' },
                 { src: '900px/20210322-mab-philboivin-007.jpg', srct: '400px/20210322-mab-philboivin-007.jpg', 
                   title: '' }
 
@@ -117,11 +107,11 @@ Hello i'm Phil Boivin!
 
 <script> 
   $(function(){
-    $("#menu-items").load("/inc/menu.html");
-    $("footer").load("/inc/footer.html");
-    $("#menu-editorial").load("/inc/menu-editorial.html");
+    $("header").load("/fr/inc/header.html");
+    $("footer").load("/fr/inc/footer.html");
+    $("#menu-editorial").load("/fr/inc/menu-editorial.html");
   });
-</script> 
+</script>
 
 </body>
 </html>
