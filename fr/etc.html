@@ -56,7 +56,7 @@ Hello i'm Phil Boivin!
 
 
 
-      <div class="row">
+      <div class="row top-spacer">
         <div class="col">
           <h2 id="pub">Publicités</h2>
         </div>
@@ -64,7 +64,7 @@ Hello i'm Phil Boivin!
       <div id="galPub">Chargement...</div>
 
 
-      <div class="row">
+      <div class="row top-spacer">
         <div class="col">
           <h2 id="event">Événements et mariages</h2>
         </div>
@@ -72,7 +72,7 @@ Hello i'm Phil Boivin!
       <div id="galEvent">Chargement...</div>
 
 
-       <div class="row">
+       <div class="row top-spacer">
         <div class="col">
           <h2 id="immo">Architeture et immobilier</h2>
         </div>
@@ -80,8 +80,11 @@ Hello i'm Phil Boivin!
       <div id="galImmo">Chargement...</div>
 
 
-      
-  
+      <div class="topLink"><a href="#top"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="40"><title>Retour en haut</title><path d="M46.7070007,34.2929993c0.3906975,0.3906021,0.3906975,1.0233994,0,1.4140015 c-0.3906021,0.3906975-1.0233955,0.3906975-1.4140015,0L32,22.4141006L18.7070007,35.7070007 c-0.3906002,0.3906975-1.0233955,0.3906975-1.4139996,0C17.0977001,35.5116997,17,35.2559013,17,35 c0-0.2557983,0.0977001-0.5116997,0.2930012-0.7070007l13.9999981-14c0.3906059-0.3906002,1.0233994-0.3906002,1.4140015,0
+    L46.7070007,34.2929993z"/><path d="M32,0c-17.6730995,0-32,14.3268995-32,32s14.3268995,32,32,32c17.6731987,0,32-14.3269005,32-32S49.6731987,0,32,0z M32,2
+    c16.542099,0,30,13.4580002,30,30c0,16.542099-13.457901,30-30,30s-30-13.457901-30-30C2.0000007,15.4580002,15.4579,2,32,2z"/></svg></a></div>
+
+
    </div>
  </main>
 
@@ -102,15 +105,21 @@ Hello i'm Phil Boivin!
 <script src="/js/pb.lib.js"></script>
 
 <script>
-  var csvEvent = '/csv/phil-boivin-evenements.csv';
+  
+  // var csvEvent = '/csv/phil-boivin-evenements.csv';
+  var csvEvent = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTntSEyC_ayVeSc8uebcvVfCFd9EkHJ4VK5gTpoR6iNmwsGRWgDcBF59bRIbBPqVfESxngkC7F8krBM/pub?gid=130601549&single=true&output=csv';
   var idEvent = "#galEvent";
   displayGallery(csvEvent, idEvent);
 
-  var csvImmo = '/csv/phil-boivin-immobilier.csv';
+  // var csvImmo = '/csv/phil-boivin-immobilier.csv';
+  var csvImmo = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTntSEyC_ayVeSc8uebcvVfCFd9EkHJ4VK5gTpoR6iNmwsGRWgDcBF59bRIbBPqVfESxngkC7F8krBM/pub?gid=639037139&single=true&output=csv';
   var idImmo = "#galImmo";
   displayGallery(csvImmo, idImmo);
 
-  var csvPub = '/csv/phil-boivin-publicites.csv';
+
+  //var csvPub = '/csv/phil-boivin-publicites.csv';
+  
+  var csvPub = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTntSEyC_ayVeSc8uebcvVfCFd9EkHJ4VK5gTpoR6iNmwsGRWgDcBF59bRIbBPqVfESxngkC7F8krBM/pub?gid=1217580290&single=true&output=csv';
   var idPub = "#galPub";
   displayGallery(csvPub, idPub);
 </script>
