@@ -9,23 +9,24 @@
       <span></span>
       <span></span>
       <span></span>
-      <ul id="menu-items"></ul>
+      <ul id="menu-items">
+        <li><a href="/fr/photos.html">Photos</a></li>
+        <li><a href="/fr/apropos.html">À propos</a></li>
+        <li><a href="/fr/publications.html">Publications</a></li>
+        <li><a href="/fr/contact.html">Contact</a></li>
+      </ul>
     </div>
 
     <div id="menuToggleDesk">
-      <ul id="menu-items-desk"></ul>
+      <ul id="menu-items-desk">
+        <li><a href="/fr/photos.html">Photos</a></li>
+        <li><a href="/fr/apropos.html">À propos</a></li>
+        <li><a href="/fr/publications.html">Publications</a></li>
+        <li><a href="/fr/contact.html">Contact</a></li>
+      </ul>
       <hr>
     </div>
 
   </nav>
-
-  <script> 
-    $(function(){
-      $.get("/fr/inc/menu.html", function( menu ) {
-       $("#menu-items").html(menu);
-       $("#menu-items-desk").html(menu);
-      });
-    });
-  </script>
 
 </section>
