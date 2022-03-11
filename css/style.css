@@ -80,7 +80,7 @@ main {z-index: 1; grid-area: main; min-height: 65vh; display: grid; grid-templat
 main p {line-height: 1.4; margin: 10px 0 15px 0; font-size: 1.0em;}
 li {color: var(--color-li)}
 
-header {z-index: 100; grid-area: header; display: grid; grid-template-areas: "header-content";}
+header {z-index: 100; grid-area: header; display: grid; grid-template-areas: "header-content"; min-height: 80px;}
 #header-content {
   grid-area: header-content; 
   text-align: left; 
@@ -88,7 +88,6 @@ header {z-index: 100; grid-area: header; display: grid; grid-template-areas: "he
   width: var(--content-width); 
   font-size: var(--footer-font-size); 
   color: var(--color-footer-txt);
-  min-height: 80px;
 }
 
 #content {grid-area: content; text-align: left; width: var(--content-width); margin: 0 auto 50px auto;}
