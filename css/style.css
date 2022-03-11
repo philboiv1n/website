@@ -87,7 +87,8 @@ header {z-index: 100; grid-area: header; display: grid; grid-template-areas: "he
   margin: 60px auto 0px auto; 
   width: var(--content-width); 
   font-size: var(--footer-font-size); 
-  color: var(--color-footer-txt); 
+  color: var(--color-footer-txt);
+  min-height: 80px;
 }
 
 #content {grid-area: content; text-align: left; width: var(--content-width); margin: 0 auto 50px auto;}
