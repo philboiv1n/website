@@ -41,23 +41,11 @@ Hello i'm Phil Boivin!
       <span></span>
       <span></span>
       <span></span>
-      <ul id="menu-items">
-        <li><a href="/fr/photos.html">Photos</a></li>
-        <li><a href="/fr/apropos.html">À propos</a></li>
-        <li><a href="/fr/publications.html">Publications</a></li>
-        <li><a href="/fr/contact.html">Contact</a></li>
-    <!--     <li><a href="/en/index.html">English</a></li> -->
-      </ul>
+      <ul id="menu-items"></ul>
     </div>
 
     <div id="menuToggleDesk">
-      <ul id="menu-items-desk">
-        <li><a href="/fr/photos.html">Photos</a></li>
-        <li><a href="/fr/apropos.html">À propos</a></li>
-        <li><a href="/fr/publications.html">Publications</a></li>
-        <li><a href="/fr/contact.html">Contact</a></li>
-    <!--     <li><a href="/en/index.html">English</a></li> -->
-      </ul>
+      <ul id="menu-items-desk"></ul>
       <hr>
     </div>
 
@@ -103,7 +91,9 @@ Hello i'm Phil Boivin!
 <!-- Load shared HTML content -->
 <script>
   $(function(){
-  //  $("header").load("/fr/inc/header.html");
+   // $("header").load("/fr/inc/header.html");
+   $("#menu-items").load("/fr/inc/menu.html");
+    $("#menu-items-desk").load("/fr/inc/menu.html");
     $("footer").load("/fr/inc/footer.html");
   });
 </script> 
