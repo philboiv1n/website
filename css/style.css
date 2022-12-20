@@ -1,14 +1,14 @@
 /**********************************
 CSS Stylesheet for philboivin.com
 /**********************************/
-@import url('https://fonts.googleapis.com/css2?family=Alike&family=Roboto&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Alike&family=Roboto&display=swap');*/
  
 :root {
 
---logo-font : 'Alike';
---body-font : 'Roboto';
---menu-font : 'Roboto';
---h-font : 'Alike';
+--body-font : 'helvetica';
+--menu-font : 'helvetica';
+--logo-font : 'georgia';
+--h-font : 'georgia';
 
 --logo-font-size : 1.4em;
 --form-font-size : 1.0em;
@@ -254,82 +254,11 @@ footer nav li {display: inline-block; margin: 0 20px 10px 0;}
 /* Menu (mady by Erik Terwan - MIT License)              
 /******************************************/
 
-#menuToggle {display: block; position: relative; z-index: 100; -webkit-user-select: none; user-select: none;}
-#menuToggle a { text-decoration: none; color: var(--color-menu-a); transition: color 0.3s ease;}
-#menuToggle a:hover { color: var(--color-menu-a-hover);}
-
-#menuToggle input
-{
-  display: block;
-  width: 40px;
-  height: 32px;
-  position: absolute;
-  top: -7px;
-  left: -5px;
-  cursor: pointer;
-  opacity: 0; /* hide this */
-  z-index: 20; /* and place it over the hamburger */
-  -webkit-touch-callout: none;
-}
-
-/* Hamburger */
-#menuToggle span
-{
-  display: block;
-  width: 33px;
-  height: 4px;
-  margin-bottom: 5px;
-  position: relative;
-  background: var(--color-menu-hamburger);
-  border-radius: 3px;
-  z-index: 10;
-  transform-origin: 4px 0px;
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              opacity 0.55s ease;
-}
-
-#menuToggle span:first-child {transform-origin: 0% 0%;}
-#menuToggle span:nth-last-child(2) {transform-origin: 0% 100%;}
-
-/* Transform all the slices of hamburger into a crossmark. */
-#menuToggle input:checked ~ span { opacity: 1; transform: rotate(45deg) translate(-2px, -1px); background: var(--color-menu-x);}
-
-/* hide the middle one. */
-#menuToggle input:checked ~ span:nth-last-child(3) { opacity: 0; transform: rotate(0deg) scale(0.2, 0.2);}
-
-/* and the last one should go the other direction */
-#menuToggle input:checked ~ span:nth-last-child(2) { transform: rotate(-45deg) translate(0, -1px);}
-
-
-/* Make this absolute positioned at the top left of the screen */
-#menu-items
-{
-  position: absolute;
-  width: 300px;
-  margin: -100px 0 0 -50px;
-  padding: 50px;
-  padding-top: 125px;
-  background: var(--color-menu-bg);
-  list-style-type: none;
-  -webkit-font-smoothing: antialiased;
-  /* to stop flickering of text in safari */
-  transform-origin: 0% 0%;
-  transform: translate(-190%, 0);  
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-}
-#menu-items ul {list-style-type: none; font-size: var(--menu-font-size);}
-#menu-items li {padding: 8px 0;}
-
-
-/* And let's slide it in from the left */
-#menuToggle input:checked ~ ul {transform: none;}
-
 
 /* Desktop menu */
 
 /* hide hamburger menu */
-#menuToggle {display: none;}
+/*#menuToggle {display: none;}*/
 
 #menuToggleDesk ul {
   list-style-type: none;
@@ -358,8 +287,8 @@ footer nav li {display: inline-block; margin: 0 20px 10px 0;}
 /* Mobile                
 /*****************************************/
 @media (max-width: 800px) {
-  #menuToggle {display: block;}
-  #menuToggleDesk {display: none;}
+/*  #menuToggle {display: block;}
+  #menuToggleDesk {display: none;}*/
   #content, #header-content, #footer-content {width: var(--content-width-mobile);}
   .row {flex-direction: column;}
   .padding-left {padding-left: 0;}
