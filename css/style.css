@@ -32,7 +32,7 @@ CSS Stylesheet for philboivin.com
 --color-body-a: #3366cc;
 --color-body-a-hover: #3366cc;
 
---color-menu-a: #888;
+--color-menu-a: #666;
 --color-menu-a-hover: #333;
 --color-menu-hamburger: #ccc;
 --color-menu-x: #999;
@@ -53,17 +53,17 @@ CSS Stylesheet for philboivin.com
 --color-logo-footer-hover: #ccc;
 
 --color-footer-bg: #eee;
---color-footer-txt: #999;
---color-footer-a: #999;
---color-footer-a-hover: #666;
---color-social-icons : #999;
+--color-footer-txt: #666;
+--color-footer-a: #666;
+--color-footer-a-hover: #333;
+--color-social-icons : #666;
 --color-social-icons-hover : #666;
---color-copy : #999;
---color-info : #999;
+--color-copy : #666;
+--color-info : #666;
 --color-hr : #eee;
---color-photoby : #999;
+--color-photoby : #666;
 --color-li : #333;
---color-li-list-bullet : #999;
+--color-li-list-bullet : #666;
 }
 
 * {margin:0; padding:0; box-sizing: border-box;}
@@ -81,6 +81,7 @@ main p {line-height: 1.4; margin: 10px 0 15px 0; font-size: 1.0em;}
 li {color: var(--color-li)}
 
 header {z-index: 100; grid-area: header; display: grid; grid-template-areas: "header-content"; min-height: 80px;}
+
 #header-content {
   grid-area: header-content; 
   text-align: left; 
