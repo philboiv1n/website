@@ -156,6 +156,37 @@ ul.list li::before {
 }
 
 
+/******************************************/
+/* Menu           
+/******************************************/
+
+
+#menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 0 20px 0;
+  overflow: hidden;
+}
+
+#menu li {
+  float: left;
+  display: block;
+  padding-right: 20px;
+  font-size: var(--menu-font-size);
+  font-family: var(--menu-font);
+}
+
+#menu li a { 
+  color: var(--color-menu-a);
+  text-decoration: none;
+}
+
+#menu li a:hover { 
+  color: var(--color-menu-a-hover);
+}
+
+
+
 
 
 /*****************************************/
@@ -251,45 +282,11 @@ footer nav li {display: inline-block; margin: 0 20px 10px 0;}
 
 
 
-/******************************************/
-/* Menu (mady by Erik Terwan - MIT License)              
-/******************************************/
-
-
-/* Desktop menu */
-
-/* hide hamburger menu */
-/*#menuToggle {display: none;}*/
-
-#menuToggleDesk ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0 0 20px 0;
-  overflow: hidden;
-}
-#menuToggleDesk li {
-  float: left;
-  display: block;
-  padding-right: 20px;
-  font-size: var(--menu-font-size);
-  font-family: var(--menu-font);
-}
-
-#menuToggleDesk li a { 
-  color: var(--color-menu-a);
-  text-decoration: none;
-}
-
-#menuToggleDesk li a:hover { 
-  color: var(--color-menu-a-hover);
-}
 
 /*****************************************/
 /* Mobile                
 /*****************************************/
 @media (max-width: 800px) {
-/*  #menuToggle {display: block;}
-  #menuToggleDesk {display: none;}*/
   #content, #header-content, #footer-content {width: var(--content-width-mobile);}
   .row {flex-direction: column;}
   .padding-left {padding-left: 0;}
