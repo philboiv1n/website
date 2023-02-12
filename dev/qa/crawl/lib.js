@@ -3,7 +3,7 @@ const visitedUrls = new Set();
 const urls = [];
 let activeRequests = 0;
 const MAX_ACTIVE_REQUESTS = 10;
-const MAX_LEVEL = 3;
+const MAX_LEVEL = 10;
 const baseUrl = window.location.protocol + "//" + window.location.host + "/";
 
 function crawl(url, level) {
