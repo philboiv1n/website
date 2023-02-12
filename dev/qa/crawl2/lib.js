@@ -45,3 +45,4 @@ function getUrls(baseUrl) {
 }
 
 getUrls("https://www.philboivin.com/");
+getUrls("https://www.philboivin.com/fr/photos.html");
