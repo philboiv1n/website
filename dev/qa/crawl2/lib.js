@@ -1,5 +1,5 @@
 const visited = new Set();
-const startingUrl = new URL("http://www.philboivin.com");
+const startingUrl = new URL("https://www.philboivin.com");
 
 async function crawlSite(url) {
   if (visited.has(url)) {
