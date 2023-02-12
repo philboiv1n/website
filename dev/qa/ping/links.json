@@ -1,0 +1,17 @@
+{
+    "links":[
+       {
+          "url":"https://www.philboivin.com",
+          "description":"This site"
+       },
+       {
+          "url":"/dffd.html",
+          "description":"not found"
+       },
+       {
+          "url":"/fr/contact.html",
+          "description":"Contact in FR (ok)"
+       }
+    ]
+ }
+ 
