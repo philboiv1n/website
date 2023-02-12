@@ -1,7 +1,7 @@
 const request = new XMLHttpRequest();
 const visitedUrls = new Set();
 let activeRequests = 0;
-const MAX_ACTIVE_REQUESTS = 10;
+const MAX_ACTIVE_REQUESTS = 100;
 
 function getUrls(baseUrl) {
   const urls = [];
@@ -33,7 +33,7 @@ function getUrls(baseUrl) {
           table += `<tr><td>${url}</td></tr>`;
         });
         table += "</table>";
-        document.getElementById("tableContainer").innerHTML = table;
+        document.getElementById("tableContainer").innerHTML += table;
       }
     };
     request.send();
