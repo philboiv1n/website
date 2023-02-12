@@ -36,26 +36,26 @@ async function crawlSite(url) {
 crawlSite(startingUrl.href);
 console.log(results);
 
-async function crawlAllLinks(results) {
-  const allLinks = [];
-  for (const url of results) {
-    const response = await fetch(url);
-    if (response.ok) {
-      const html = await response.text();
-      const parser = new DOMParser();
-      const doc = parser.parseFromString(html, 'text/html');
-      const links = Array.from(doc.querySelectorAll('a'));
-      links.forEach(link => {
-        let href = link.getAttribute('href');
-        if (!href.startsWith('http')) {
-          href = new URL(href, url).href;
-        }
-        allLinks.push(href);
-      });
-    }
-  }
-  console.log(allLinks);
-}
+// async function crawlAllLinks(results) {
+//   const allLinks = [];
+//   for (const url of results) {
+//     const response = await fetch(url);
+//     if (response.ok) {
+//       const html = await response.text();
+//       const parser = new DOMParser();
+//       const doc = parser.parseFromString(html, 'text/html');
+//       const links = Array.from(doc.querySelectorAll('a'));
+//       links.forEach(link => {
+//         let href = link.getAttribute('href');
+//         if (!href.startsWith('http')) {
+//           href = new URL(href, url).href;
+//         }
+//         allLinks.push(href);
+//       });
+//     }
+//   }
+//   console.log(allLinks);
+// }
 
-crawlAllLinks(results);
+// crawlAllLinks(results);
 
