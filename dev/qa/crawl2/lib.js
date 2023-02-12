@@ -1,4 +1,5 @@
 const visited = new Set();
+const startingUrl = new URL("http://www.philboivin.com");
 
 async function crawlSite(url) {
   if (visited.has(url)) {
@@ -6,6 +7,12 @@ async function crawlSite(url) {
   }
 
   visited.add(url);
+
+  const currentUrl = new URL(url);
+  if (currentUrl.host !== startingUrl.host) {
+    return;
+  }
+
   console.log(url);
 
   const response = await fetch(url);
@@ -24,4 +31,4 @@ async function crawlSite(url) {
   }
 }
 
-crawlSite("https://www.philboivin.com");
+crawlSite(startingUrl.href);
