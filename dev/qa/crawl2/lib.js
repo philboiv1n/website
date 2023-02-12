@@ -23,7 +23,7 @@ async function crawlSite(url) {
     const links = Array.from(doc.querySelectorAll('a'));
     links.forEach(link => {
       let href = link.getAttribute('href');
-      if (!href.startsWith('http')) {
+      if (!href.startsWith('https')) {
         href = new URL(href, url).href;
       }
       crawlSite(href);
