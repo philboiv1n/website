@@ -1,9 +1,9 @@
 const request = new XMLHttpRequest();
-const baseUrl = "https://www.philboivin.com";
 const visitedUrls = new Set();
 const urls = [];
 let activeRequests = 0;
 const MAX_ACTIVE_REQUESTS = 10;
+const baseUrl = window.location.protocol + "//" + window.location.host + "/";
 
 function crawl(url, level) {
   if (visitedUrls.has(url)) {
