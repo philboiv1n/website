@@ -3,10 +3,9 @@ const visitedUrls = new Set();
 const urls = [];
 let activeRequests = 0;
 const MAX_ACTIVE_REQUESTS = 10;
-const MAX_LEVEL = 10;
 const baseUrl = window.location.protocol + "//" + window.location.host + "/";
 
-function crawl(url, level) {
+function crawl(url) {
   if (visitedUrls.has(url)) {
     return;
   }
@@ -22,8 +21,8 @@ function crawl(url, level) {
       const links = htmlDoc.getElementsByTagName("a");
       for (let i = 0; i < links.length; i++) {
         const link = links[i];
-        if (link.href.startsWith(baseUrl) && activeRequests < MAX_ACTIVE_REQUESTS && level < MAX_LEVEL) {
-          crawl(link.href, level + 1);
+        if (link.href.startsWith(baseUrl) && activeRequests < MAX_ACTIVE_REQUESTS) {
+          crawl(link.href);
         }
       }
     }
@@ -35,12 +34,9 @@ function crawl(url, level) {
       });
       table += "</table>";
       document.getElementById("tableContainer").innerHTML = table;
-      for (let i = 0; i < urls.length; i++) {
-        crawl(urls[i], level + 1);
-      }
     }
   };
   request.send();
 }
 
-crawl(baseUrl, 1);
+crawl(baseUrl);
