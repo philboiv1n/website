@@ -39,6 +39,10 @@ async function crawlSite(url) {
 crawlSite(startingUrl.href);
 console.log(results);
 
+results.forEach(result => {
+  console.log(result);
+})
+
 // async function crawlAllLinks(results) {
 //   const allLinks = [];
 //   for (const url of results) {
