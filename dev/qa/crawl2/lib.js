@@ -1,68 +1,47 @@
-const visited = new Set();
-const baseUrl = window.location.protocol + "//" + window.location.host + "/";
-const startingUrl = new URL(baseUrl);
-const results = [];
+const request = new XMLHttpRequest();
+const visitedUrls = new Set();
+let activeRequests = 0;
+const MAX_ACTIVE_REQUESTS = 10;
 
-async function crawlSite(url) {
-
-  if (visited.has(url)) {
-    return;
-  }
-
-  visited.add(url);
-
-  const currentUrl = new URL(url);
-  if (currentUrl.host !== startingUrl.host) {
-    return;
-  }
-
-  //console.log(url);
-  results.push(url);
-
-  const response = await fetch(url);
-  if (response.ok) {
-    const html = await response.text();
-    const parser = new DOMParser();
-    const doc = parser.parseFromString(html, 'text/html');
-    const links = Array.from(doc.querySelectorAll('a'));
-    console.log(links);
-    links.forEach(link => {
-      let href = link.getAttribute('href');
-      if (!href.startsWith('http')) {
-        href = new URL(href, url).href;
+function getUrls(baseUrl) {
+  const urls = [];
+  function crawl(url) {
+    if (visitedUrls.has(url)) {
+      return;
+    }
+    visitedUrls.add(url);
+    urls.push(url);
+    activeRequests++;
+    request.open("GET", url, true);
+    request.onreadystatechange = function() {
+      activeRequests--;
+      if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+        const parser = new DOMParser();
+        const htmlDoc = parser.parseFromString(this.responseText, "text/html");
+        const links = htmlDoc.getElementsByTagName("a");
+        for (let i = 0; i < links.length; i++) {
+          const link = links[i];
+          if (link.href.startsWith(baseUrl) && activeRequests < MAX_ACTIVE_REQUESTS) {
+            crawl(link.href);
+          }
+        }
       }
-      crawlSite(href);
-    });
+      if (activeRequests === 0) {
+        console.log(JSON.stringify({ urls: Array.from(urls) }));
+        let table = "<table><tr><th>URL</th></tr>";
+        urls.forEach(url => {
+          table += `<tr><td>${url}</td></tr>`;
+        });
+        table += "</table>";
+        document.getElementById("tableContainer").innerHTML = table;
+      }
+    };
+    request.send();
   }
+
+  visitedUrls.clear();
+  activeRequests = 0;
+  crawl(baseUrl);
 }
 
-crawlSite(startingUrl.href);
-console.log(results);
-
-results.forEach(result => {
-  console.log(result);
-})
-
-// async function crawlAllLinks(results) {
-//   const allLinks = [];
-//   for (const url of results) {
-//     const response = await fetch(url);
-//     if (response.ok) {
-//       const html = await response.text();
-//       const parser = new DOMParser();
-//       const doc = parser.parseFromString(html, 'text/html');
-//       const links = Array.from(doc.querySelectorAll('a'));
-//       links.forEach(link => {
-//         let href = link.getAttribute('href');
-//         if (!href.startsWith('http')) {
-//           href = new URL(href, url).href;
-//         }
-//         allLinks.push(href);
-//       });
-//     }
-//   }
-//   console.log(allLinks);
-// }
-
-// crawlAllLinks(results);
-
+getUrls("https://www.philboivin.com/");
