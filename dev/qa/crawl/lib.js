@@ -1,5 +1,5 @@
 const request = new XMLHttpRequest();
-const baseUrl = "https://www.philboivin.com/";
+const baseUrl = "https://www.philboivin.com";
 const visitedUrls = new Set();
 const urls = [];
 let activeRequests = 0;
