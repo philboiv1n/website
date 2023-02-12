@@ -21,7 +21,7 @@ function crawl(url, level) {
       const links = htmlDoc.getElementsByTagName("a");
       for (let i = 0; i < links.length; i++) {
         const link = links[i];
-        if (link.href.startsWith(baseUrl) && activeRequests < MAX_ACTIVE_REQUESTS && level < 3) {
+        if (link.href.startsWith(baseUrl) && activeRequests < MAX_ACTIVE_REQUESTS && level < 5) {
           crawl(link.href, level + 1);
         }
       }
