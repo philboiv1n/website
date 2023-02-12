@@ -17,7 +17,7 @@ async function crawlSite(url) {
     links.forEach(link => {
       let href = link.getAttribute('href');
       if (!href.startsWith('http')) {
-        href = url + '/' + href;
+        href = url + '' + href;
       }
       crawlSite(href);
     });
