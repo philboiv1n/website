@@ -1,8 +1,10 @@
 const visited = new Set();
-const startingUrl = new URL("https://www.philboivin.com");
+const baseUrl = window.location.protocol + "//" + window.location.host + "/";
+const startingUrl = new URL(baseUrl);
 const results = [];
 
 async function crawlSite(url) {
+
   if (visited.has(url)) {
     return;
   }
@@ -14,7 +16,7 @@ async function crawlSite(url) {
     return;
   }
 
-  console.log(url);
+  //console.log(url);
   results.push(url);
 
   const response = await fetch(url);
@@ -23,6 +25,7 @@ async function crawlSite(url) {
     const parser = new DOMParser();
     const doc = parser.parseFromString(html, 'text/html');
     const links = Array.from(doc.querySelectorAll('a'));
+    console.log(links);
     links.forEach(link => {
       let href = link.getAttribute('href');
       if (!href.startsWith('http')) {
