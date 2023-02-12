@@ -1,11 +1,11 @@
 const request = new XMLHttpRequest();
-const baseUrl = "https://www.philboivin.com";
+const baseUrl = "https://www.philboivin.com/";
 const visitedUrls = new Set();
 const urls = [];
 let activeRequests = 0;
 const MAX_ACTIVE_REQUESTS = 10;
 
-function crawl(url) {
+function crawl(url, level) {
   if (visitedUrls.has(url)) {
     return;
   }
@@ -21,8 +21,8 @@ function crawl(url) {
       const links = htmlDoc.getElementsByTagName("a");
       for (let i = 0; i < links.length; i++) {
         const link = links[i];
-        if (link.href.startsWith(baseUrl) && activeRequests < MAX_ACTIVE_REQUESTS) {
-          crawl(link.href);
+        if (link.href.startsWith(baseUrl) && activeRequests < MAX_ACTIVE_REQUESTS && level < 3) {
+          crawl(link.href, level + 1);
         }
       }
     }
@@ -39,4 +39,4 @@ function crawl(url) {
   request.send();
 }
 
-crawl(baseUrl);
+crawl(baseUrl, 1);
