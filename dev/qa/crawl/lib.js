@@ -3,7 +3,7 @@ const visitedUrls = new Set();
 const urls = [];
 let activeRequests = 0;
 const MAX_ACTIVE_REQUESTS = 10;
-const MAX_LEVEL = 10;
+const MAX_LEVEL = 3;
 const baseUrl = window.location.protocol + "//" + window.location.host + "/";
 
 function crawl(url, level) {
@@ -35,6 +35,9 @@ function crawl(url, level) {
       });
       table += "</table>";
       document.getElementById("tableContainer").innerHTML = table;
+      for (let i = 0; i < urls.length; i++) {
+        crawl(urls[i], level + 1);
+      }
     }
   };
   request.send();
