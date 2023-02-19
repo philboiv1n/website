@@ -1,7 +1,6 @@
 /**********************************
 CSS Stylesheet for philboivin.com
 /**********************************/
-/*@import url('https://fonts.googleapis.com/css2?family=Alike&family=Roboto&display=swap');*/
  
 :root {
 
@@ -10,15 +9,15 @@ CSS Stylesheet for philboivin.com
 --logo-font : 'georgia';
 --h-font : 'georgia';
 
---logo-font-size : 1.4em;
+--logo-font-size : 1.3em;
 --form-font-size : 1.0em;
---menu-font-size : 1.0em;
+--menu-font-size : 0.9em;
 --menu-footer-font-size : 1.0em;
 --h1-font-size : 1.3em;
 --h2-font-size : 1.2em;
 --h3-font-size : 1.1em;
 --photo-caption-font-size : 1.0em;
---footer-font-size: 1.0em;
+--footer-font-size: 0.8em;
 
 --form-border-color: #ddd;
 --form-submit-color-border: #ccc;
@@ -35,11 +34,6 @@ CSS Stylesheet for philboivin.com
 --color-menu-a: #3366cc;
 --color-menu-a-hover: #3366cc;
 
-/*--color-menu-hamburger: #ccc;
---color-menu-x: #999;
---color-menu-bg: #eee;
---color-menu-line: #999;
-*/
 --color-sub-menu-li: #333;
 --color-sub-menu-border: #ccc;
 --color-sub-menu-a-hover: #888;
@@ -88,7 +82,7 @@ header {z-index: 100; grid-area: header; display: grid; grid-template-areas: "he
   text-align: left; 
   margin: 60px auto 0px auto; 
   width: var(--content-width); 
-  font-size: var(--footer-font-size); 
+  /* font-size: var(--menu-font-size);  */
   color: var(--color-footer-txt);
 }
 
