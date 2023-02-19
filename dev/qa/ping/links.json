@@ -1,12 +1,12 @@
 {
     "links":[
        {
-          "url":"https://www.philboivin.com",
-          "description":"This site"
+          "url":"/index.html",
+          "description":"Index"
        },
        {
-          "url":"/dffd.html",
-          "description":"not found"
+          "url":"/fr/photos",
+          "description":"Photos"
        },
        {
           "url":"/fr/contact.html",
