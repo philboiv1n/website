@@ -2,15 +2,15 @@
     "links":[
        {
           "url":"/index.html",
-          "description":"Index"
-       },
-       {
-          "url":"/fr/photos",
-          "description":"Photos"
+          "description":"index"
        },
        {
           "url":"/fr/contact.html",
-          "description":"Contact in FR (ok)"
+          "description":"fr / contact"
+       },
+       {
+          "url":"https://dev01.philboivin.com/",
+          "description":"Dev01"
        }
     ]
  }
