@@ -73,7 +73,8 @@ img {max-width: 100%; height: auto;}
 hr {margin: 10px 0; border: 1px solid var(--color-hr);}
 main {z-index: 1; grid-area: main; min-height: 65vh; display: grid; grid-template-areas: "content";}
 main p {line-height: 1.4; margin: 10px 0 15px 0; font-size: 1.0em;}
-li {color: var(--color-li)}
+ul {padding: 10px 0 0 15px;}
+li {color: var(--color-li); padding: 2px 0;}
 
 header {z-index: 100; grid-area: header; display: grid; grid-template-areas: "header-content"; min-height: 80px;}
 
@@ -94,6 +95,7 @@ header {z-index: 100; grid-area: header; display: grid; grid-template-areas: "he
 
 
 .sub-menu {margin: 30px 0 0 0; }
+.sub-menu ul {padding: 0;}
 .sub-menu li {display: inline-block; color: var(--color-sub-menu-li); margin: 0 10px 25px 0; }
 .sub-menu a {text-decoration: none; border: 1px solid var(--color-sub-menu-border);  padding: 5px 8px;}
 .sub-menu a:hover {border: 1px solid var(--color-sub-menu-a-hover);}
@@ -269,6 +271,7 @@ footer nav {font-size: var(--menu-footer-font-size); padding: 20px 0;}
 footer nav li {display: inline-block; margin: 0 20px 10px 0;}
 
 .social-icons {padding: 20px 0;}
+.social-icons ul {padding: 0;}
 .social-icons li {display: inline; padding-right: 15px;}
 .social-icons svg {fill: var(--color-social-icons); opacity: 1.0; width: 24px;}
 .social-icons svg:hover {fill: var(--color-social-icons-hover);}
