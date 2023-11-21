@@ -178,10 +178,15 @@
 
     <script>
 
-    function getIPFromAmazon() {
-      fetch("https://checkip.amazonaws.com/").then(res => res.text()).then(data => console.log(data))
-    }
-    getIPFromAmazon()
+function getUserIP() {
+  fetch('https://api.ipify.org?format=json')
+    .then(response => response.json())
+    .then(data => console.log("User's IP:", data.ip))
+    .catch(error => console.error('Error:', error));
+}
+
+getUserIP();
+
     </script>
 
 
