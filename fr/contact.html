@@ -162,7 +162,7 @@
     </footer>
 
     <!-- Get IP address (for security measure only) -->
-    <script type="application/javascript">
+    <!-- <script type="application/javascript">
       var ip;
       $(function () {
         $.getJSON(
@@ -174,7 +174,20 @@
           }
         );
       });
+    </script> -->
+
+    <script type="application/javascript">
+
+      $(function() {
+        $.getJSON("https://api.ipify.org?format=jsonp&callback=?",
+          function(json) {
+          //  document.write("My public IP address is: ", json.ip);
+            console.log(json.ip);
+          }
+        );
+      });
     </script>
+
 
     <!-- Form validation and post -->
     <script>
