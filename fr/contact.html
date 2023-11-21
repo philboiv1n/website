@@ -161,33 +161,6 @@
       </section>
     </footer>
 
-    <!-- Get IP address (for security measure only) -->
-    <!-- <script type="application/javascript">
-      var ip;
-      $(function () {
-        $.getJSON(
-         // "https://api.ipify.org?format=jsonp&callback=?",
-         "https://api.ipify.org?format=json",
-          function (json) {
-            ip = json.ip;
-            console.log(ip);
-          }
-        );
-      });
-    </script> -->
-
-    <script>
-
-function getUserIP() {
-  fetch('https://api.ipify.org?format=json')
-    .then(response => response.json())
-    .then(data => console.log("User's IP:", data.ip))
-    .catch(error => console.error('Error:', error));
-}
-
-getUserIP();
-
-    </script>
 
 
     <!-- Form validation and post -->
@@ -224,7 +197,7 @@ getUserIP();
           return;
         }
 
-        var finalMsg = "IP: " + ip + " - " + $("#message-input").val();
+       var finalMsg = $("#message-input").val();
 
         var data = {
           name: $("#name-input").val(),
