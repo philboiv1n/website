@@ -6,13 +6,13 @@ CSS Stylesheet for philboivin.com
   --body-font: "helvetica";
   --menu-font: "helvetica";
   --logo-font: "georgia";
-  --h-font: "georgia";
+  --h-font: "helvetica";
 
-  --logo-font-size: 1.4em;
+  --logo-font-size: 1.7em;
   --form-font-size: 1em;
   --menu-font-size: 1em;
   --menu-footer-font-size: 1em;
-  --h1-font-size: 1.3em;
+  --h1-font-size: 1.4em;
   --h2-font-size: 1.2em;
   --h3-font-size: 1.1em;
   --photo-caption-font-size: 1em;
@@ -46,7 +46,7 @@ CSS Stylesheet for philboivin.com
   --color-logo-footer: #fff;
   --color-logo-footer-hover: #ccc;
 
-  --color-footer-bg: #eee;
+  --color-footer-bg: #fff;
   --color-footer-txt: #666;
   --color-footer-a: #666;
   --color-footer-a-hover: #333;
@@ -77,17 +77,18 @@ body {
   display: grid;
   grid-template-columns: 100%;
   grid-template-areas: "header" "main" "footer";
-  min-height: 100vh;
+  /* min-height: 100vh; */
 }
 h1 {
   font-size: var(--h1-font-size);
-  margin: 12px 0;
+  margin: 14px 0;
   font-family: var(--h-font);
   font-weight: normal;
-}
+} 
 h2 {
   font-size: var(--h2-font-size);
-  margin: 18px 0 5px 0;
+  /* margin: 18px 0 10px 0; */
+  margin: 12px 0;
   font-family: var(--h-font);
   font-weight: normal;
 }
@@ -109,19 +110,20 @@ img {
   height: auto;
 }
 hr {
-  margin: 10px 0;
+  margin: 20px 0;
   border: 1px solid var(--color-hr);
 }
+
 main {
   z-index: 1;
   grid-area: main;
-  min-height: 55vh;
+
   display: grid;
   grid-template-areas: "content";
 }
 main p {
   line-height: 1.4;
-  margin: 10px 0 15px 0;
+  margin: 15px 0;
   font-size: 1em;
 }
 ul {
@@ -137,13 +139,14 @@ header {
   grid-area: header;
   display: grid;
   grid-template-areas: "header-content";
-  min-height: 80px;
+  /* min-height: 80px; */
+  /* background-color: #ccc; */
 }
 
 #header-content {
   grid-area: header-content;
   text-align: left;
-  margin: 60px auto 0px auto;
+  margin: 60px auto 10px auto;
   width: var(--content-width);
   /* font-size: var(--menu-font-size);  */
   color: var(--color-footer-txt);
@@ -153,7 +156,7 @@ header {
   grid-area: content;
   text-align: left;
   width: var(--content-width);
-  margin: 0 auto 50px auto;
+  margin: 0 auto;
 }
 
 .logo {
@@ -209,7 +212,8 @@ header {
 
 .row {
   display: flex;
-  padding: 15px 0;
+  /* padding: 10px 0; */
+  padding: 25px 0;
 }
 .col {
   flex: 70%;
@@ -324,7 +328,7 @@ textarea {
 
 .form-control {
   font-family: var(--body-font);
-  padding: 5px;
+  padding: 10px;
   font-size: var(--form-font-size);
   margin: 0 0 20px 0;
   border: 1px solid var(--form-border-color);
@@ -392,7 +396,7 @@ textarea {
 }
 
 /*****************************************/
-/* Footer and main menu             
+/* Footer             
 /*****************************************/
 footer {
   z-index: 0;
@@ -405,7 +409,7 @@ footer {
 #footer-content {
   grid-area: footer-content;
   text-align: left;
-  margin: 60px auto;
+  margin: 10px auto 50px auto;
   width: var(--content-width);
   font-size: var(--footer-font-size);
   color: var(--color-footer-txt);
@@ -456,6 +460,7 @@ footer nav li {
   fill: var(--color-social-icons-hover);
 }
 .copy {
+  padding-top: 15px;
   color: var(--color-copy);
 }
 
