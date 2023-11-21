@@ -176,16 +176,12 @@
       });
     </script> -->
 
-    <script type="application/javascript">
+    <script>
 
-      $(function() {
-        $.getJSON("https://api.ipify.org?format=jsonp&callback=?",
-          function(json) {
-          //  document.write("My public IP address is: ", json.ip);
-            console.log(json.ip);
-          }
-        );
-      });
+    function getIPFromAmazon() {
+      fetch("https://checkip.amazonaws.com/").then(res => res.text()).then(data => console.log(data))
+    }
+    getIPFromAmazon()
     </script>
 
 
