@@ -8,6 +8,7 @@ CSS Stylesheet for philboivin.com
   --logo-font: "georgia";
   --h-font: "arial";
 
+  --text-font-size: 1em;
   --logo-font-size: 1.6em;
   --form-font-size: 1em;
   --menu-font-size: 1em;
@@ -69,6 +70,7 @@ html {
   scroll-behavior: smooth;
 }
 body {
+  font-size: var(--text-font-size);
   background-color: var(--color-body-bg);
   font-family: var(--body-font), sans-serif;
   color: var(--color-body-txt);
