@@ -125,10 +125,10 @@ main {
 main p {
   line-height: 1.4;
   margin: 15px 0;
-  font-size: var(--text-font-size);
+  /* font-size: var(--text-font-size); */
 }
 ul {
-  font-size: var(--text-font-size);
+  /* font-size: var(--text-font-size); */
   padding: 0 0 0 15px;
 }
 li {
@@ -466,6 +466,7 @@ footer nav li {
 /* Mobile                
 /*****************************************/
 @media (max-width: 800px) {
+  body {-webkit-text-size-adjust: none;}
   #content,
   #header-content,
   #footer-content {
