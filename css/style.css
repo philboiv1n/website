@@ -128,12 +128,12 @@ main p {
   font-size: var(--text-font-size);
 }
 ul {
+  font-size: var(--text-font-size);
   padding: 0 0 0 15px;
 }
 li {
   color: var(--color-li);
   padding: 3px 0;
-  font-size: var(--text-font-size);
 }
 
 header {
