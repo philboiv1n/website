@@ -12,11 +12,9 @@ CSS Stylesheet for philboivin.com
   --logo-font-size: 1.6em;
   --form-font-size: 1em;
   --menu-font-size: 1em;
-  --menu-footer-font-size: 1em;
   --h1-font-size: 1.4em;
   --h2-font-size: 1.2em;
   --h3-font-size: 1.1em;
-  --photo-caption-font-size: 1em;
   --footer-font-size: 0.8em;
 
   --form-border-color: #ddd;
@@ -44,9 +42,6 @@ CSS Stylesheet for philboivin.com
   --color-logo-hover: #000;
   --color-logo-top: #ccc;
 
-  --color-logo-footer: #fff;
-  --color-logo-footer-hover: #ccc;
-
   --color-footer-bg: #fff;
   --color-footer-txt: #666;
   --color-footer-a: #666;
@@ -56,7 +51,6 @@ CSS Stylesheet for philboivin.com
   --color-copy: #666;
   --color-info: #666;
   --color-hr: #eee;
-  --color-photoby: #666;
   --color-li: #333;
   --color-li-list-bullet: #666;
 }
@@ -85,19 +79,19 @@ h1 {
   font-size: var(--h1-font-size);
   margin: 14px 0;
   font-family: var(--h-font);
-  font-weight: normal;
+  font-weight: 400;
 } 
 h2 {
   font-size: var(--h2-font-size);
   margin: 12px 0;
   font-family: var(--h-font);
-  font-weight: normal;
+  font-weight: 400;
 }
 h3 {
   font-size: var(--h3-font-size);
   margin: 18px 0 5px 0;
   font-family: var(--h-font);
-  font-weight: normal;
+  font-weight: 400;
 }
 a {
   color: var(--color-body-a);
@@ -125,10 +119,8 @@ main {
 main p {
   line-height: 1.4;
   margin: 15px 0;
-  /* font-size: var(--text-font-size); */
 }
 ul {
-  /* font-size: var(--text-font-size); */
   padding: 0 0 0 15px;
 }
 li {
@@ -217,19 +209,9 @@ header {
   flex: 70%;
   padding-right: 40px;
 }
-.col-slim {
-  flex: 10%;
-  padding: 0 20px 0 10px;
-}
 
 .padding-left {
   padding-left: 20px;
-}
-.portrait {
-  width: 160px;
-}
-.float {
-  z-index: 10;
 }
 
 .topLink {
@@ -242,48 +224,8 @@ header {
   width: 30px;
 }
 
-ul.list {
-  list-style: none; /* Remove default bullets */
-}
-.list li {
-  margin: 0 0 5px 20px;
-}
-
-ul.list li::before {
-  content: "\2022";
-  color: var(--color-li-list-bullet);
-  font-weight: bold;
-  display: inline-block;
-  width: 1em;
-  margin-left: -1em;
-}
-
-.date {
-  color: #999;
-  font-size: 0.9em;
-}
-.photo-by {
-  color: var(--color-photoby);
-}
-.center {
-  text-align: center;
-}
-
-#gallery-publications {
-  filter: grayscale(100%);
-}
 #gallery {
   padding-bottom: 15px;
-}
-
-#indexVideo {
-  object-fit: cover;
-  width: 100vw;
-  height: 85vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 0;
 }
 
 /******************************************/
@@ -370,28 +312,6 @@ textarea {
   display: inline-block;
 }
 
-/*****************************************/
-/* Blog        
-/*****************************************/
-.blog {
-  text-align: center;
-}
-.date-blog {
-  color: #666;
-  margin: 20px 0;
-}
-.photos {
-  margin-top: 40px;
-}
-.photos img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-.photos p {
-  margin: 0 0 40px 0;
-  font-size: var(--photo-caption-font-size);
-}
 
 /*****************************************/
 /* Footer             
@@ -421,23 +341,6 @@ footer a:hover {
   color: var(--color-footer-a-hover);
 }
 
-footer .logo a {
-  top: 0;
-  left: 0;
-  color: var(--color-logo-footer);
-}
-footer .logo a:hover {
-  color: var(--color-logo-footer-hover);
-}
-
-footer nav {
-  font-size: var(--menu-footer-font-size);
-  padding: 20px 0;
-}
-footer nav li {
-  display: inline-block;
-  margin: 0 20px 10px 0;
-}
 
 .social-icons {
   padding: 20px 0;
@@ -481,8 +384,5 @@ footer nav li {
   .col {
     flex: 50%;
     padding-right: 10px;
-  }
-  #indexVideo {
-    display: none;
   }
 }
