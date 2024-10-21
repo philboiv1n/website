@@ -20,13 +20,13 @@
   --content-width: 90%;
   --content-width-mobile: 88%;
 
-  --color-body-bg: #fff;
-  --color-body-txt: #333;
-  --color-body-a: #3366cc;
-  --color-body-a-hover: #3366cc;
+  --color-body-bg: #faf9f6;
+  --color-body-txt: #494846;
+  --color-body-a: #494846;
+  --color-body-a-hover: #13797e;
 
-  --color-menu-a: #3366cc;
-  --color-menu-a-hover: #3366cc;
+  --color-menu-a: #494846;
+  --color-menu-a-hover: #13797e;
 
   --color-sub-menu-li: #333;
   --color-sub-menu-border: #ccc;
@@ -34,11 +34,11 @@
 
   --color-sub-sub-menu: #ccc;
 
-  --color-logo: #333;
-  --color-logo-hover: #000;
+  --color-logo: #494846;
+  --color-logo-hover: #13797e;
   --color-logo-top: #ccc;
 
-  --color-footer-bg: #fff;
+  --color-footer-bg: #FBF9F1;
   --color-footer-txt: #666;
   --color-footer-a: #666;
   --color-footer-a-hover: #333;
@@ -47,7 +47,7 @@
   --color-copy: #666;
   --color-info: #666;
   --color-hr: #eee;
-  --color-li: #333;
+  --color-li: #494846;
   --color-li-list-bullet: #666;
 }
 
@@ -156,6 +156,10 @@ header {
 .logo a {
   text-decoration: none;
   color: var(--color-logo);
+}
+
+.logo a:hover {
+  color: var(--color-logo-hover);
 }
 
 .sub-menu {
