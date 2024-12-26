@@ -1,49 +1,36 @@
 :root {
-  --body-font: "arial";
-  --menu-font: "arial";
-  --logo-font: "georgia";
-  --h-font: "arial";
+  --body-font: "Courier New", Courier, monospace;
+  --menu-font: "Courier New", Courier, monospace;
+  --logo-font: "Courier New", Courier, monospace;
+  --h-font: "Courier New", Courier, monospace;
+
+  --content-width: 90%;
+  --content-width-mobile: 88%;
 
   --text-font-size: 1em;
-  --logo-font-size: 1.6em;
+  --logo-font-size: 1.4em;
   --form-font-size: 1em;
   --menu-font-size: 1em;
-  --h1-font-size: 1.4em;
+  --h1-font-size: 1.3em;
   --h2-font-size: 1.2em;
   --h3-font-size: 1.1em;
-  --footer-font-size: 0.8em;
+  --footer-font-size: 1.0em;
 
   --form-border-color: #ddd;
   --form-submit-color-border: #ccc;
   --form-submit-color-hover: #fff;
 
-  --content-width: 90%;
-  --content-width-mobile: 88%;
-
-  --color-body-bg: #faf9f6;
-  --color-body-txt: #494846;
-  --color-body-a: #494846;
+  --color-body-bg: #f7f9f9 ;
+  --color-body-txt: #000;
+  --color-body-a: #000;
   --color-body-a-hover: #13797e;
-
-  --color-menu-a: #494846;
-  --color-menu-a-hover: #13797e;
-
   --color-sub-menu-li: #333;
   --color-sub-menu-border: #ccc;
   --color-sub-menu-a-hover: #888;
-
   --color-sub-sub-menu: #ccc;
-
-  --color-logo: #494846;
-  --color-logo-hover: #13797e;
-  --color-logo-top: #ccc;
-
-  --color-footer-bg: #FBF9F1;
   --color-footer-txt: #666;
   --color-footer-a: #666;
   --color-footer-a-hover: #333;
-  --color-social-icons: #666;
-  --color-social-icons-hover: #666;
   --color-copy: #666;
   --color-info: #666;
   --color-hr: #eee;
@@ -62,40 +49,43 @@ html {
 body {
   font-size: var(--text-font-size);
   background-color: var(--color-body-bg);
-  font-family: var(--body-font), sans-serif;
+  font-family: var(--body-font);
   color: var(--color-body-txt);
-  text-align: center;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 100%;
   grid-template-areas: "header" "main" "footer";
   letter-spacing: 0.7px;
 }
+
+
 h1 {
   font-size: var(--h1-font-size);
   margin: 14px 0;
   font-family: var(--h-font);
-  font-weight: 400;
+  font-weight: normal;
 } 
 h2 {
   font-size: var(--h2-font-size);
   margin: 12px 0;
   font-family: var(--h-font);
-  font-weight: 400;
+  font-weight: normal;
 }
 h3 {
   font-size: var(--h3-font-size);
   margin: 18px 0 5px 0;
   font-family: var(--h-font);
-  font-weight: 400;
+  font-weight: normal;
 }
+
 a {
   color: var(--color-body-a);
 }
+
 a:hover {
-  color: var(--color-body-a-hover);
   text-decoration: none;
 }
+
 img {
   max-width: 100%;
   height: auto;
@@ -108,7 +98,6 @@ hr {
 main {
   z-index: 1;
   grid-area: main;
-
   display: grid;
   grid-template-areas: "content";
 }
@@ -120,7 +109,6 @@ ul {
   padding: 0 0 0 15px;
 }
 li {
-  color: var(--color-li);
   padding: 3px 0;
 }
 
@@ -149,17 +137,11 @@ header {
 .logo {
   font-family: var(--logo-font);
   font-size: var(--logo-font-size);
-  color: var(--color-logo);
-  letter-spacing: 1px;
   padding-bottom: 16px;
+  font-weight: 400;
 }
 .logo a {
   text-decoration: none;
-  color: var(--color-logo);
-}
-
-.logo a:hover {
-  color: var(--color-logo-hover);
 }
 
 .sub-menu {
@@ -219,7 +201,7 @@ header {
   padding: 20px 0 0 0;
 }
 .topLink svg {
-  fill: var(--color-social-icons);
+  fill: var(--color-body-txt);
   opacity: 1;
   width: 30px;
 }
@@ -244,13 +226,9 @@ header {
 }
 
 #menu li a {
-  color: var(--color-menu-a);
   text-decoration: none;
 }
 
-#menu li a:hover {
-  color: var(--color-menu-a-hover);
-}
 
 #contact-form {
   padding: 20px 0;
@@ -280,6 +258,7 @@ textarea {
 }
 
 .form-submit {
+  font-family: var(--body-font);
   padding: 10px 15px;
   font-size: inherit;
   margin-top: 10px;
@@ -310,7 +289,6 @@ footer {
   z-index: 0;
   grid-area: footer;
   display: grid;
-  background-color: var(--color-footer-bg);
   grid-template-areas: "footer-content";
 }
 
@@ -343,13 +321,11 @@ footer a:hover {
   padding-right: 15px;
 }
 .social-icons svg {
-  fill: var(--color-social-icons);
+  fill: var(--color-body-txt);
   opacity: 1;
   width: 24px;
 }
-.social-icons svg:hover {
-  fill: var(--color-social-icons-hover);
-}
+
 .copy {
   padding-top: 15px;
   color: var(--color-copy);
