@@ -1,8 +1,7 @@
 :root {
-  --body-font: "Courier New", Courier, monospace;
-  --menu-font: "Courier New", Courier, monospace;
-  --logo-font: "Courier New", Courier, monospace;
-  --h-font: "Courier New", Courier, monospace;
+  --body-font: Arial, Helvetica, sans-serif;
+  --logo-font: Arial, Helvetica, sans-serif;
+  --h-font:  Arial, Helvetica, sans-serif;
 
   --content-width: 90%;
   --content-width-mobile: 88%;
@@ -10,7 +9,6 @@
   --text-font-size: 1em;
   --logo-font-size: 1.4em;
   --form-font-size: 1em;
-  --menu-font-size: 1em;
   --h1-font-size: 1.3em;
   --h2-font-size: 1.2em;
   --h3-font-size: 1.1em;
@@ -23,7 +21,6 @@
   --color-body-bg: #f7f9f9 ;
   --color-body-txt: #000;
   --color-body-a: #000;
-  --color-body-a-hover: #13797e;
   --color-sub-menu-li: #333;
   --color-sub-menu-border: #ccc;
   --color-sub-menu-a-hover: #888;
@@ -34,8 +31,6 @@
   --color-copy: #666;
   --color-info: #666;
   --color-hr: #eee;
-  --color-li: #494846;
-  --color-li-list-bullet: #666;
 }
 
 * {
@@ -43,9 +38,11 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 html {
   scroll-behavior: smooth;
 }
+
 body {
   font-size: var(--text-font-size);
   background-color: var(--color-body-bg);
@@ -221,8 +218,8 @@ header {
   float: left;
   display: block;
   padding-right: 20px;
-  font-size: var(--menu-font-size);
-  font-family: var(--menu-font);
+  /* font-size: var(--menu-font-size);
+  font-family: var(--menu-font); */
 }
 
 #menu li a {
@@ -264,6 +261,7 @@ textarea {
   margin-top: 10px;
   border-radius: 10px;
   border: 1px solid var(--form-submit-color-border);
+  color: var(--color-body-a)
 }
 .form-submit:hover {
   cursor: pointer;
