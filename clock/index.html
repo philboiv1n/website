@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Clock</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: sans-serif;
+      background-color: #000;
+      color: #0f0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 64px;
+    }
+  </style>
+</head>
+<body>
+  <div id="clock">--:--:--</div>
+
+  <script>
+    function pad(n) {
+      return (n < 10 ? '0' : '') + n;
+    }
+
+    function updateClock() {
+      var now = new Date();
+      var h = pad(now.getHours());
+      var m = pad(now.getMinutes());
+      var s = pad(now.getSeconds());
+      document.getElementById('clock').innerHTML = h + ':' + m + ':' + s;
+    }
+
+    setInterval(updateClock, 1000);
+    updateClock();
+  </script>
+</body>
+</html>
