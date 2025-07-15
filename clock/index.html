@@ -5,6 +5,11 @@
   <title>Clock - Philippe Boivin</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
+    @font-face {
+      font-family: 'RobotoMono';
+      src: url('RobotoMono-VariableFont_wght.ttf') format('truetype');
+    }
+
     html, body {
       height: 100%;
       margin: 0;
@@ -16,21 +21,17 @@
     }
 
     #clock {
-      font-family: sans-serif;
-      font-size: 20vw;
+      font-family: 'RobotoMono', monospace;
+      font-size: 30vw;
+      font-weight: 500;
       text-align: center;
       line-height: 1;
       color: #0f0;
-      transition: color 1s ease;
-    }
-
-    .night {
-      color: #040;
     }
   </style>
 </head>
 <body>
-  <div id="clock">--:--:--</div>
+  <div id="clock">--:--</div>
 
   <script>
     function pad(n) {
@@ -41,15 +42,14 @@
       var now = new Date();
       var h = now.getHours();
       var m = pad(now.getMinutes());
-      var s = pad(now.getSeconds());
-
-      document.getElementById('clock').innerHTML = pad(h) + ':' + m + ':' + s;
 
       var clock = document.getElementById('clock');
-      if (h >= 21 || h < 5) {
-        clock.className = 'night';
+      clock.innerHTML = pad(h) + ':' + m;
+
+      if (h >= 21 || h < 6) {
+        clock.style.color = '#030';
       } else {
-        clock.className = '';
+        clock.style.color = '#0f0';
       }
     }
 
