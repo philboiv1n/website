@@ -41,19 +41,21 @@
     function updateClock() {
       var now = new Date();
       var h = now.getHours();
-      var m = pad(now.getMinutes());
+      var m = now.getMinutes();
+
+      document.getElementById('clock').innerHTML = pad(h) + ':' + pad(m);
 
       var clock = document.getElementById('clock');
-      clock.innerHTML = pad(h) + ':' + m;
-
       if (h >= 21 || h < 6) {
         clock.style.color = '#030';
       } else {
         clock.style.color = '#0f0';
       }
+
+      var delay = (60 - now.getSeconds()) * 1000;
+      setTimeout(updateClock, delay);
     }
 
-    setInterval(updateClock, 1000);
     updateClock();
   </script>
 </body>
