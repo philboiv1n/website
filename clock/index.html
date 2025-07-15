@@ -10,7 +10,6 @@
       margin: 0;
       padding: 0;
       background: #000;
-      color: #0f0;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -21,6 +20,12 @@
       font-size: 20vw;
       text-align: center;
       line-height: 1;
+      color: #0f0;
+      transition: color 1s ease;
+    }
+
+    .night {
+      color: #040;
     }
   </style>
 </head>
@@ -34,10 +39,18 @@
 
     function updateClock() {
       var now = new Date();
-      var h = pad(now.getHours());
+      var h = now.getHours();
       var m = pad(now.getMinutes());
       var s = pad(now.getSeconds());
-      document.getElementById('clock').innerHTML = h + ':' + m + ':' + s;
+
+      document.getElementById('clock').innerHTML = pad(h) + ':' + m + ':' + s;
+
+      var clock = document.getElementById('clock');
+      if (h >= 21 || h < 5) {
+        clock.className = 'night';
+      } else {
+        clock.className = '';
+      }
     }
 
     setInterval(updateClock, 1000);
