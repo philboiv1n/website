@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <title>Philippe Boivin</title>
-    <meta name="description" content="Terrain de jeux virtuel de Philippe Boivin">
+    <meta name="description" content="Philippe Boivin's virtual playground">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta property="og:image" content="https://www.philboivin.com/img/philboivin-og.jpg">
     <link rel="icon" type="image/png" href="/img/icon.png">
@@ -24,10 +24,10 @@
         
         <div class="row">
           <div class="col">
-              <h1>À propos</h1>
+              <h1>About</h1>
               <p>
-                Chargé de projets TI situé à Montréal (Québec) au Canada.
-                J'oeuvre à rendre les choses plus simples, efficaces et accessibles.
+                IT Project Manager based in Montreal (Quebec), Canada.
+                I strive to make things simpler, more efficient, and accessible.
               </p>
           </div>
         </div>
@@ -36,13 +36,13 @@
         
         <div class="row">
             <div class="col">
-              <h1>Projets</h1>
+              <h1>Projects</h1>
                <ul>
-                  <li><a href="https://myetl.philboivin.com">MyETL</a> : A simple, no-build, no-fuss data pipeline.</li>
-                  <li><a href="https://github.com/philboiv1n/chip-8-python">Chip-8 Emulator</a> : Emulateur de base en Python + Docker.</li>
-                  <li><a href="https://github.com/philboiv1n/django-poker">Django Poker</a> : Poker multijoueur en Python + Docker.</li>
-                  <li><a href="/mf">Mystic Flight</a> : Jeu rétro en AssemblyScript et compilé en WebAssembly via WASM-4.</li>
-                  <li><a href="https://github.com/philboiv1n">Github</a> : Autres projets en programmation logiciels.</li>
+                  <li><a href="https://myetl.philboivin.com">MyETL</a> : A simple data pipeline in PHP.</li>
+                  <li><a href="https://github.com/philboiv1n/chip-8-python">Chip-8 Emulator</a> : Basic emulator in Python + Docker.</li>
+                  <li><a href="https://github.com/philboiv1n/django-poker">Django Poker</a> : Multiplayer poker in Python + Docker.</li>
+                  <li><a href="/mf">Mystic Flight</a> : Retro game in AssemblyScript compiled to WebAssembly via WASM-4.</li>
+                  <li><a href="https://github.com/philboiv1n">Github</a> : Other software programming projects.</li>
                   <li><a href="/fr/photos.html">Photos</a> : Archives.</li>
                </ul>
             </div>
@@ -55,7 +55,7 @@
 
         <div class="row">
             <div class="col">
-              <h1>Contactez-moi</h1>
+              <h1>Contact me</h1>
                 <form id="contact-form" method="post">
                   <label class="form-control-bee" for="name"></label>
                   <input
@@ -77,7 +77,7 @@
                   <input
                     type="text"
                     id="name-input"
-                    placeholder="Votre nom"
+                    placeholder="Your name"
                     class="form-control"
                     maxlength="64"
                     required><br>
@@ -85,7 +85,7 @@
                   <input
                     type="email"
                     id="email-input"
-                    placeholder="Votre adresse courriel"
+                    placeholder="Your email address"
                     class="form-control"
                     maxlength="320"
                     required><br>
@@ -93,7 +93,7 @@
                   <textarea
                     id="message-input"
                     rows="5"
-                    placeholder="Votre message"
+                    placeholder="Your message"
                     class="form-control"
                     maxlength="1024"
                     required></textarea>
@@ -102,8 +102,8 @@
                   <button
                     id="submit-button"
                     type="button"
-                    onClick="submitToAPI(event)"
-                    class="form-submit">Envoyer</button>
+                    onclick="submitToAPI(event)"
+                    class="form-submit">Send</button>
                 </form>
                 <div id="messages" class="error"></div>
               </div>
@@ -115,7 +115,7 @@
 
           <div class="row">
             <div class="col">
-              <h1>Réseaux sociaux</h1>
+              <h1>Social Networks</h1>
                 <div class="social-icons">
                   <ul>
                     <li>
@@ -172,7 +172,7 @@
           }
   
           if (!nameRegex.test($("#name-input").val())) {
-            $("#messages").html(x + "Le nom doit contenir au moins 2 lettres");
+            $("#messages").html(x + "Name must contain at least 2 letters");
             return;
           }
   
@@ -181,7 +181,7 @@
   
           if (!emailRegex.test($("#email-input").val())) {
             $("#messages").html(
-              x + "Veuillez entrer une adresse courriel valide"
+              x + "Please enter a valid email address"
             );
             return;
           }
@@ -189,7 +189,7 @@
           var msgRegex = /[A-Za-z]{3}[A-Za-z]/;
   
           if (!msgRegex.test($("#message-input").val())) {
-            $("#messages").html(x + "Veuillez entrer un message");
+            $("#messages").html(x + "Please enter a message");
             return;
           }
   
@@ -210,7 +210,7 @@
             data: JSON.stringify(data),
   
             success: function () {
-              alert("Message envoyé.");
+              alert("Message sent.");
               document.getElementById("contact-form").reset();
               location.reload();
             },
@@ -219,8 +219,7 @@
               $("#submit-button").attr("disabled", "disabled");
               $("#submit-button").addClass("form-submit-disabled"); // ADD class form-submit-disabled
               $("#messages").html(
-                x +
-                  "Désolé, nous éprouvons des difficultés techniques, veuillez essayer plus tard."
+                x + "Sorry, we are experiencing technical difficulties, please try again later."
               );
             },
           });
