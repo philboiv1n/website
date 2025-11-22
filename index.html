@@ -16,6 +16,10 @@
       <div id="header-content">
         <div class="logo"><a href="/">Philippe Boivin</a></div>
         <hr>
+        <nav id="lang-switch" aria-label="Language switcher">
+          <button type="button" data-lang="en" class="active">English</button>
+          <button type="button" data-lang="fr">Français</button>
+        </nav>
       </div>
     </header>
 
@@ -24,10 +28,13 @@
         
         <div class="row">
           <div class="col">
-              <h1>About</h1>
-              <p>
-                IT Project Manager based in Montreal (Quebec), Canada.
-                I strive to make things simpler, more efficient, and accessible.
+              <h1 class="lang-en">About</h1>
+              <h1 class="lang-fr">À propos</h1>
+              <p class="lang-en">
+              IT Professional based in Montreal, Canada. I specialize in solution architecture, web development, IT project management, and business/technical analysis — always focused on delivering simpler, more efficient, and more accessible digital experiences.
+              </p>
+              <p class="lang-fr">
+              Professionnel des technologies de l'information basé à Montréal, Canada. Je me spécialise en architecture de solutions, développement web, gestion de projets TI et analyse d'affaires/technique, toujours axé sur des expériences numériques simples, efficaces et plus accessibles.
               </p>
           </div>
         </div>
@@ -36,26 +43,49 @@
         
         <div class="row">
             <div class="col">
-              <h1>Projects</h1>
+              <h1 class="lang-en">Projects</h1>
+              <h1 class="lang-fr">Projets</h1>
                <ul>
-                  <li><a href="https://myetl.philboivin.com">MyETL</a> : A simple data pipeline in PHP.</li>
-                  <li><a href="https://github.com/philboiv1n/chip-8-python">Chip-8 Emulator</a> : Basic emulator in Python + Docker.</li>
-                  <li><a href="https://github.com/philboiv1n/django-poker">Django Poker</a> : Multiplayer poker in Python + Docker.</li>
-                  <li><a href="/mf">Mystic Flight</a> : Retro game in AssemblyScript compiled to WebAssembly via WASM-4.</li>
-                  <li><a href="https://github.com/philboiv1n">Github</a> : Other software programming projects.</li>
-                  <li><a href="/fr/photos.html">Photos</a> : Archives.</li>
+                                  <li>
+                    <a href="https://myetl.philboivin.com">MyETL</a> :
+                    <span class="lang-en">A simple, modular data pipeline in PHP.</span>
+                    <span class="lang-fr">Un pipeline de données simple et modulaire en PHP.</span>
+                  </li>
+                  <li>
+                    <a href="https://github.com/philboiv1n/chip-8-python">Chip-8 Emulator</a> :
+                    <span class="lang-en">Basic Chip-8 emulator written in Python and running in Docker.</span>
+                    <span class="lang-fr">Émulateur Chip-8 de base écrit en Python et exécuté dans Docker.</span>
+                  </li>
+                  <li>
+                    <a href="https://github.com/philboiv1n/django-poker">Django Poker</a> :
+                    <span class="lang-en">Multiplayer Texas Hold'em poker built with Django (Python) and Docker.</span>
+                    <span class="lang-fr">Jeu de poker Texas Holdem multijoueur développé avec Django (Python) et Docker.</span>
+                  </li>
+                  <li>
+                    <a href="/mf">Mystic Flight</a> :
+                    <span class="lang-en">Retro shoot 'em up built in AssemblyScript and WebAssembly (WASM-4).</span>
+                    <span class="lang-fr">Shoot 'em up rétro développé en AssemblyScript et WebAssembly (WASM-4).</span>
+                  </li>
+                  <li>
+                    <a href="https://github.com/philboiv1n">Github</a> :
+                    <span class="lang-en">Other software programming projects.</span>
+                    <span class="lang-fr">Autres projets logiciels et expérimentations.</span>
+                  </li>
+                  <li>
+                    <a href="/fr/photos.html">Photos</a> :
+                    <span class="lang-en">Archives.</span>
+                    <span class="lang-fr">Archives.</span>
+                  </li>
                </ul>
             </div>
         </div>
 
 
-        
-
-        
 
         <div class="row">
             <div class="col">
-              <h1>Contact me</h1>
+              <h1 class="lang-en">Contact</h1>
+              <h1 class="lang-fr">Contact</h1>
                 <form id="contact-form" method="post">
                   <label class="form-control-bee" for="name"></label>
                   <input
@@ -115,7 +145,8 @@
 
           <div class="row">
             <div class="col">
-              <h1>Social Networks</h1>
+              <h1 class="lang-en">Social Networks</h1>
+              <h1 class="lang-fr">Réseaux sociaux</h1>
                 <div class="social-icons">
                   <ul>
                     <li>
@@ -225,7 +256,55 @@
           });
         }
       </script>
+      <script>
+        (function () {
+          function setLang(lang) {
+            var enNodes = document.querySelectorAll('.lang-en');
+            var frNodes = document.querySelectorAll('.lang-fr');
 
+            for (var i = 0; i < enNodes.length; i++) {
+              enNodes[i].style.display = (lang === 'en') ? '' : 'none';
+            }
+
+            for (var j = 0; j < frNodes.length; j++) {
+              frNodes[j].style.display = (lang === 'fr') ? '' : 'none';
+            }
+
+            var buttons = document.querySelectorAll('#lang-switch button');
+            for (var k = 0; k < buttons.length; k++) {
+              buttons[k].classList.toggle('active', buttons[k].getAttribute('data-lang') === lang);
+            }
+
+            document.documentElement.lang = (lang === 'fr') ? 'fr' : 'en';
+            try {
+              localStorage.setItem('siteLang', lang);
+            } catch (e) {
+              // ignore if storage not available
+            }
+          }
+
+          document.addEventListener('DOMContentLoaded', function () {
+            var savedLang = 'en';
+            try {
+              savedLang = localStorage.getItem('siteLang') || 'en';
+            } catch (e) {
+              savedLang = 'en';
+            }
+            setLang(savedLang);
+
+            var switcher = document.getElementById('lang-switch');
+            if (switcher) {
+              switcher.addEventListener('click', function (e) {
+                var target = e.target;
+                var lang = target.getAttribute('data-lang');
+                if (lang) {
+                  setLang(lang);
+                }
+              });
+            }
+          });
+        })();
+      </script>
 
   </body>
 </html>

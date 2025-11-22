@@ -218,8 +218,6 @@ header {
   float: left;
   display: block;
   padding-right: 20px;
-  /* font-size: var(--menu-font-size);
-  font-family: var(--menu-font); */
 }
 
 #menu li a {
@@ -282,6 +280,22 @@ textarea {
   display: inline-block;
 }
 
+
+#lang-switch button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 1.0rem;
+  padding: 0.2rem 0.5rem 0 0 ;
+}
+
+#lang-switch button.active {
+  text-decoration: underline;
+}
+
+#lang-switch button:hover {
+  text-decoration: none;
+}
 
 footer {
   z-index: 0;
