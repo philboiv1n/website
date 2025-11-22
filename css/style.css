@@ -225,48 +225,6 @@ header {
 }
 
 
-#contact-form {
-  padding: 20px 0;
-}
-textarea {
-  resize: none;
-}
-
-.form-control {
-  font-family: var(--body-font);
-  padding: 10px;
-  font-size: var(--form-font-size);
-  margin: 0 0 20px 0;
-  border: 1px solid var(--form-border-color);
-  width: 95%;
-  max-width: 400px;
-}
-
-.form-control-bee {
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 0;
-  width: 0;
-  z-index: -1;
-}
-
-.form-submit {
-  font-family: var(--body-font);
-  padding: 10px 15px;
-  font-size: inherit;
-  margin-top: 10px;
-  border-radius: 10px;
-  border: 1px solid var(--form-submit-color-border);
-  color: var(--color-body-a)
-}
-.form-submit:hover {
-  cursor: pointer;
-}
-.form-submit-disabled:hover {
-  cursor: default;
-}
 
 .redCircle {
   border-radius: 50%;
@@ -282,6 +240,7 @@ textarea {
 
 
 #lang-switch button {
+  color: var(--color-body-a);
   border: none;
   background: transparent;
   cursor: pointer;
@@ -321,22 +280,6 @@ footer a:hover {
   color: var(--color-footer-a-hover);
 }
 
-
-.social-icons {
-  padding: 20px 0;
-}
-.social-icons ul {
-  padding: 0;
-}
-.social-icons li {
-  display: inline;
-  padding-right: 15px;
-}
-.social-icons svg {
-  fill: var(--color-body-txt);
-  opacity: 1;
-  width: 24px;
-}
 
 .copy {
   padding-top: 15px;
