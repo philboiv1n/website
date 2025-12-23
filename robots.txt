@@ -1,0 +1,6 @@
+# robots.txt for https://www.philboivin.com/
+User-agent: *
+Disallow: /clock/
+Disallow: /csv/
+Disallow: /.git/
+Disallow: /.DS_Store
